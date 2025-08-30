@@ -58,9 +58,7 @@ const GraphicDesignPage = () => {
               Bygg ditt varumärke med visuell kraft
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mx-auto">
-              Från logotyper till tryckt material – vi skapar en konsekvent och
-              professionell visuell identitet som kommunicerar ditt budskap
-              tydligt.
+              Från logotyper till tryckt material – jag skapar en konsekvent och professionell visuell identitet som kommunicerar ditt budskap tydligt.
             </p>
           </div>
         </section>
@@ -72,23 +70,19 @@ const GraphicDesignPage = () => {
               Skräddarsydd grafisk design
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              Vi hjälper dig att skapa ett bestående intryck med stark och
-              minnesvärd design. Våra tjänster inom grafisk design inkluderar:
+              Jag hjälper dig att skapa ett bestående intryck med stark och minnesvärd design. Mina tjänster inom grafisk design inkluderar:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-semibold mb-2">Logotypdesign</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  En unik och professionell logotyp är grunden för ditt
-                  varumärke. Vi designar en logga som representerar din
-                  verksamhet på bästa sätt.
+                  En unik och professionell logotyp är grunden för ditt varumärke. Jag designar en logga som representerar din verksamhet på bästa sätt.
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-semibold mb-2">Tryckt Material</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Från visitkort till flyers och broschyrer – vi designar
-                  trycksaker som imponerar och stärker din varumärkesidentitet.
+                  Från visitkort till flyers och broschyrer – jag designar trycksaker som imponerar och stärker din varumärkesidentitet.
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
@@ -96,9 +90,7 @@ const GraphicDesignPage = () => {
                   Grafik för Sociala medier
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Professionella bilder och banners skapar ett starkt intryck på
-                  sociala plattformar. Vi designar grafik som fångar
-                  uppmärksamhet.
+                  Professionella bilder och banners skapar ett starkt intryck på sociala plattformar. Jag designar grafik som fångar uppmärksamhet.
                 </p>
               </div>
             </div>
@@ -109,7 +101,7 @@ const GraphicDesignPage = () => {
         <section id="process-graphic" className="py-20 px-4 bg-gray-800">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Hur vi arbetar
+              Hur jag arbetar
             </h2>
             <div className="space-y-12">
               <div className="flex flex-col md:flex-row items-center justify-between">
@@ -121,9 +113,7 @@ const GraphicDesignPage = () => {
                     Brief & Idéutveckling
                   </h3>
                   <p className="text-gray-400">
-                    Vi börjar med att lyssna på dina idéer och behov. Vi
-                    utforskar din vision för att skapa ett kreativt koncept som
-                    matchar din verksamhet.
+                    Jag börjar med att lyssna på dina idéer och behov. Jag utforskar din vision för att skapa ett kreativt koncept som matchar din verksamhet.
                   </p>
                 </div>
                 <div className="md:w-1/2">
@@ -154,9 +144,7 @@ const GraphicDesignPage = () => {
                     Skapande & Iteration
                   </h3>
                   <p className="text-gray-400">
-                    Vi skapar de första designutkasten. Du får se dem och ge
-                    feedback, så att vi tillsammans kan förfina och justera
-                    designen tills den är perfekt.
+                    Jag skapar de första designutkasten. Du får se dem och ge feedback, så att vi tillsammans kan förfina och justera designen tills den är perfekt.
                   </p>
                 </div>
               </div>
@@ -169,9 +157,7 @@ const GraphicDesignPage = () => {
                     Leverans & Support
                   </h3>
                   <p className="text-gray-400">
-                    När designen är godkänd levererar vi alla filer i
-                    högupplösta format. Vi ser till att du har allt du behöver
-                    för att använda din nya design framgångsrikt.
+                    När designen är godkänd levererar jag alla filer i högupplösta format. Jag ser till att du har allt du behöver för att använda din nya design framgångsrikt.
                   </p>
                 </div>
                 <div className="md:w-1/2">
@@ -192,15 +178,14 @@ const GraphicDesignPage = () => {
         <section className="py-20 px-4 bg-gray-700 text-center">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-4">
-              Låt oss skapa ett starkt varumärkesintryck
+              Låt mig skapa ett starkt varumärkesintryck
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Kontakta oss idag för att diskutera din digitala vision och få en
-              kostnadsfri offert.
+              Kontakta mig idag för att diskutera din digitala vision och få en kostnadsfri offert.
             </p>
-            <Link href="/#footer">
+            <Link href="/contact">
               <button className="px-8 py-4 rounded-lg font-medium text-lg transition-transform duration-300 hover:scale-105 bg-pink-500 hover:bg-pink-600 text-white">
-                Kontakta oss
+                Kontakta mig
               </button>
             </Link>
           </div>

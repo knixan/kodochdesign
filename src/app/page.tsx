@@ -40,10 +40,7 @@ const HomePage = () => {
               Webbplatsen är för närvarande under utveckling.
             </h1>
             <h1 className="text-2xl font-semibold text-cyan-400">
-              Under min utbildning skapar jag ett antal webbplatser i syfte att
-              öva, och jag tar därför gärna emot förfrågningar från dig som är
-              intresserad av en ny hemsida. Vänligen kontakta mig med din
-              förfrågan.
+              Under min utbildning skapar jag ett antal webbplatser i syfte att öva, och jag tar därför gärna emot förfrågningar från dig som är intresserad av en ny hemsida. Vänligen kontakta mig med din förfrågan.
             </h1>
             <h1
               id="main-heading"
@@ -55,64 +52,50 @@ const HomePage = () => {
               id="sub-heading"
               className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"
             >
-              Vi kombinerar <strong>modern design</strong> med{" "}
-              <strong>ren kod</strong> för att bygga unika och högpresterande
-              webbplatser som är perfekt anpassade för just dina behov.
+              Jag kombinerar <strong>modern design</strong> med <strong>ren kod</strong> för att bygga unika och högpresterande webbplatser som är perfekt anpassade för just dina behov.
             </p>
             <Link href="#section3" className="inline-block">
               <button className="px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-300 bg-pink-500 hover:bg-pink-600 text-white transform transition-transform duration-300 hover:scale-105">
-                Se våra tjänster
+                Se mina tjänster
               </button>
             </Link>
           </div>
         </section>
 
-        {/* Section 2: Om Oss */}
+        {/* Section 2: Om Mig */}
         <section id="section2" className="py-20 px-4">
           <div className="container mx-auto max-w-3xl text-center">
             <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-600">
               Om Kod & Design
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed">
-              Kod och Design är ett projekt som föddes ur min passion för att
-              skapa vackra och funktionella webblösningar. Som
-              fullstackutvecklare kombinerar jag modern design med ren och
-              effektiv kod för att hjälpa företag och privatpersoner att
-              förverkliga sina digitala idéer. Jag tror på ett nära samarbete
-              med mina kunder för att säkerställa att varje projekt blir en
-              framgång, oavsett om det handlar om en enklare landningssida eller
-              en mer komplex webbapplikation. Jag erbjuder prisvärda lösningar
-              som gör professionella webbplatser tillgängliga för alla budgetar.
-              Låt oss arbeta tillsammans för att bygga din nästa digitala
-              upplevelse.
+              Kod och Design är ett projekt som föddes ur min passion för att skapa vackra och funktionella webblösningar. Som fullstackutvecklare kombinerar jag modern design med ren och effektiv kod för att hjälpa företag och privatpersoner att förverkliga sina digitala idéer. Jag tror på ett nära samarbete med mina kunder för att säkerställa att varje projekt blir en framgång, oavsett om det handlar om en enklare landningssida eller en mer komplex webbapplikation. Jag erbjuder prisvärda lösningar som gör professionella webbplatser tillgängliga för alla budgetar. Låt oss arbeta tillsammans för att bygga din nästa digitala upplevelse.
             </p>
           </div>
         </section>
 
-        {/* Section 3: Våra tjänster */}
+        {/* Section 3: Mina tjänster */}
         <section id="section3" className="py-20 bg-gray-800 px-4">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
-              Våra tjänster
+              Mina tjänster
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Kort 1: Webbutveckling */}
               <div className="relative bg-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105">
                 <Image
-                  src="/images/placeholder.jpg"
+                  src="/images/webbutveckling.jpg"
                   alt="Webbutveckling"
                   width={600}
                   height={400}
-                  className="w-full h-48 object-cover"
+                  className="w-[600px] h-[400px] object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-2">
                     Webbutveckling
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    Vi bygger skräddarsydda, högpresterande och responsiva
-                    webbplatser med den senaste tekniken React, Next.js och
-                    Tailwind CSS.
+                    Jag bygger skräddarsydda, högpresterande och responsiva webbplatser med den senaste tekniken React, Next.js och Tailwind CSS.
                   </p>
                   <Link href="/webbutveckling" className="inline-block">
                     <button className="px-6 py-3 rounded-lg font-medium transition-colors duration-300 bg-pink-500 hover:bg-pink-600 text-white">
@@ -124,17 +107,16 @@ const HomePage = () => {
               {/* Kort 2: UX/UI Design */}
               <div className="relative bg-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105">
                 <Image
-                  src="/images/placeholder.jpg"
+                  src="/images/uxuidesign.jpg"
                   alt="UX/UI Design"
                   width={600}
                   height={400}
-                  className="w-full h-48 object-cover"
+                  className="w-[600px] h-[400px] object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-2">UX/UI Design</h3>
                   <p className="text-gray-300 mb-4">
-                    Vi skapar intuitiva och vackra användarupplevelser som
-                    engagerar dina besökare.
+                    Jag skapar intuitiva och vackra användarupplevelser som engagerar dina besökare.
                   </p>
                   <Link href="/ux-ui" className="inline-block">
                     <button className="px-6 py-3 rounded-lg font-medium transition-colors duration-300 bg-pink-500 hover:bg-pink-600 text-white">
@@ -157,10 +139,7 @@ const HomePage = () => {
                     Grafisk Design
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    Skapa ett starkt första intryck. Vi hjälper dig att bygga
-                    din visuella identitet med professionell grafisk design för
-                    logotyper, visitkort, flyers, samt anpassade profilbilder
-                    och banners för sociala medier.
+                    Jag hjälper dig att bygga din visuella identitet med professionell grafisk design för logotyper, visitkort, flyers, samt anpassade profilbilder och banners för sociala medier.
                   </p>
                   <Link href="/grafisk-design" className="inline-block">
                     <button className="px-6 py-3 rounded-lg font-medium transition-colors duration-300 bg-pink-500 hover:bg-pink-600 text-white">

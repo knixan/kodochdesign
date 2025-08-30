@@ -30,13 +30,11 @@ const UxUiPage = () => {
         >
           <div className="absolute inset-0 bg-gray-900 opacity-60"></div>
           <Image
-            src="/images/placebolder.jpg"
-            alt="UX/UI Design bakgrund"
+            src="/images/placeholder.jpg"
+            alt="Grafisk design bakgrund"
             fill
             style={{ objectFit: "cover" }}
             className="z-0"
-            width={800}
-            height={400}
           />
           <div className="z-10 max-w-4xl relative">
             <h1
@@ -46,8 +44,7 @@ const UxUiPage = () => {
               Fokus på användaren – från början till slut
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mx-auto">
-              Vi skapar intuitiva och vackra digitala upplevelser som engagerar
-              dina besökare och leder dem mot framgång.
+              Jag skapar intuitiva och vackra digitala upplevelser som engagerar dina besökare och leder dem mot framgång.
             </p>
           </div>
         </section>
@@ -59,12 +56,7 @@ const UxUiPage = () => {
               Vad är UX/UI Design?
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              **User Experience (UX)** handlar om hur en användare upplever din
-              produkt. Det är processen att skapa en meningsfull och relevant
-              upplevelse. **User Interface (UI)** är den visuella delen,
-              gränssnittet som användaren interagerar med. Vi kombinerar de två
-              för att bygga en webbplats som inte bara ser bra ut, utan som
-              också är lätt att använda.
+              **User Experience (UX)** handlar om hur en användare upplever din produkt. Det är processen att skapa en meningsfull och relevant upplevelse. **User Interface (UI)** är den visuella delen, gränssnittet som användaren interagerar med. Jag kombinerar de två för att bygga en webbplats som inte bara ser bra ut, utan som också är lätt att använda.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
@@ -72,9 +64,7 @@ const UxUiPage = () => {
                   UX - Användarupplevelse
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Vi skapar användarresor, wireframes och prototyper för att
-                  säkerställa att din webbplats är logisk, funktionell och
-                  intuitiv.
+                  Jag skapar användarresor, wireframes och prototyper för att säkerställa att din webbplats är logisk, funktionell och intuitiv.
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
@@ -82,9 +72,7 @@ const UxUiPage = () => {
                   UI - Användargränssnitt
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Vi designar den visuella estetiken, från färgscheman och
-                  typografi till knappar och ikoner, för att skapa ett
-                  gränssnitt som är både vackert och effektivt.
+                  Jag designar den visuella estetiken, från färgscheman och typografi till knappar och ikoner, för att skapa ett gränssnitt som är både vackert och effektivt.
                 </p>
               </div>
             </div>
@@ -95,7 +83,7 @@ const UxUiPage = () => {
         <section id="process-uxui" className="py-20 px-4 bg-gray-800">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Vår designprocess
+              Min designprocess
             </h2>
             <div className="space-y-12">
               <div className="flex flex-col md:flex-row items-center justify-between">
@@ -107,8 +95,7 @@ const UxUiPage = () => {
                     Forskning & Strategi
                   </h3>
                   <p className="text-gray-400">
-                    Vi börjar med att djupdyka i din målgrupp och dina affärsmål
-                    för att bygga en solid grund för designen.
+                    Jag börjar med att djupdyka i din målgrupp och dina affärsmål för att bygga en solid grund för designen.
                   </p>
                 </div>
                 <div className="md:w-1/2">
@@ -139,9 +126,7 @@ const UxUiPage = () => {
                     Wireframing & Prototyping
                   </h3>
                   <p className="text-gray-400">
-                    Vi skissar upp strukturen och flödet på webbplatsen för att
-                    testa användarvänligheten innan vi lägger till de visuella
-                    detaljerna.
+                    Jag skissar upp strukturen och flödet på webbplatsen för att testa användarvänligheten innan jag lägger till de visuella detaljerna.
                   </p>
                 </div>
               </div>
@@ -154,9 +139,7 @@ const UxUiPage = () => {
                     Visuell design & Leverans
                   </h3>
                   <p className="text-gray-400">
-                    Vi skapar den slutgiltiga designen med färger, typografi och
-                    interaktiva element. Därefter levererar vi en komplett
-                    design som är redo för utveckling.
+                    Jag skapar den slutgiltiga designen med färger, typografi och interaktiva element. Därefter levererar jag en komplett design som är redo för utveckling.
                   </p>
                 </div>
                 <div className="md:w-1/2">
@@ -177,14 +160,14 @@ const UxUiPage = () => {
         <section className="py-20 px-4 bg-gray-700 text-center">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-4">
-              Låt oss designa din nästa digitala upplevelse
+              Låt mig designa din nästa digitala upplevelse
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Kontakta oss idag för en kostnadsfri konsultation och offert.
+              Kontakta mig idag för en kostnadsfri konsultation och offert.
             </p>
-            <Link href="/#footer">
+            <Link href="/contact">
               <button className="px-8 py-4 rounded-lg font-medium text-lg transition-transform duration-300 hover:scale-105 bg-pink-500 hover:bg-pink-600 text-white">
-                Kontakta oss
+                Kontakta mig
               </button>
             </Link>
           </div>
