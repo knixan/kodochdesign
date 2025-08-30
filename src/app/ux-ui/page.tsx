@@ -30,16 +30,17 @@ const UxUiPage = () => {
         >
           <div className="absolute inset-0 bg-gray-900 opacity-60"></div>
           <Image
-            src="/images/placeholder.jpg"
+            src="/images/uxuidesign.jpg"
             alt="Grafisk design bakgrund"
             fill
             style={{ objectFit: "cover" }}
             className="z-0"
+            
           />
           <div className="z-10 max-w-4xl relative">
             <h1
               id="main-heading"
-              className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-600 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"
+              className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 to-pink-600 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"
             >
               Fokus på användaren – från början till slut
             </h1>

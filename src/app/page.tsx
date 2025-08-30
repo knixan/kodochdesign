@@ -36,34 +36,34 @@ const HomePage = () => {
         >
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="z-10 relative">
-            <h1 className="animate-bounce font-bold text-2xl text-cyan-500">
+            <h1 className="animate-bounce font-bold text-3xl text-pink-500">
               Webbplatsen är för närvarande under utveckling.
             </h1>
-            <h1 className="text-2xl font-semibold text-cyan-400">
-              Under min utbildning skapar jag ett antal webbplatser i syfte att öva, och jag tar därför gärna emot förfrågningar från dig som är intresserad av en ny hemsida. Vänligen kontakta mig med din förfrågan.
-            </h1>
+            <p className="text-2xl font-semibold text-cyan-400 italic">
+              Under min utbildning skapar jag ett antal webbplatser i syfte att öva, <br /> och jag tar därför gärna emot förfrågningar från dig som är intresserad av en ny hemsida. <br /> Vänligen kontakta mig med din förfrågan.
+            </p>
             <h1
               id="main-heading"
-              className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"
+              className="text-5xl md:text-7xl font-extrabold mb-4 mt-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"
             >
-              Skräddarsydda webblösningar i React & Next.js
+              Digitala helhetslösningar – från kod till design
             </h1>
             <p
               id="sub-heading"
               className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"
             >
-              Jag kombinerar <strong>modern design</strong> med <strong>ren kod</strong> för att bygga unika och högpresterande webbplatser som är perfekt anpassade för just dina behov.
+              "En kombination av <strong>modern kod</strong> och <strong>kreativ design</strong> – allt på ett ställe."
             </p>
             <Link href="#section3" className="inline-block">
-              <button className="px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-300 bg-pink-500 hover:bg-pink-600 text-white transform transition-transform duration-300 hover:scale-105">
+              <button className="px-8 py-4 rounded-lg font-bold text-lg  bg-pink-500 hover:bg-pink-600 text-white transform transition-transform duration-300 hover:scale-105">
                 Se mina tjänster
               </button>
             </Link>
           </div>
         </section>
 
-        {/* Section 2: Om Mig */}
-        <section id="section2" className="py-20 px-4">
+        {/* Section 2: Om Kod och Design */}
+        <section id="kodochdesign" className="py-20 px-4">
           <div className="container mx-auto max-w-3xl text-center">
             <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-600">
               Om Kod & Design
@@ -75,7 +75,7 @@ const HomePage = () => {
         </section>
 
         {/* Section 3: Mina tjänster */}
-        <section id="section3" className="py-20 bg-gray-800 px-4">
+        <section id="tjanster" className="py-20 bg-gray-800 px-4">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600">
               Mina tjänster
@@ -127,12 +127,12 @@ const HomePage = () => {
               </div>
               {/* Kort 3: Grafisk Design */}
               <div className="relative bg-gray-700 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105">
-                <Image
-                  src="/images/placeholder.jpg"
-                  alt="Grafisk Design"
+               <Image
+                  src="/images/grafiskdesign.jpg"
+                  alt="UX/UI Design"
                   width={600}
                   height={400}
-                  className="w-full h-48 object-cover"
+                  className="w-[600px] h-[400px] object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-2">
