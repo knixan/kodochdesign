@@ -63,7 +63,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/about-me"
+                href="/ommig"
                 className="hover:text-pink-400 transition-colors duration-300"
               >
                 Om Mig
@@ -71,7 +71,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/#section3"
+                href="/#tjanster"
                 className="hover:text-pink-400 transition-colors duration-300"
               >
                 Tjänster
@@ -79,7 +79,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="/kontakt"
                 className="hover:text-pink-400 transition-colors duration-300"
               >
                 Kontakt

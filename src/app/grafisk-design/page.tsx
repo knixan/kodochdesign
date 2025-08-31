@@ -183,7 +183,7 @@ const GraphicDesignPage = () => {
             <p className="text-lg text-gray-300 mb-8">
               Kontakta mig idag för att diskutera din digitala vision och få en kostnadsfri offert.
             </p>
-            <Link href="/contact">
+            <Link href="/kontakt">
               <button className="px-8 py-4 rounded-lg font-medium text-lg transition-transform duration-300 hover:scale-105 bg-pink-500 hover:bg-pink-600 text-white">
                 Kontakta mig
               </button>

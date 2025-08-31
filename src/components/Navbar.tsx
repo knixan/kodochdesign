@@ -55,7 +55,7 @@ const Navbar = () => {
 
           {/* Om kod&design */}
           <Link
-            href="/#section2"
+            href="/#kodochdesign"
             className="text-white hover:text-pink-400 transition-colors duration-300"
           >
             <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">
@@ -75,7 +75,7 @@ const Navbar = () => {
 
           {/* Kontakt */}
           <Link
-            href="/contact"
+            href="/kontakt"
             className="text-white hover:text-pink-400 transition-colors duration-300"
           >
             <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">
@@ -152,7 +152,7 @@ const Navbar = () => {
 
           {/* Kontakt */}
           <Link
-            href="/contact"
+            href="/kontakt"
             onClick={toggleMobileMenu}
             className="w-full text-center"
           >

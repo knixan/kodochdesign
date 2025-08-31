@@ -69,8 +69,11 @@ const HomePage = () => {
               Om Kod & Design
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed">
-              Kod och Design är ett projekt som föddes ur min passion för att skapa vackra och funktionella webblösningar. Som fullstackutvecklare kombinerar jag modern design med ren och effektiv kod för att hjälpa företag och privatpersoner att förverkliga sina digitala idéer. Jag tror på ett nära samarbete med mina kunder för att säkerställa att varje projekt blir en framgång, oavsett om det handlar om en enklare landningssida eller en mer komplex webbapplikation. Jag erbjuder prisvärda lösningar som gör professionella webbplatser tillgängliga för alla budgetar. Låt oss arbeta tillsammans för att bygga din nästa digitala upplevelse.
-            </p>
+              Kod & Design är resultatet av min passion för att förena teknik och estetik i digitala lösningar. Som frilansande fullstackutvecklare och grafisk designer erbjuder jag en helhetslösning – från modern, effektiv kod och intuitiva UX/UI-gränssnitt till visuella identiteter med logotyper, banners, profilbilder samt trycksaker som visitkort och flyers.
+
+Mitt fokus ligger på att skapa användarvänliga och professionella lösningar som stärker ditt varumärke och engagerar din målgrupp. Genom nära samarbete med varje kund säkerställer jag att resultatet inte bara uppfyller, utan överträffar förväntningarna – oavsett om det gäller en enkel landningssida, en skräddarsydd webbapplikation eller en komplett grafisk profil.
+
+Jag erbjuder flexibla och prisvärda lösningar som gör det möjligt för både företag och privatpersoner att förverkliga sina digitala idéer. Låt oss tillsammans bygga din nästa digitala upplevelse – från kod till design. </p>
           </div>
         </section>
 
