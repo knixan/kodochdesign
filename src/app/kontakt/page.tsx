@@ -1,4 +1,3 @@
-// src\app\kontakt\page.tsx
 "use client";
 
 import { useState } from "react";
@@ -31,7 +30,7 @@ const ContactPage = () => {
     e.preventDefault();
     setError(""); // Rensa tidigare felmeddelanden
 
-    // Validering på klientsidan
+    // Klientside-validering
     if (!formData.name.trim()) {
       setError("Vänligen fyll i ditt namn.");
       return;
@@ -67,9 +66,14 @@ const ContactPage = () => {
           result.message || "Något gick fel. Vänligen försök igen."
         );
       }
-    } catch (error: any) {
+    } catch (error) {
       console.error("Fel vid skickande av formulär:", error);
-      setError(error.message);
+      // Hantera felet på ett säkert sätt för TypeScript
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("Ett okänt fel uppstod.");
+      }
       setFormStatus("Något gick fel. Vänligen försök igen.");
     }
   };
