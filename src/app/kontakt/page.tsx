@@ -1,3 +1,4 @@
+// src\app\kontakt\page.tsx
 "use client";
 
 import { useState } from "react";
@@ -16,7 +17,9 @@ const ContactPage = () => {
   const [formStatus, setFormStatus] = useState("");
   const [error, setError] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -28,29 +31,45 @@ const ContactPage = () => {
     e.preventDefault();
     setError(""); // Rensa tidigare felmeddelanden
 
-    // Validering: Namn måste fyllas i
+    // Validering på klientsidan
     if (!formData.name.trim()) {
       setError("Vänligen fyll i ditt namn.");
       return;
     }
-
-    // Validering: Minst ett av e-post eller telefonnummer måste fyllas i
     if (!formData.email.trim() && !formData.phone.trim()) {
-      setError("Vänligen fyll i antingen din e-postadress eller ditt telefonnummer.");
+      setError(
+        "Vänligen fyll i antingen din e-postadress eller ditt telefonnummer."
+      );
       return;
     }
 
     setFormStatus("Skickar...");
 
     try {
-      // Exempel på att simulera ett lyckat skickande:
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Formulärdata:", formData);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      setFormStatus("Tack för ditt meddelande! Jag återkommer så snart jag kan.");
-      setFormData({ name: "", email: "", phone: "", message: "" }); // Rensa formuläret
-    } catch (error) {
+      const result = await response.json();
+
+      if (response.ok) {
+        setFormStatus(
+          result.message ||
+            "Tack för ditt meddelande! Jag återkommer så snart jag kan."
+        );
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        throw new Error(
+          result.message || "Något gick fel. Vänligen försök igen."
+        );
+      }
+    } catch (error: any) {
       console.error("Fel vid skickande av formulär:", error);
+      setError(error.message);
       setFormStatus("Något gick fel. Vänligen försök igen.");
     }
   };
@@ -64,10 +83,14 @@ const ContactPage = () => {
             Kontakta mig
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Har du en fråga, en idé eller vill du bara säga hej? Fyll i formuläret så hör jag av mig!
+            Har du en fråga, en idé eller vill du bara säga hej? Fyll i
+            formuläret så hör jag av mig!
           </p>
 
-          <form onSubmit={handleSubmit} className="bg-gray-800 p-8 rounded-lg shadow-lg">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-gray-800 p-8 rounded-lg shadow-lg"
+          >
             {error && (
               <div className="bg-red-900 text-red-300 p-4 rounded-lg mb-6 text-sm">
                 {error}
@@ -75,7 +98,10 @@ const ContactPage = () => {
             )}
 
             <div className="mb-6 text-left">
-              <label htmlFor="name" className="block text-gray-400 font-semibold mb-2">
+              <label
+                htmlFor="name"
+                className="block text-gray-400 font-semibold mb-2"
+              >
                 Namn <span className="text-red-500">*</span>
               </label>
               <input
@@ -89,7 +115,10 @@ const ContactPage = () => {
             </div>
 
             <div className="mb-6 text-left">
-              <label htmlFor="email" className="block text-gray-400 font-semibold mb-2">
+              <label
+                htmlFor="email"
+                className="block text-gray-400 font-semibold mb-2"
+              >
                 E-postadress
               </label>
               <input
@@ -103,7 +132,10 @@ const ContactPage = () => {
             </div>
 
             <div className="mb-6 text-left">
-              <label htmlFor="phone" className="block text-gray-400 font-semibold mb-2">
+              <label
+                htmlFor="phone"
+                className="block text-gray-400 font-semibold mb-2"
+              >
                 Telefonnummer
               </label>
               <input
@@ -117,7 +149,10 @@ const ContactPage = () => {
             </div>
 
             <div className="mb-6 text-left">
-              <label htmlFor="message" className="block text-gray-400 font-semibold mb-2">
+              <label
+                htmlFor="message"
+                className="block text-gray-400 font-semibold mb-2"
+              >
                 Ditt meddelande
               </label>
               <textarea
@@ -139,7 +174,11 @@ const ContactPage = () => {
           </form>
 
           {formStatus && (
-            <p className={`mt-6 text-center font-medium ${formStatus.includes("Tack") ? "text-green-400" : "text-red-400"}`}>
+            <p
+              className={`mt-6 text-center font-medium ${
+                formStatus.includes("Tack") ? "text-green-400" : "text-red-400"
+              }`}
+            >
               {formStatus}
             </p>
           )}
