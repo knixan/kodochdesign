@@ -82,9 +82,18 @@ const Navbar = () => {
               Kontakt
             </button>
           </Link>
+          {/* Om mig */}
+          <Link
+            href="/ommig"
+            className="text-white hover:text-pink-400 transition-colors duration-300"
+          >
+            <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">
+              Om mig
+            </button>
+          </Link>
         </div>
 
-{/* MOBILMENY */}
+        {/* MOBILMENY */}
 
         <div className="md:hidden">
           <button
@@ -116,7 +125,6 @@ const Navbar = () => {
         } md:hidden w-full bg-gray-800 backdrop-blur-md bg-opacity-90`}
       >
         <div className="flex flex-col items-center py-4 space-y-4">
-
           {/* STARTSIDA */}
           <Link
             href="/#section1"
@@ -158,6 +166,16 @@ const Navbar = () => {
           >
             <button className="w-4/5 px-4 py-3 rounded-lg font-medium transition-colors duration-300 hover:bg-pink-600 bg-pink-500 text-white">
               Kontakt
+            </button>
+          </Link>
+          {/* Om mig */}
+          <Link
+            href="/ommig"
+            onClick={toggleMobileMenu}
+            className="w-full text-center"
+          >
+            <button className="w-4/5 px-4 py-3 rounded-lg font-medium transition-colors duration-300 hover:bg-pink-600 bg-pink-500 text-white">
+              Om mig
             </button>
           </Link>
         </div>
