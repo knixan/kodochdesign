@@ -75,7 +75,7 @@ const Navbar = () => {
 
           {/* Kontakt */}
           <Link
-            href="/kontakt"
+            href="#kontakt"
             className="text-white hover:text-pink-400 transition-colors duration-300"
           >
             <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">

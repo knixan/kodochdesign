@@ -10,16 +10,16 @@ const Footer = () => {
           <Image
             src="/images/kodochdesign.png"
             alt="Footer logga"
-            width={60}
-            height={60}
+            width={300}
+            height={300}
             className="full mx-auto md:mx-0"
           />
         </div>
 
-        <div className="text-center md:text-left mb-6 md:mb-0">
+        <div id="kontakt" className="text-center md:text-left mb-6 md:mb-0">
           <h4 className="text-white font-bold mb-2">Kontakt</h4>
           <p>Josefine Eriksson</p>
-          <p>E-post: josefineeriksson@live.se</p>
+          <p>E-post: kontakt@kodochdesign.se</p>
           <br />
           <p>Mjölby SVERIGE</p>
           <div className="flex justify-center text-cyan-400 md:justify-start space-x-4 mt-4  text-2xl">
@@ -77,14 +77,7 @@ const Footer = () => {
                 Tjänster
               </Link>
             </li>
-            <li>
-              <Link
-                href="/kontakt"
-                className="hover:text-pink-400 transition-colors duration-300"
-              >
-                Kontakt
-              </Link>
-            </li>
+         
           </ul>
         </div>
       </div>
