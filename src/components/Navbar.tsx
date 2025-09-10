@@ -149,7 +149,7 @@ const Navbar = () => {
 
           {/* Tjänster */}
           <Link
-            href="/#tjanster"
+            href="#tjanster"
             onClick={toggleMobileMenu}
             className="w-full text-center"
           >
@@ -160,7 +160,7 @@ const Navbar = () => {
 
           {/* Kontakt */}
           <Link
-            href="/kontakt"
+            href="#kontakt"
             onClick={toggleMobileMenu}
             className="w-full text-center"
           >
