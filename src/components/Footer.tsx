@@ -16,15 +16,10 @@ const Footer = () => {
           />
         </div>
 
-<<<<<<< HEAD
         <div className="text-center md:text-left mb-6 md:mb-0">
           <h4 id="kontakt" className="text-white font-bold mb-2">
             Kontakt
           </h4>
-=======
-        <div id="kontakt" className="text-center md:text-left mb-6 md:mb-0">
-          <h4 className="text-white font-bold mb-2">Kontakt</h4>
->>>>>>> b2f362026f07ffe68a52496a52240d514b87d256
           <p>Josefine Eriksson</p>
           <p>E-post: kontakt@kodochdesign.se</p>
           <br />
@@ -84,18 +79,6 @@ const Footer = () => {
                 Tjänster
               </Link>
             </li>
-<<<<<<< HEAD
-            {/* <li>
-              <Link
-                href="/kontakt"
-                className="hover:text-pink-400 transition-colors duration-300"
-              >
-                Kontakt
-              </Link>
-            </li> */}
-=======
-         
->>>>>>> b2f362026f07ffe68a52496a52240d514b87d256
           </ul>
         </div>
       </div>
