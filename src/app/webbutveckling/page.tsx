@@ -46,7 +46,8 @@ const WebDevelopmentPage = () => {
               Kraftfulla webblösningar för din digitala framtid
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mx-auto">
-              Jag bygger moderna och högpresterande webbplatser som inte bara ser fantastiska ut, utan också fungerar felfritt på alla enheter.
+              Jag bygger moderna och högpresterande webbplatser som inte bara
+              ser fantastiska ut, utan också fungerar felfritt på alla enheter.
             </p>
           </div>
         </section>
@@ -58,7 +59,8 @@ const WebDevelopmentPage = () => {
               Vad jag erbjuder
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              Jag skapar webbplatser med den senaste tekniken för att garantera snabbhet, säkerhet och en utmärkt användarupplevelse.
+              Jag skapar webbplatser med den senaste tekniken för att garantera
+              snabbhet, säkerhet och en utmärkt användarupplevelse.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
@@ -66,7 +68,9 @@ const WebDevelopmentPage = () => {
                   Responsiv design
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Jag säkerställer att din webbplats ser perfekt ut och fungerar felfritt, oavsett om besökaren använder en mobil, surfplatta eller dator.
+                  Jag säkerställer att din webbplats ser perfekt ut och fungerar
+                  felfritt, oavsett om besökaren använder en mobil, surfplatta
+                  eller dator.
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
@@ -74,7 +78,8 @@ const WebDevelopmentPage = () => {
                   SEO-optimerad kod
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Med en SEO-vänlig struktur och snabb laddningstid ökar jag din synlighet på sökmotorer som Google, så att fler hittar dig.
+                  Med en SEO-vänlig struktur och snabb laddningstid ökar jag din
+                  synlighet på sökmotorer som Google, så att fler hittar dig.
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
@@ -82,15 +87,16 @@ const WebDevelopmentPage = () => {
                   Skalbar arkitektur
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Jag bygger din webbplats på en solid grund som gör den enkel att utöka med nya funktioner i framtiden.
+                  Jag bygger din webbplats på en solid grund som gör den enkel
+                  att utöka med nya funktioner i framtiden.
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
-                <h3 className="text-2xl font-semibold mb-2">
-                  Modern teknik
-                </h3>
+                <h3 className="text-2xl font-semibold mb-2">Modern teknik</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Jag använder branschledande ramverk som Next.js, React och Tailwind CSS för att leverera snabba och säkra webbapplikationer.
+                  Jag använder branschledande ramverk som Next.js, React och
+                  Tailwind CSS för att leverera snabba och säkra
+                  webbapplikationer.
                 </p>
               </div>
             </div>
@@ -113,7 +119,8 @@ const WebDevelopmentPage = () => {
                     Strategi & Planering
                   </h3>
                   <p className="text-gray-400">
-                    Jag börjar med att förstå dina mål, din målgrupp och din vision. Tillsammans skapar vi en tydlig plan för projektet.
+                    Jag börjar med att förstå dina mål, din målgrupp och din
+                    vision. Tillsammans skapar vi en tydlig plan för projektet.
                   </p>
                 </div>
                 <div className="md:w-1/2">
@@ -144,7 +151,8 @@ const WebDevelopmentPage = () => {
                     Design & Utveckling
                   </h3>
                   <p className="text-gray-400">
-                    Jag skapar en elegant och intuitiv design, och översätter den sedan till ren, effektiv och välstrukturerad kod.
+                    Jag skapar en elegant och intuitiv design, och översätter
+                    den sedan till ren, effektiv och välstrukturerad kod.
                   </p>
                 </div>
               </div>
@@ -157,7 +165,9 @@ const WebDevelopmentPage = () => {
                     Lansering & Support
                   </h3>
                   <p className="text-gray-400">
-                    Jag ser till att din webbplats lanseras smidigt och är redo för dina besökare. Efter lanseringen finns jag här för att hjälpa dig med support och underhåll.
+                    Jag ser till att din webbplats lanseras smidigt och är redo
+                    för dina besökare. Efter lanseringen finns jag här för att
+                    hjälpa dig med support och underhåll.
                   </p>
                 </div>
                 <div className="md:w-1/2">
@@ -181,13 +191,14 @@ const WebDevelopmentPage = () => {
               Redo att förvandla dina idéer till verklighet?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Kontakta mig idag för att diskutera ditt projekt och få en kostnadsfri offert.
+              Kontakta mig idag för att diskutera ditt projekt och få en
+              kostnadsfri offert.
             </p>
-            <Link href="/kontakt">
+            <a href="mailto:kontakt@kodochdesign.se">
               <button className="px-8 py-4 rounded-lg font-medium text-lg transition-transform duration-300 hover:scale-105 bg-pink-500 hover:bg-pink-600 text-white">
-                Kontakta mig
+                Skicka E-post
               </button>
-            </Link>
+            </a>
           </div>
         </section>
       </main>

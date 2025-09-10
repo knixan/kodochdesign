@@ -17,9 +17,11 @@ const Footer = () => {
         </div>
 
         <div className="text-center md:text-left mb-6 md:mb-0">
-          <h4 className="text-white font-bold mb-2">Kontakt</h4>
+          <h4 id="kontakt" className="text-white font-bold mb-2">
+            Kontakt
+          </h4>
           <p>Josefine Eriksson</p>
-          <p>E-post: josefineeriksson@live.se</p>
+          <p>E-post: kontakt@kodochdesign.se</p>
           <br />
           <p>Mjölby SVERIGE</p>
           <div className="flex justify-center text-cyan-400 md:justify-start space-x-4 mt-4  text-2xl">
@@ -77,14 +79,14 @@ const Footer = () => {
                 Tjänster
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="/kontakt"
                 className="hover:text-pink-400 transition-colors duration-300"
               >
                 Kontakt
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

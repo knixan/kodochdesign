@@ -58,7 +58,7 @@ const HomePage = () => {
               &#34; En kombination av <strong>modern kod</strong> och{" "}
               <strong>kreativ design</strong> – allt på ett ställe. &#34;
             </p>
-            <Link href="#section3" className="inline-block">
+            <Link href="#tjanster" className="inline-block">
               <button className="px-8 py-4 rounded-lg font-bold text-lg  bg-pink-500 hover:bg-pink-600 text-white transform transition-transform duration-300 hover:scale-105">
                 Se mina tjänster
               </button>
