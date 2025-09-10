@@ -30,7 +30,7 @@ const HomePage = () => {
       <main>
         {/* Section 1: Hero */}
         <section
-          id="section1"
+          id="hero"
           className="relative h-screen flex flex-col justify-center items-center text-center px-4 md:px-0 bg-cover bg-center"
           style={{ backgroundImage: 'url("/images/kodar.png")' }}
         >
