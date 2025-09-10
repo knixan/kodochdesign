@@ -10,16 +10,21 @@ const Footer = () => {
           <Image
             src="/images/kodochdesign.png"
             alt="Footer logga"
-            width={60}
-            height={60}
+            width={300}
+            height={300}
             className="full mx-auto md:mx-0"
           />
         </div>
 
+<<<<<<< HEAD
         <div className="text-center md:text-left mb-6 md:mb-0">
           <h4 id="kontakt" className="text-white font-bold mb-2">
             Kontakt
           </h4>
+=======
+        <div id="kontakt" className="text-center md:text-left mb-6 md:mb-0">
+          <h4 className="text-white font-bold mb-2">Kontakt</h4>
+>>>>>>> b2f362026f07ffe68a52496a52240d514b87d256
           <p>Josefine Eriksson</p>
           <p>E-post: kontakt@kodochdesign.se</p>
           <br />
@@ -79,6 +84,7 @@ const Footer = () => {
                 Tjänster
               </Link>
             </li>
+<<<<<<< HEAD
             {/* <li>
               <Link
                 href="/kontakt"
@@ -87,6 +93,9 @@ const Footer = () => {
                 Kontakt
               </Link>
             </li> */}
+=======
+         
+>>>>>>> b2f362026f07ffe68a52496a52240d514b87d256
           </ul>
         </div>
       </div>

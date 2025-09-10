@@ -46,8 +46,12 @@ const WebDevelopmentPage = () => {
               Kraftfulla webblösningar för din digitala framtid
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mx-auto">
+<<<<<<< HEAD
               Jag bygger moderna och högpresterande webbplatser som inte bara
               ser fantastiska ut, utan också fungerar felfritt på alla enheter.
+=======
+              Jag bygger moderna och högpresterande webbplatser som inte bara ser bra ut, utan också fungerar felfritt på alla enheter.
+>>>>>>> b2f362026f07ffe68a52496a52240d514b87d256
             </p>
           </div>
         </section>
