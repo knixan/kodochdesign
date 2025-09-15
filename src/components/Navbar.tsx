@@ -33,10 +33,10 @@ const Navbar = () => {
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/images/kodochdesign.png"
-            alt="Min bild logga"
+            alt="Logga Kod & Design"
             width={80}
             height={80}
-            className="full"
+            className="full h-12 w-10 object-contain"
           />
           <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Kod & Design

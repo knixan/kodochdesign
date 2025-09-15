@@ -12,7 +12,7 @@ const Footer = () => {
             alt="Footer logga"
             width={300}
             height={300}
-            className="full mx-auto md:mx-0"
+            className="full mx-auto md:mx-0 h-16 w-14 object-contain"
           />
         </div>
 
