@@ -38,7 +38,7 @@ const GraphicDesignPage = () => {
           {/* Bakgrundsbild som fyller sektionen */}
           <div className="absolute inset-0">
             <Image
-              src="/images/placeholder.jpg"
+              src="/images/graphicdesigner.png"
               alt="Grafisk design bakgrund"
               fill
               style={{ objectFit: "cover" }}
@@ -128,7 +128,7 @@ const GraphicDesignPage = () => {
                 </div>
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placeholder.jpg"
+                    src="/images/grafiskdesign1.png"
                     alt="Idéutvecklingsfas"
                     width={600}
                     height={400}
@@ -139,7 +139,7 @@ const GraphicDesignPage = () => {
               <div className="flex flex-col-reverse md:flex-row items-center justify-between">
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placeholder.jpg"
+                    src="/images/grafiskdesign2.png"
                     alt="Designfas"
                     width={600}
                     height={400}
@@ -176,7 +176,7 @@ const GraphicDesignPage = () => {
                 </div>
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placeholder.jpg"
+                    src="/images/grafiskdesign3.png"
                     alt="Leveransfas"
                     width={600}
                     height={400}

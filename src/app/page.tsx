@@ -32,19 +32,13 @@ const HomePage = () => {
         <section
           id="hero"
           className="relative h-screen flex flex-col justify-center items-center text-center px-4 md:px-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("/images/kodar.png")' }}
+          style={{
+            backgroundImage:
+              'url("/images/mockup-alldevice-graphicdesign-tai.jpg")',
+          }}
         >
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="z-10 relative">
-            <h1 className="animate-bounce font-bold text-3xl text-pink-500">
-              Webbplatsen är för närvarande under utveckling.
-            </h1>
-            <p className="text-2xl font-semibold text-cyan-400 italic">
-              Under min utbildning skapar jag ett antal webbplatser i syfte att
-              öva, <br /> och jag tar därför gärna emot förfrågningar från dig
-              som är intresserad av en ny hemsida. <br /> Vänligen kontakta mig
-              med din förfrågan.
-            </p>
             <h1
               id="main-heading"
               className="text-5xl md:text-7xl font-extrabold mb-4 mt-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"

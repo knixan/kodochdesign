@@ -29,7 +29,7 @@ const UxUiPage = () => {
         >
           <div className="absolute inset-0 bg-gray-900 opacity-60"></div>
           <Image
-            src="/images/uxuidesign.jpg"
+            src="/images/uxuidesignar.png"
             alt="Grafisk design bakgrund"
             fill
             style={{ objectFit: "cover" }}
@@ -43,8 +43,10 @@ const UxUiPage = () => {
               Fokus på användaren – från början till slut
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mx-auto">
-              Jag skapar intuitiva och vackra digitala upplevelser som engagerar
-              dina besökare och leder dem mot framgång.
+              Jag sätter användaren i centrum – i varje steg av designprocessen,
+              från research till prototyper och slutlig design. Resultatet? En
+              webbplats som inte bara ser fantastisk ut, utan också är enkel och
+              rolig att använda.
             </p>
           </div>
         </section>
@@ -110,7 +112,7 @@ const UxUiPage = () => {
                 </div>
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placebolder.jpg"
+                    src="/images/uxuidesign1.png"
                     alt="Forskning & Strategi"
                     width={600}
                     height={400}
@@ -121,7 +123,7 @@ const UxUiPage = () => {
               <div className="flex flex-col-reverse md:flex-row items-center justify-between">
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placebolder.jpg"
+                    src="/images/uxuidesign2.png"
                     alt="Wireframing & Prototyping"
                     width={600}
                     height={400}
@@ -158,7 +160,7 @@ const UxUiPage = () => {
                 </div>
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placebolder.jpg"
+                    src="/images/uxuidesign3.png"
                     alt="Visuell design & Leverans"
                     width={600}
                     height={400}

@@ -30,7 +30,7 @@ const WebDevelopmentPage = () => {
         >
           <div className="absolute inset-0">
             <Image
-              src="/images/placebolder.jpg"
+              src="/images/kodar.png"
               alt="Webbutveckling bakgrund"
               fill
               style={{ objectFit: "cover" }}
@@ -125,7 +125,7 @@ const WebDevelopmentPage = () => {
                 </div>
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placeholder.jpg"
+                    src="/images/webutveckling1.png"
                     alt="Strategi & Planering"
                     width={600}
                     height={400}
@@ -136,7 +136,7 @@ const WebDevelopmentPage = () => {
               <div className="flex flex-col-reverse md:flex-row items-center justify-between">
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placeholder.jpg"
+                    src="/images/webutveckling2.png"
                     alt="Design & Utveckling"
                     width={600}
                     height={400}
@@ -172,7 +172,7 @@ const WebDevelopmentPage = () => {
                 </div>
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/placeholder.jpg"
+                    src="/images/webutveckling3.png"
                     alt="Lansering & Support"
                     width={600}
                     height={400}
