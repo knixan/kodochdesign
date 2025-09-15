@@ -25,76 +25,47 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out ${
         isScrolled
-          ? "bg-gray-900 bg-opacity-80"
+          ? "bg-[#001d32] bg-opacity-90 backdrop-blur-md"
           : "bg-transparent backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/images/kodochdesign.png"
             alt="Logga Kod & Design"
             width={80}
             height={80}
-            className="full h-12 w-10 object-contain"
+            className="h-12 w-10 object-contain"
           />
-          <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#f6339a] to-[#4cb7d9]">
             Kod & Design
           </span>
         </Link>
 
+        {/* Desktop links */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link
-            href="/#section1"
-            className="text-white hover:text-pink-400 transition-colors duration-300"
-          >
-            <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">
-              Hem
-            </button>
-          </Link>
-
-          {/* Om kod&design */}
-          <Link
-            href="/#kodochdesign"
-            className="text-white hover:text-pink-400 transition-colors duration-300"
-          >
-            <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">
-              Om Kod&Design
-            </button>
-          </Link>
-
-          {/* TJÄNSTER */}
-          <Link
-            href="/#tjanster"
-            className="text-white hover:text-pink-400 transition-colors duration-300"
-          >
-            <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">
-              Tjänster
-            </button>
-          </Link>
-
-          {/* Kontakt */}
-          <Link
-            href="#kontakt"
-            className="text-white hover:text-pink-400 transition-colors duration-300"
-          >
-            <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">
-              Kontakt
-            </button>
-          </Link>
-          {/* Om mig */}
-          <Link
-            href="/ommig"
-            className="text-white hover:text-pink-400 transition-colors duration-300"
-          >
-            <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-pink-400">
-              Om mig
-            </button>
-          </Link>
+          {[
+            { href: "/#section1", label: "Hem" },
+            { href: "/#kodochdesign", label: "Om Kod&Design" },
+            { href: "/#tjanster", label: "Tjänster" },
+            { href: "#kontakt", label: "Kontakt" },
+            { href: "/ommig", label: "Om mig" },
+          ].map((link, i) => (
+            <Link
+              key={i}
+              href={link.href}
+              className="text-white transition-colors duration-300"
+            >
+              <button className="px-4 py-2 rounded-lg font-medium transition-transform duration-300 hover:scale-105 border border-transparent hover:border-[#4cb7d9] hover:text-[#4cb7d9]">
+                {link.label}
+              </button>
+            </Link>
+          ))}
         </div>
 
-        {/* MOBILMENY */}
-
+        {/* Mobile menu button */}
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
@@ -118,66 +89,32 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile menu */}
       <div
         id="mobile-menu"
         className={`${
           isMobileMenuOpen ? "block" : "hidden"
-        } md:hidden w-full bg-gray-800 backdrop-blur-md bg-opacity-90`}
+        } md:hidden w-full bg-[#001d32] backdrop-blur-md bg-opacity-95`}
       >
         <div className="flex flex-col items-center py-4 space-y-4">
-          {/* STARTSIDA */}
-          <Link
-            href="/#section1"
-            onClick={toggleMobileMenu}
-            className="w-full text-center"
-          >
-            <button className="w-4/5 px-4 py-3 rounded-lg font-medium transition-colors duration-300 hover:bg-pink-600 bg-pink-500 text-white">
-              Hem
-            </button>
-          </Link>
-
-          {/* Kod & Design */}
-          <Link
-            href="/#kodochdesign"
-            onClick={toggleMobileMenu}
-            className="w-full text-center"
-          >
-            <button className="w-4/5 px-4 py-3 rounded-lg font-medium transition-colors duration-300 hover:bg-pink-600 bg-pink-500 text-white">
-              Om Kod&Design
-            </button>
-          </Link>
-
-          {/* Tjänster */}
-          <Link
-            href="#tjanster"
-            onClick={toggleMobileMenu}
-            className="w-full text-center"
-          >
-            <button className="w-4/5 px-4 py-3 rounded-lg font-medium transition-colors duration-300 hover:bg-pink-600 bg-pink-500 text-white">
-              Tjänster
-            </button>
-          </Link>
-
-          {/* Kontakt */}
-          <Link
-            href="#kontakt"
-            onClick={toggleMobileMenu}
-            className="w-full text-center"
-          >
-            <button className="w-4/5 px-4 py-3 rounded-lg font-medium transition-colors duration-300 hover:bg-pink-600 bg-pink-500 text-white">
-              Kontakt
-            </button>
-          </Link>
-          {/* Om mig */}
-          <Link
-            href="/ommig"
-            onClick={toggleMobileMenu}
-            className="w-full text-center"
-          >
-            <button className="w-4/5 px-4 py-3 rounded-lg font-medium transition-colors duration-300 hover:bg-pink-600 bg-pink-500 text-white">
-              Om mig
-            </button>
-          </Link>
+          {[
+            { href: "/#section1", label: "Hem" },
+            { href: "/#kodochdesign", label: "Om Kod&Design" },
+            { href: "#tjanster", label: "Tjänster" },
+            { href: "#kontakt", label: "Kontakt" },
+            { href: "/ommig", label: "Om mig" },
+          ].map((link, i) => (
+            <Link
+              key={i}
+              href={link.href}
+              onClick={toggleMobileMenu}
+              className="w-full text-center"
+            >
+              <button className="w-4/5 px-4 py-3 rounded-lg font-medium transition-colors duration-300 bg-[#f6339a] hover:bg-[#4cb7d9] text-white">
+                {link.label}
+              </button>
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
