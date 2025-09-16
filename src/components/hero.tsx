@@ -44,7 +44,7 @@ const Hero = () => {
       </div>
 
       {/* Carousel */}
-      <div className="w-full max-w-6xl">
+      <div className="h-full w-3/4 ">
         <ImageCarousel
           images={[
             {
