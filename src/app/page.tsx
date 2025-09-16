@@ -1,74 +1,23 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero from "@/components/hero";
+import Image from "next/image";
+import Link from "next/link";
 
 const HomePage = () => {
-  useEffect(() => {
-    const mainHeading = document.getElementById("main-heading");
-    const subHeading = document.getElementById("sub-heading");
-
-    setTimeout(() => {
-      if (mainHeading) {
-        mainHeading.classList.remove("translate-y-full", "opacity-0");
-        mainHeading.classList.add("translate-y-0", "opacity-100");
-      }
-      if (subHeading) {
-        subHeading.classList.remove("translate-y-full", "opacity-0");
-        subHeading.classList.add("translate-y-0", "opacity-100");
-      }
-    }, 800);
-  }, []);
+  // (Behåll ev. annan logik om du vill)
+  useEffect(() => {}, []);
 
   return (
     <div className="bg-gray-900 text-white font-sans">
       <Navbar />
       <main>
-        {/* Section 1: Hero */}
-        <section
-          id="hero"
-          className="relative h-screen flex flex-col justify-center items-center text-center px-4 md:px-0"
-        >
-          {/* Bakgrundsbild */}
-          <div className="absolute inset-0">
-            <Image
-              src="/images/mockup-alldevice-graphicdesign-tai.jpg"
-              alt="Hero bakgrund"
-              fill
-              style={{ objectFit: "cover" }}
-              className="z-0"
-            />
-          </div>
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gray-900 opacity-70"></div>
+        <Hero />
 
-          {/* Hero Text */}
-          <div className="z-10 relative max-w-4xl">
-            <h1
-              id="main-heading"
-              className="text-5xl md:text-7xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-400 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"
-            >
-              Digitala helhetslösningar – från kod till design
-            </h1>
-            <p
-              id="sub-heading"
-              className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 transform translate-y-full opacity-0 transition-all duration-1000 ease-out"
-            >
-              En kombination av <strong>modern kod</strong> och{" "}
-              <strong>kreativ design</strong> – allt på ett ställe.
-            </p>
-            <Link href="#tjanster" className="inline-block">
-              <button className="px-8 py-4 rounded-lg font-medium text-lg transition-transform duration-300 hover:scale-105 bg-pink-500 hover:bg-pink-600 text-white">
-                Se mina tjänster
-              </button>
-            </Link>
-          </div>
-        </section>
-
-        {/* Section 2: Om Kod & Design */}
+        {/* Section: Om Kod & Design */}
         <section id="kodochdesign" className="py-20 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500">
@@ -88,7 +37,7 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* Section 3: Mina tjänster */}
+        {/* Section: Mina tjänster */}
         <section id="tjanster" className="py-20 px-4 bg-gray-800">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-400">
