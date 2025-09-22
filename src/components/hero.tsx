@@ -19,47 +19,90 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative flex flex-col items-center w-full pt-32 pb-10 px-4 md:px-6 lg:px-8 bg-gray-900"
+      className="relative flex flex-col items-center w-full pt-40 pb-20 px-4 md:px-6 lg:px-8 bg-slate-950 overflow-hidden"
     >
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-violet-950/20 to-cyan-950/20"></div>
+      <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-r from-violet-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
       {/* Top text block */}
-      <div className="relative z-10 max-w-5xl w-full text-center mb-8">
+      <div className="relative z-10 max-w-6xl w-full text-center mb-16">
         <h1
           id="main-heading"
-          className="text-4xl md:text-6xl font-extrabold mb-5 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-400 transition-all duration-700 ease-out translate-y-8 opacity-0"
+          className="text-5xl md:text-8xl font-black mb-8 bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent transition-all duration-700 ease-out translate-y-8 opacity-0 leading-tight tracking-tight"
         >
-          Digitala helhetslösningar – från kod till design
+          Digitala helhetslösningar
         </h1>
-        <p
-          id="sub-heading"
-          className="text-base md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed transition-all duration-700 ease-out delay-100 translate-y-8 opacity-0"
-        >
-          En kombination av <strong>modern kod</strong> och{" "}
-          <strong>kreativ design</strong> – allt på ett ställe.
-        </p>
-        <Link href="#tjanster" className="inline-block">
-          <button className="px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-[1.03] bg-pink-500 hover:bg-pink-600 text-white shadow-lg shadow-pink-500/30">
-            Se mina tjänster
+        <div className="text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-pink-300 to-cyan-300 bg-clip-text text-transparent">
+          – från kod till design
+        </div>
+
+        <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8 max-w-4xl mx-auto mb-12">
+          <p
+            id="sub-heading"
+            className="text-xl md:text-2xl text-slate-200 leading-relaxed font-light transition-all duration-700 ease-out delay-100 translate-y-8 opacity-0"
+          >
+            En kombination av{" "}
+            <span className="font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              modern kod
+            </span>{" "}
+            och{" "}
+            <span className="font-bold bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
+              kreativ design
+            </span>{" "}
+            – allt på ett ställe.
+          </p>
+        </div>
+
+        <Link href="#tjanster" className="inline-block group">
+          <button className="relative px-12 py-6 rounded-2xl font-bold text-xl text-white overflow-hidden transition-all duration-300 bg-gradient-to-r from-violet-500 via-pink-500 to-cyan-500 hover:from-violet-600 hover:via-pink-600 hover:to-cyan-600 transform hover:scale-105 shadow-2xl hover:shadow-violet-500/30">
+            <span className="relative z-10">Se mina tjänster</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
           </button>
         </Link>
       </div>
 
-      {/* Carousel */}
-      <div className="h-full w-3/4 ">
-        <ImageCarousel
-          images={[
-            {
-              src: "/images/mockup-alldevice-graphicdesign-tai.jpg",
-              alt: "Responsiv webbplats på flera enheter",
-            },
-            {
-              src: "/images/mockup-alldevice-graphicdesign-bygg.jpg",
-              alt: "UX/UI wireframes och prototyper",
-            },
-          ]}
-          interval={5000}
-          autoPlay
-          rounded
-        />
+      {/* Enhanced Carousel */}
+      <div className="relative z-10 w-full max-w-6xl">
+        <div className="relative group">
+          {/* Glowing border effect */}
+          <div className="absolute -inset-2 bg-gradient-to-r from-violet-600 via-pink-600 to-cyan-600 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
+
+          {/* Carousel container */}
+          <div className="relative backdrop-blur-xl bg-slate-900/20 border border-white/10 rounded-3xl p-4 shadow-2xl">
+            <ImageCarousel
+              images={[
+                {
+                  src: "/images/mockup-alldevice-graphicdesign-tai.jpg",
+                  alt: "Responsiv webbplats på flera enheter",
+                },
+                {
+                  src: "/images/mockup-alldevice-graphicdesign-bygg.jpg",
+                  alt: "UX/UI wireframes och prototyper",
+                },
+              ]}
+              interval={5000}
+              autoPlay
+              rounded
+            />
+          </div>
+
+          {/* Additional glow effects */}
+          <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-80 h-20 bg-gradient-to-r from-violet-500/20 via-pink-500/20 to-cyan-500/20 rounded-full blur-2xl"></div>
+        </div>
+
+        {/* Floating elements around carousel */}
+        <div className="absolute -top-8 -left-8 w-16 h-16 bg-gradient-to-r from-violet-400 to-pink-400 rounded-2xl opacity-80 animate-bounce delay-300"></div>
+        <div className="absolute -bottom-8 -right-8 w-12 h-12 bg-gradient-to-r from-pink-400 to-cyan-400 rounded-xl opacity-60 animate-bounce delay-700"></div>
+        <div className="absolute top-1/2 -right-12 w-8 h-8 bg-gradient-to-r from-cyan-400 to-violet-400 rounded-lg opacity-70 animate-pulse"></div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-gradient-to-b from-violet-400 to-cyan-400 rounded-full mt-2 animate-pulse"></div>
+        </div>
       </div>
     </section>
   );

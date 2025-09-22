@@ -4,93 +4,139 @@ import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-[#001d32] text-gray-300 py-12 px-4">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
-        {/* Logo */}
-        <div className="mb-6 md:mb-0">
-          <Image
-            src="/images/kodochdesign.png"
-            alt="Footer logga"
-            width={300}
-            height={300}
-            className="mx-auto md:mx-0 h-16 w-14 object-contain"
-          />
-        </div>
+    <footer
+      id="footer"
+      className="relative bg-slate-950 text-slate-300 py-20 px-4 overflow-hidden"
+    >
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-900/50"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-violet-900/20 to-pink-900/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-900/20 to-cyan-900/20 rounded-full blur-3xl"></div>
 
-        {/* Kontakt */}
-        <div className="text-center md:text-left mb-6 md:mb-0">
-          <h4 id="kontakt" className="text-white font-bold mb-2">
-            Kontakt
-          </h4>
-          <p>Josefine Eriksson</p>
-          <p>E-post: kontakt@kodochdesign.se</p>
-          <br />
-          <p>Mjölby, Sverige</p>
+      <div className="relative z-10 container mx-auto">
+        {/* Main footer content */}
+        <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-12 mb-12">
+          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
+            {/* Logo Section */}
+            <div className="text-center lg:text-left group">
+              <div className="relative inline-block mb-6">
+                <div className="absolute -inset-2 bg-gradient-to-r from-violet-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+                <div className="relative backdrop-blur-xl bg-slate-900/40 border border-white/20 rounded-2xl p-4">
+                  <Image
+                    src="/images/kodochdesign.png"
+                    alt="Footer logga"
+                    width={300}
+                    height={300}
+                    className="h-20 w-18 object-contain"
+                  />
+                </div>
+              </div>
+              <div className="text-3xl font-black bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                Kod & Design
+              </div>
+              <p className="text-slate-400 mt-2 font-light">
+                Där kod möter kreativitet
+              </p>
+            </div>
 
-          {/* Sociala medier */}
-          <div className="flex justify-center md:justify-start space-x-4 mt-4 text-2xl text-[#4cb7d9]">
-            <a
-              href="https://www.linkedin.com/in/josefine-eriksson-349498345/"
-              aria-label="LinkedIn"
-              target="_blank"
-              className="hover:text-[#f6339a] transition-colors duration-300"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61579831973399"
-              aria-label="Facebook"
-              target="_blank"
-              className="hover:text-[#f6339a] transition-colors duration-300"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="https://www.instagram.com/kodochdesign"
-              aria-label="Instagram"
-              target="_blank"
-              className="hover:text-[#f6339a] transition-colors duration-300"
-            >
-              <FaInstagram />
-            </a>
+            {/* Contact Section */}
+            <div className="text-center lg:text-left">
+              <h4
+                id="kontakt"
+                className="text-2xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent"
+              >
+                Kontakt
+              </h4>
+              <div className="space-y-3 text-lg">
+                <p className="font-semibold text-white">Josefine Eriksson</p>
+                <div className="group">
+                  <a
+                    href="mailto:kontakt@kodochdesign.se"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                  >
+                    kontakt@kodochdesign.se
+                  </a>
+                </div>
+                <p className="text-slate-400">Mjölby, Sverige</p>
+              </div>
+
+              {/* Social Media */}
+              <div className="flex justify-center lg:justify-start space-x-6 mt-8">
+                {[
+                  {
+                    icon: FaLinkedin,
+                    href: "https://www.linkedin.com/in/josefine-eriksson-349498345/",
+                    label: "LinkedIn",
+                  },
+                  {
+                    icon: FaFacebook,
+                    href: "https://www.facebook.com/profile.php?id=61579831973399",
+                    label: "Facebook",
+                  },
+                  {
+                    icon: FaInstagram,
+                    href: "https://www.instagram.com/kodochdesign",
+                    label: "Instagram",
+                  },
+                ].map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative"
+                  >
+                    <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-300"></div>
+                    <div className="relative w-12 h-12 flex items-center justify-center backdrop-blur-xl bg-slate-800/60 border border-white/20 rounded-xl text-cyan-400 hover:text-white transform hover:scale-110 transition-all duration-300">
+                      <Icon className="text-xl" />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Links Section */}
+            <div className="text-center lg:text-left">
+              <h4 className="text-2xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                Navigation
+              </h4>
+              <ul className="space-y-4">
+                {[
+                  { href: "/#section1", label: "Hem" },
+                  { href: "/ommig", label: "Om Mig" },
+                  { href: "/#tjanster", label: "Tjänster" },
+                  { href: "/webbutveckling", label: "Webbutveckling" },
+                  { href: "/ux-ui", label: "UX/UI Design" },
+                  { href: "/grafisk-design", label: "Grafisk Design" },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="group relative inline-block"
+                    >
+                      <span className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 font-medium text-lg group-hover:translate-x-2 transform transition-transform duration-300 inline-block">
+                        {link.label}
+                      </span>
+                      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-400 group-hover:w-full transition-all duration-300"></div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* Länkar */}
-        <div className="text-center md:text-left mb-6 md:mb-0">
-          <h4 className="text-white font-bold mb-2">Länkar</h4>
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href="/#section1"
-                className="hover:text-[#4cb7d9] transition-colors duration-300"
-              >
-                Hem
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/ommig"
-                className="hover:text-[#4cb7d9] transition-colors duration-300"
-              >
-                Om Mig
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#tjanster"
-                className="hover:text-[#4cb7d9] transition-colors duration-300"
-              >
-                Tjänster
-              </Link>
-            </li>
-          </ul>
+        {/* Bottom Section */}
+        <div className="text-center">
+          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="text-slate-400 font-light">
+                © 2025 Kod och Design - Josefine Eriksson
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Bottom bar */}
-      <div className="mt-8 text-center text-gray-500 text-sm border-t border-[#002844] pt-6">
-        © Kod och Design Josefine Eriksson 2025
       </div>
     </footer>
   );
