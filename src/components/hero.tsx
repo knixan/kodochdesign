@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-6xl w-full text-center mb-16">
         <h1
           id="main-heading"
-          className="text-5xl md:text-8xl font-black mb-8 bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent transition-all duration-700 ease-out translate-y-8 opacity-0 leading-tight tracking-tight"
+          className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent transition-all duration-700 ease-out translate-y-8 opacity-0 leading-tight tracking-tight"
         >
           Digitala helhetslösningar
         </h1>
