@@ -91,18 +91,6 @@ const Hero = () => {
           {/* Additional glow effects */}
           <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-80 h-20 bg-gradient-to-r from-violet-500/20 via-pink-500/20 to-cyan-500/20 rounded-full blur-2xl"></div>
         </div>
-
-        {/* Floating elements around carousel */}
-        <div className="absolute -top-8 -left-8 w-16 h-16 bg-gradient-to-r from-violet-400 to-pink-400 rounded-2xl opacity-80 animate-bounce delay-300"></div>
-        <div className="absolute -bottom-8 -right-8 w-12 h-12 bg-gradient-to-r from-pink-400 to-cyan-400 rounded-xl opacity-60 animate-bounce delay-700"></div>
-        <div className="absolute top-1/2 -right-12 w-8 h-8 bg-gradient-to-r from-cyan-400 to-violet-400 rounded-lg opacity-70 animate-pulse"></div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gradient-to-b from-violet-400 to-cyan-400 rounded-full mt-2 animate-pulse"></div>
-        </div>
       </div>
     </section>
   );

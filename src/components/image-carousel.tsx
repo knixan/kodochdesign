@@ -98,37 +98,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         ))}
       </div>
 
-      {/* Paginering prickar */}
-      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            aria-label={`Gå till bild ${i + 1}`}
-            onClick={() => setIndex(i)}
-            className={clsx(
-              "h-3 w-3 rounded-full transition-colors duration-300",
-              i === index ? "bg-pink-500" : "bg-white/40 hover:bg-white/70"
-            )}
-          />
-        ))}
-      </div>
-
-      {/* Navigationsknappar */}
-      <button
-        aria-label="Föregående bild"
-        onClick={prev}
-        className="hidden md:flex absolute top-1/2 -translate-y-1/2 left-3 h-10 w-10 items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition"
-      >
-        ‹
-      </button>
-      <button
-        aria-label="Nästa bild"
-        onClick={next}
-        className="hidden md:flex absolute top-1/2 -translate-y-1/2 right-3 h-10 w-10 items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition"
-      >
-        ›
-      </button>
-
       {/* Skärmläsare info */}
       <div className="sr-only" aria-live="polite">
         Bild {index + 1} av {images.length}: {images[index].alt}
