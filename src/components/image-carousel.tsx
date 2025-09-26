@@ -15,6 +15,7 @@ interface ImageCarouselProps {
   interval?: number;
   className?: string;
   rounded?: boolean;
+  quality?: number; // lägg till
 }
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
@@ -23,6 +24,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   interval = 4500,
   className = "",
   rounded = true,
+  quality = 80, // defaultkvalitet
 }) => {
   const [index, setIndex] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -64,6 +66,19 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     touchEndX.current = null;
   };
 
+  const onKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        next();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        prev();
+      }
+    },
+    [next, prev]
+  );
+
   return (
     <div
       className={clsx(
@@ -73,8 +88,52 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       )}
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
+      onKeyDown={onKeyDown} // <- piltangenter
+      tabIndex={0} // <- gör karusellen fokuserbar
       aria-roledescription="carousel"
     >
+      {/* Navigationsknappar */}
+      <button
+        type="button"
+        onClick={prev}
+        aria-label="Föregående bild"
+        className="absolute top-1/2 left-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-pink-400/60"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          className="h-7 w-7"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button
+        type="button"
+        onClick={next}
+        aria-label="Nästa bild"
+        className="absolute top-1/2 right-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          className="h-7 w-7"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+
       <div
         className="flex transition-transform duration-700 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
@@ -90,7 +149,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
               alt={img.alt}
               fill
               priority={i === 0}
-              sizes="(max-width:768px) 100vw, 100vw"
+              sizes="(min-width: 1280px) 1152px, 100vw" // bättre matchning mot max-w-6xl
+              quality={quality} // använd kvalitet
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/40 pointer-events-none" />

@@ -74,12 +74,12 @@ const Hero = () => {
             <ImageCarousel
               images={[
                 {
-                  src: "/images/mockup-alldevice-graphicdesign-tai.jpg",
-                  alt: "Responsiv webbplats på flera enheter",
+                  src: "/images/mockups/mockup-tai-01.jpg",
+                  alt: "UX/UI wireframes och prototyper",
                 },
                 {
-                  src: "/images/mockup-alldevice-graphicdesign-bygg.jpg",
-                  alt: "UX/UI wireframes och prototyper",
+                  src: "/images/mockups/mockup-gammelbyggnadsmaleri-01.jpg",
+                  alt: "Responsiv webbplats på flera enheter",
                 },
               ]}
               interval={5000}
