@@ -12,7 +12,7 @@ const HomePage = () => {
   useEffect(() => {}, []);
 
   return (
-    <div className="bg-slate-950 text-white font-sans relative overflow-hidden">
+    <div className="bg-slate-950 text-white font-sans relative overflow-hidden min-h-screen">
       {/* Animated background gradient */}
       <div className="fixed inset-0 bg-gradient-to-br from-slate-950 via-purple-950/20 to-cyan-950/20 animate-gradient-xy"></div>
 

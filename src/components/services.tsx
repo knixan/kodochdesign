@@ -35,9 +35,8 @@ export default function Services() {
   ];
 
   return (
-    <section id="tjanster" className="py-32 px-4 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-900/30 to-slate-950/50"></div>
-      <div className="container mx-auto relative z-10">
+    <section id="tjanster" className="py-20 px-4">
+      <div className="container mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-black mb-8 bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent leading-tight tracking-tight">
             Mina tjänster

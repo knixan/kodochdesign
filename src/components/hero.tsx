@@ -69,11 +69,7 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="relative overflow-hidden py-32 px-4">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/80 to-slate-950" />
-      <div className="absolute top-6 -right-24 w-[28rem] h-[28rem] bg-pink-500/20 blur-[160px]" />
-      <div className="absolute -bottom-10 -left-10 w-80 h-80 bg-violet-600/20 blur-[140px]" />
-
+    <section id="home" className="relative overflow-hidden py-20 px-4">
       <div className="relative max-w-7xl mx-auto">
         <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-8">

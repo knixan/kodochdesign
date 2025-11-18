@@ -181,15 +181,9 @@ const Hero = () => {
   return (
     <section
       id="carousel"
-      className="relative flex flex-col items-center w-full pt-40 pb-20 px-4 md:px-6 lg:px-8 bg-slate-950 overflow-hidden"
+      className="relative flex flex-col items-center w-full pt-40 pb-20 px-4 md:px-6 lg:px-8 overflow-hidden"
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-violet-950/20 to-cyan-950/20"></div>
-      <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-r from-violet-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-
-      {/* Enhanced Carousel */}
-      <div className="relative z-10 w-full max-w-6xl">
+      <div className="w-full max-w-6xl">
         <div className="relative group">
           {/* Glowing border effect */}
           <div className="absolute -inset-2 bg-gradient-to-r from-violet-600 via-pink-600 to-cyan-600 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
