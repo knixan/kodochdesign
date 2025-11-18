@@ -26,7 +26,7 @@ const AboutMePage = () => {
                 <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 blur-lg opacity-40"></div>
                 <div className="relative">
                   <Image
-                    src="/images/josefineErikssonProfilBild.jpg"
+                    src="/images/josefineeriksson.png"
                     alt="Profilbild av Josefine Eriksson"
                     width={280}
                     height={280}
@@ -151,7 +151,7 @@ const AboutMePage = () => {
                       Redo att förverkliga din digitala vision?
                     </p>
                     <a
-                      href="mailto:kontakt@kodochdesign.se"
+                      href="mailto:josefineeriksson@live.se"
                       className="inline-block group"
                     >
                       <button className="relative px-10 py-4 rounded-xl font-bold text-lg text-white overflow-hidden transition-all duration-300 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 hover:from-purple-600 hover:via-pink-600 hover:to-cyan-600 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">

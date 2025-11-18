@@ -35,7 +35,7 @@ const Footer = () => {
                 Kod & Design
               </div>
               <p className="text-slate-400 mt-2 font-light">
-                Där kod möter kreativitet
+                © 2025 av Josefine Eriksson
               </p>
             </div>
 
@@ -51,10 +51,10 @@ const Footer = () => {
                 <p className="font-semibold text-white">Josefine Eriksson</p>
                 <div className="group">
                   <a
-                    href="mailto:kontakt@kodochdesign.se"
+                    href="mailto:josefineeriksson@live.se"
                     className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                   >
-                    kontakt@kodochdesign.se
+                    josefineeriksson@live.se
                   </a>
                 </div>
                 <p className="text-slate-400">Mjölby, Sverige</p>
@@ -106,9 +106,6 @@ const Footer = () => {
                   { href: "/#section1", label: "Hem" },
                   { href: "/ommig", label: "Om Mig" },
                   { href: "/#tjanster", label: "Tjänster" },
-                  { href: "/webbutveckling", label: "Webbutveckling" },
-                  { href: "/ux-ui", label: "UX/UI Design" },
-                  { href: "/grafisk-design", label: "Grafisk Design" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
@@ -123,17 +120,6 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Section */}
-        <div className="text-center">
-          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-slate-400 font-light">
-                © 2025 Kod och Design - Josefine Eriksson
-              </div>
             </div>
           </div>
         </div>

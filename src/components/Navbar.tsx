@@ -45,16 +45,17 @@ const Navbar = () => {
             </div>
           </div>
           <span className="text-2xl font-black bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent tracking-tight">
-            Kod & Design
+            Kod & Design av Josefine Eriksson
           </span>
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center space-x-2">
+        <div className="hidden md:flex gap-4 items-center space-x-2">
           {[
             { href: "/#section1", label: "Hem" },
-            { href: "/#kodochdesign", label: "Om Kod&Design" },
+            { href: "/#kodochdesign", label: "Om Kod & Design" },
             { href: "/#tjanster", label: "Tjänster" },
+            { href: "/webbsidor", label: "Webbsidor" },
             { href: "#kontakt", label: "Kontakt" },
             { href: "/ommig", label: "Om mig" },
           ].map((link, i) => (
@@ -113,7 +114,8 @@ const Navbar = () => {
           {[
             { href: "/#section1", label: "Hem" },
             { href: "/#kodochdesign", label: "Om Kod&Design" },
-            { href: "#tjanster", label: "Tjänster" },
+            { href: "/#tjanster", label: "Tjänster" },
+            { href: "/webbsidor", label: "Webbsidor" },
             { href: "#kontakt", label: "Kontakt" },
             { href: "/ommig", label: "Om mig" },
           ].map((link, i) => (
