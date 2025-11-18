@@ -110,9 +110,6 @@ export default function WebbsidorPage() {
                         className="object-cover transition duration-500 group-hover:scale-105"
                         sizes="(min-width: 768px) 50vw, 100vw"
                       />
-                      <div className="absolute inset-x-4 bottom-4 rounded-full bg-black/40 px-4 py-1 text-center text-xs uppercase tracking-[0.4em] text-white">
-                        Klicka för helskärm
-                      </div>
                     </div>
                   </button>
 
@@ -150,45 +147,28 @@ export default function WebbsidorPage() {
         </div>
 
         {activeItem && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+          <div className="fixed inset-0 z-50">
             <div
-              className="absolute inset-0 bg-slate-950/80 backdrop-blur"
+              className="absolute inset-0 bg-slate-950/90 backdrop-blur"
               onClick={() => setActiveItem(null)}
             />
-            <div className="relative max-w-4xl w-full rounded-3xl border border-white/10 bg-slate-950/90 p-6 backdrop-blur-2xl shadow-2xl">
-              <button
-                type="button"
-                onClick={() => setActiveItem(null)}
-                className="absolute right-6 top-6 text-sm font-semibold uppercase tracking-[0.3em] text-slate-400 hover:text-white"
-              >
-                Stäng
-              </button>
-              <div className="grid gap-6 md:grid-cols-[1.4fr_0.8fr]">
-                <div className="relative h-96 w-full overflow-hidden rounded-2xl border border-white/10">
-                  <Image
-                    src={activeItem.src}
-                    alt={activeItem.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="space-y-4 text-white">
-                  <p className="text-xs uppercase tracking-[0.4em] text-slate-400">
-                    Live-case
-                  </p>
-                  <h3 className="text-3xl font-black">{activeItem.title}</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    {activeItem.description}
-                  </p>
-                  <Link
-                    href={activeItem.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-pink-500/30 transition hover:-translate-y-0.5"
-                  >
-                    Besök live-sidan
-                  </Link>
-                </div>
+            <button
+              type="button"
+              onClick={() => setActiveItem(null)}
+              className="absolute right-6 top-6 z-50 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white hover:bg-white/20"
+            >
+              Stäng
+            </button>
+            <div className="relative flex h-full w-full items-center justify-center p-4">
+              <div className="relative w-full max-w-6xl h-[80vh]">
+                <Image
+                  src={activeItem.src}
+                  alt={activeItem.title}
+                  fill
+                  className="object-contain"
+                  sizes="100vw"
+                  priority
+                />
               </div>
             </div>
           </div>
