@@ -121,9 +121,6 @@ export default function WebbsidorPage() {
                       <h2 className="text-2xl font-bold text-white">
                         {item.title}
                       </h2>
-                      <p className="mt-2 text-sm uppercase tracking-[0.3em] text-pink-200">
-                        Next.js · Tailwind · SEO
-                      </p>
                     </div>
                     <p className="text-slate-300 leading-relaxed">
                       {item.description}

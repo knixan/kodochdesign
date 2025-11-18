@@ -39,7 +39,7 @@ export default function Hero() {
     { icon: SiAdobeillustrator, name: "Illustraitor", color: "#f472b6" },
   ];
 
-  const badges = ["Freelance", "Byråklar", "SEO-anpassad"];
+  const badges = ["Frilans", "Byråklar", "SEO-anpassad"];
 
   const packages = [
     {
