@@ -35,7 +35,7 @@ const galleryItems = [
     title: "Jonny Eriksson",
     description: "Personlig portfölj med fokus på konst",
     src: "/images/carousel/jonnyeriksson-mockup.jpg",
-    liveUrl: "/#",
+    liveUrl: "https://jonnyeriksson.vercel.app/",
     accent: "bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400",
   },
   {
