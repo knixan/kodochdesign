@@ -192,27 +192,34 @@ const Hero = () => {
           <div className="relative backdrop-blur-xl bg-slate-900/20 border border-white/10 rounded-3xl p-4 shadow-2xl">
             <ImageCarousel
               images={[
-                {
-                  src: "/images/carousel/taigym-mockup.jpg",
-                  alt: "Responsiv webbplats på flera enheter",
-                },
-                {
-                  src: "/images/carousel/gammelbygg-mockup.jpg",
+                  {
+                  src: "/images/carousel/fakeynails.jpg",
                   alt: "UX/UI wireframes och prototyper",
                 },
-                {
-                  src: "/images/carousel/skeningevvs-mockup.png",
-                  alt: "Responsiv webbplats på flera enheter",
-                },
+
                 {
                   src: "/images/carousel/jonnyeriksson-mockup.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
-
+              
+                {
+                  src: "/images/carousel/skenningevvs.jpg",
+                  alt: "Responsiv webbplats på flera enheter",
+                },
                 {
                   src: "/images/carousel/ledningsteknik-mockup.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
+
+                {
+                  src: "/images/carousel/taigym-mockup.jpg",
+                  alt: "Responsiv webbplats på flera enheter",
+                },
+  {
+                  src: "/images/carousel/gammelbygg-mockup.jpg",
+                  alt: "Responsiv webbplats på flera enheter",
+                },
+
               ]}
               interval={5000}
               autoPlay
