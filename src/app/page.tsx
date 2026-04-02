@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/hero";
-import About from "@/components/about";
+import AboutUs from "@/components/about-us";
 import Services from "@/components/services";
 import Carousel from "@/components/carousel";
 
@@ -25,9 +25,10 @@ const HomePage = () => {
         <main>
           <Hero />
           <Carousel />
-          <About />
-
           <Services />
+          <AboutUs />
+          
+          
         </main>
         <Footer />
       </div>

@@ -23,19 +23,17 @@ const Footer = () => {
                 <div className="absolute -inset-2 bg-gradient-to-r from-violet-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
                 <div className="relative backdrop-blur-xl bg-slate-900/40 border border-white/20 rounded-2xl p-4">
                   <Image
-                    src="/images/kodochdesign.png"
+                    src="/kodochdesignloggo2.png"
                     alt="Footer logga"
                     width={300}
                     height={300}
-                    className="h-20 w-18 object-contain"
+                    className="h-18 w-32 object-contain"
                   />
                 </div>
               </div>
-              <div className="text-3xl font-black bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                Kod & Design
-              </div>
+             
               <p className="text-slate-400 mt-2 font-light">
-                © 2025 av Josefine Eriksson
+                © 2025 Kod & Design
               </p>
             </div>
 
@@ -48,16 +46,16 @@ const Footer = () => {
                 Kontakt
               </h4>
               <div className="space-y-3 text-lg">
-                <p className="font-semibold text-white">Josefine Eriksson</p>
+                <p className="font-semibold text-white">Kod & Design</p>
                 <div className="group">
                   <a
                     href="mailto:josefineeriksson@live.se"
                     className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                   >
-                    josefineeriksson@live.se
+                    kontakt@kodochdesign.se
                   </a>
                 </div>
-                <p className="text-slate-400">Mjölby, Sverige</p>
+                <p className="text-slate-400">Östergötland, Sverige</p>
               </div>
 
               {/* Social Media */}
@@ -104,7 +102,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 {[
                   { href: "/#section1", label: "Hem" },
-                  { href: "/ommig", label: "Om Mig" },
+                  { href: "/omoss", label: "Om oss" },
                   { href: "/#tjanster", label: "Tjänster" },
                 ].map((link) => (
                   <li key={link.href}>

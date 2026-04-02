@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { RiNextjsLine } from "react-icons/ri";
 import {
   SiReact,
@@ -43,30 +43,30 @@ export default function Hero() {
 const badges = ["Frilans", "Byråklar", "SEO vänligt"];
 
   return (
-    <section id="home" className="pt-24 pb-16 px-4">
+    <section id="home" className="pt-36 pb-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <div className="space-y-6">
             <h2 className="text-5xl md:text-6xl font-bold">
-              Jag skapar en{" "}
-              <span className="gradient-text text-pink-500">Skräddasydd Hemsida</span> åt dig
+              Vi skapar din{" "}
+              <span className="gradient-text text-pink-500">Digitala Lösning</span>
             </h2>
             <p className="text-gray-300 text-lg">
-              Full-stack utvecklare som specialiserar sig på moderna webteknologier
+              Hemsidor, webbapplikationer & design – skräddarsytt efter dina behov
             </p>
   <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                href="/#kontakt"
                className="group relative inline-flex items-center justify-center rounded-2xl border border-transparent bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-pink-500/30 transition-transform hover:-translate-y-0.5"
               >
-                Kontakta mig!
+                Kontakta oss!
               </Link>
               <Link
-               href="/webbsidor"
+               href="/#tjanster"
                className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-xl transition hover:border-pink-400/60 hover:text-pink-200"
              >
-               Se exempel på webbsidor
+               Tjänster
              </Link>
           </div> 
             {/* Tech Icons */}
@@ -97,16 +97,17 @@ const badges = ["Frilans", "Byråklar", "SEO vänligt"];
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right - Decorative element */}
           <div className="flex justify-center">
-            <Image
-              src="/images/josefineE.png"
-              alt="Developer"
-              width={500}
-              height={500}
-              className="max-w-full h-auto rounded-lg"
-              priority
-            />
+            <div className="relative w-80 h-80 md:w-[400px] md:h-[400px]">
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-500/30 via-pink-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+              <div className="relative w-full h-full rounded-full border-2 border-white/10 backdrop-blur-xl bg-white/5 flex items-center justify-center">
+                <div className="text-center space-y-4">
+                  <Image src="/kodochdesignloggo2.png" alt="Kod & Design" width={600} height={400} className="w-58 h-auto object-contain mx-auto" />
+                  <p className="text-sm text-slate-400 font-light">Webb &bull; Design &bull; Kod</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

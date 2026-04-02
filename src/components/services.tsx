@@ -39,7 +39,7 @@ export default function Services() {
       <div className="container mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-black mb-8 bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent leading-tight tracking-tight">
-            Mina tjänster
+            Våra tjänster
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 mx-auto rounded-full"></div>
         </div>
@@ -48,13 +48,13 @@ export default function Services() {
           {services.map((service) => (
             <div className="group relative" key={service.title}>
               <div className="absolute -inset-1 bg-gradient-to-r from-violet-600 via-pink-600 to-cyan-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-60 transition duration-500"></div>
-              <div className="relative backdrop-blur-xl bg-slate-900/40 border border-white/10 p-8 rounded-2xl shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2">
+              <div className="relative backdrop-blur-xl bg-slate-900/40 border border-white/10 p-5 md:p-8 rounded-2xl shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2">
                 <div className="relative overflow-hidden rounded-xl mb-6 flex items-center justify-center h-56 bg-gradient-to-r from-slate-800/40 to-slate-900/30">
                   <service.icon className="text-7xl gradient-text transition-transform duration-500 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent pointer-events-none"></div>
                 </div>
 
-                <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">
                   {service.title}
                 </h3>
                 <p className="text-slate-300 mb-8 leading-relaxed font-light">

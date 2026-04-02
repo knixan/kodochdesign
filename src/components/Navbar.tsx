@@ -36,28 +36,24 @@ const Navbar = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-violet-500 to-pink-500 rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
             <div className="relative backdrop-blur-xl bg-slate-900/40 border border-white/20 rounded-xl p-2">
               <Image
-                src="/images/kodochdesign.png"
+                src="/kodochdesignloggo2.png"
                 alt="Logga Kod & Design"
-                width={80}
-                height={80}
-                className="h-10 w-8 object-contain"
+                width={500}
+                height={300}
+                className="h-16 w-28 object-contain"
               />
             </div>
           </div>
-          <span className="text-2xl font-black bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent tracking-tight">
-            Kod & Design av Josefine Eriksson
-          </span>
+       
         </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex gap-4 items-center space-x-2">
           {[
             { href: "/#section1", label: "Hem" },
-            { href: "/#kodochdesign", label: "Om Kod & Design" },
             { href: "/#tjanster", label: "Tjänster" },
-            { href: "/webbsidor", label: "Webbsidor" },
-            { href: "#kontakt", label: "Kontakt" },
-            { href: "/ommig", label: "Om mig" },
+            { href: "/#omoss", label: "Om oss" },
+             { href: "#kontakt", label: "Kontakt" },
           ].map((link, i) => (
             <Link key={i} href={link.href} className="group relative">
               <button className="relative px-6 py-3 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-xl bg-white/5 border border-white/10 hover:border-violet-400/50 hover:shadow-lg hover:shadow-violet-500/25">
@@ -113,11 +109,9 @@ const Navbar = () => {
         <div className="flex flex-col items-center py-6 space-y-3 px-6">
           {[
             { href: "/#section1", label: "Hem" },
-            { href: "/#kodochdesign", label: "Om Kod&Design" },
             { href: "/#tjanster", label: "Tjänster" },
-            { href: "/webbsidor", label: "Webbsidor" },
+            { href: "/omoss", label: "Om oss" },
             { href: "#kontakt", label: "Kontakt" },
-            { href: "/ommig", label: "Om mig" },
           ].map((link, i) => (
             <Link
               key={i}

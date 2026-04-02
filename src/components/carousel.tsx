@@ -1,167 +1,206 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
-import clsx from "clsx";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 interface CarouselImage {
   src: string;
   alt: string;
 }
 
+function Lightbox({
+  images,
+  index,
+  onClose,
+  onChange,
+}: {
+  images: CarouselImage[];
+  index: number;
+  onClose: () => void;
+  onChange: (i: number) => void;
+}) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowRight") onChange((index + 1) % images.length);
+      if (e.key === "ArrowLeft") onChange((index - 1 + images.length) % images.length);
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [index, images.length, onClose, onChange]);
+
+  return createPortal(
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      {/* Prev */}
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onChange((index - 1 + images.length) % images.length);
+        }}
+        aria-label="Föregående bild"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-[10000] rounded-full bg-slate-900/60 hover:bg-slate-900/90 border border-white/10 p-2 text-white transition"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+
+      {/* Next */}
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onChange((index + 1) % images.length);
+        }}
+        aria-label="Nästa bild"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-[10000] rounded-full bg-slate-900/60 hover:bg-slate-900/90 border border-white/10 p-2 text-white transition"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+
+      {/* Image wrapper */}
+      <div
+        className="relative max-w-[90vw] max-h-[90vh]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close button - top right of image */}
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Stäng"
+          className="absolute -top-4 -right-4 z-[10000] rounded-full bg-slate-900/80 hover:bg-slate-900 border border-white/20 p-2 text-white transition"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-6 w-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={images[index].src}
+          alt={images[index].alt}
+          className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
+        />
+      </div>
+    </div>,
+    document.body
+  );
+}
+
 interface ImageCarouselProps {
   images: CarouselImage[];
   autoPlay?: boolean;
   interval?: number;
-  className?: string;
-  rounded?: boolean;
-  quality?: number;
 }
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
   images,
   autoPlay = true,
-  interval = 4500,
-  className = "",
-  rounded = true,
-  quality = 80,
+  interval = 5000,
 }) => {
-  const [index, setIndex] = useState(0);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const touchStartX = useRef<number | null>(null);
-  const touchEndX = useRef<number | null>(null);
+  const [lightbox, setLightbox] = useState<number | null>(null);
 
-  const next = useCallback(() => {
-    setIndex((prev) => (prev + 1) % images.length);
-  }, [images.length]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start" },
+    autoPlay ? [Autoplay({ delay: interval, stopOnInteraction: false })] : []
+  );
 
-  const prev = useCallback(() => {
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
-  }, [images.length]);
-
-  // Auto-play
-  useEffect(() => {
-    if (!autoPlay) return;
-    timerRef.current = setTimeout(next, interval);
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, [index, autoPlay, interval, next]);
-
-  // Swipe handlers
-  const onTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.changedTouches[0].clientX;
-  };
-
-  const onTouchEnd = (e: React.TouchEvent) => {
-    touchEndX.current = e.changedTouches[0].clientX;
-    if (touchStartX.current !== null && touchEndX.current !== null) {
-      const delta = touchEndX.current - touchStartX.current;
-      if (Math.abs(delta) > 50) {
-        if (delta < 0) next();
-        else prev();
-      }
-    }
-    touchStartX.current = null;
-    touchEndX.current = null;
-  };
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   const onKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLDivElement>) => {
       if (e.key === "ArrowRight") {
         e.preventDefault();
-        next();
+        scrollNext();
       } else if (e.key === "ArrowLeft") {
         e.preventDefault();
-        prev();
+        scrollPrev();
       }
     },
-    [next, prev]
+    [scrollNext, scrollPrev]
   );
 
   return (
     <div
-      className={clsx(
-        "relative w-full overflow-hidden select-none",
-        rounded && "rounded-xl",
-        className
-      )}
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
+      className="relative select-none"
       onKeyDown={onKeyDown}
       tabIndex={0}
       aria-roledescription="carousel"
     >
-      {/* Navigationsknappar */}
+      {/* Prev */}
       <button
         type="button"
-        onClick={prev}
+        onClick={scrollPrev}
         aria-label="Föregående bild"
         className="absolute top-1/2 left-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-pink-400/60"
       >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          className="h-7 w-7"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15.75 19.5 8.25 12l7.5-7.5"
-          />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
         </svg>
       </button>
+
+      {/* Next */}
       <button
         type="button"
-        onClick={next}
+        onClick={scrollNext}
         aria-label="Nästa bild"
         className="absolute top-1/2 right-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
       >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          className="h-7 w-7"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m8.25 4.5 7.5 7.5-7.5 7.5"
-          />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
         </svg>
       </button>
 
-      <div
-        className="flex transition-transform duration-700 ease-out items-center"
-        style={{ transform: `translateX(-${index * 100}%)` }}
-      >
-        {images.map((img, i) => (
-          <div
-            key={img.src + i}
-            className="relative min-w-full w-full aspect-[2/1] md:aspect-[16/9]"
-            aria-hidden={i !== index}
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              priority={i === 0}
-              sizes="(min-width: 1280px) 1152px, 100vw"
-              quality={quality}
-              className="object-contain object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/40 pointer-events-none" />
-          </div>
-        ))}
+      {/* Embla viewport */}
+      <div className="overflow-hidden rounded-xl" ref={emblaRef}>
+        <div className="flex ml-[calc(-0.5rem)] md:ml-[calc(-0.5rem)]">
+          {images.map((img, i) => (
+            <button
+              key={img.src + i}
+              type="button"
+              onClick={() => setLightbox(i)}
+              className="relative flex-[0_0_100%] md:flex-[0_0_33.333%] aspect-[3/4] min-w-0 pl-4 cursor-pointer"
+            >
+              <div className="relative w-full h-full rounded-xl overflow-hidden">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                priority={i < 3}
+                sizes="(min-width: 768px) 33vw, 100vw"
+                quality={80}
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/40 pointer-events-none" />
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Skärmläsare info */}
-      <div className="sr-only" aria-live="polite">
-        Bild {index + 1} av {images.length}: {images[index].alt}
-      </div>
+      {/* Lightbox via portal */}
+      {lightbox !== null && (
+        <Lightbox
+          images={images}
+          index={lightbox}
+          onClose={() => setLightbox(null)}
+          onChange={setLightbox}
+        />
+      )}
     </div>
   );
 };
@@ -192,38 +231,34 @@ const Hero = () => {
           <div className="relative backdrop-blur-xl bg-slate-900/20 border border-white/10 rounded-3xl p-4 shadow-2xl">
             <ImageCarousel
               images={[
-                  {
-                  src: "/images/carousel/fakeynails.jpg",
+                {
+                  src: "/images/carousel/fakeynails-mobile.jpg",
                   alt: "UX/UI wireframes och prototyper",
                 },
-
                 {
-                  src: "/images/carousel/jonnyeriksson-mockup.jpg",
-                  alt: "Responsiv webbplats på flera enheter",
-                },
-              
-                {
-                  src: "/images/carousel/skenningevvs.jpg",
+                  src: "/images/carousel/mozionzone-mobile.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
                 {
-                  src: "/images/carousel/ledningsteknik-mockup.jpg",
+                  src: "/images/carousel/skenningevvs-mobile.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
-
+                   {
+                  src: "/images/carousel/gammelbyggnad-mobil.jpg",
+                  alt: "Responsiv webbplats på flera enheter",
+                },
                 {
-                  src: "/images/carousel/taigym-mockup.jpg",
+                  src: "/images/carousel/mozionzone-mobile.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
-  {
-                  src: "/images/carousel/gammelbygg-mockup.jpg",
+                  {
+                  src: "/images/carousel/jonny-portfolio-mobile.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
-
+             
               ]}
               interval={5000}
               autoPlay
-              rounded
             />
           </div>
 
