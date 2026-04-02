@@ -61,11 +61,7 @@ const Footer = () => {
               {/* Social Media */}
               <div className="flex justify-center lg:justify-start space-x-6 mt-8">
                 {[
-                  {
-                    icon: FaLinkedin,
-                    href: "https://www.linkedin.com/in/josefine-eriksson-349498345/",
-                    label: "LinkedIn",
-                  },
+                
                   {
                     icon: FaFacebook,
                     href: "https://www.facebook.com/profile.php?id=61579831973399",
