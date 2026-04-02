@@ -50,7 +50,7 @@ const badges = ["Frilans", "Byråklar", "SEO vänligt"];
           <div className="space-y-6">
             <h2 className="text-5xl md:text-6xl font-bold">
               Vi skapar din{" "}
-              <span className="gradient-text text-pink-500">Digitala Lösning</span>
+              <span className="gradient-text text-pink-400">Digitala Lösning</span>
             </h2>
             <p className="text-gray-300 text-lg">
               Hemsidor, webbapplikationer & design – skräddarsytt efter dina behov

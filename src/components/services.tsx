@@ -29,7 +29,7 @@ export default function Services() {
       icon: FaPaintBrush,
       title: "Grafisk Design",
       description:
-        "Logotyper, visitkort, broschyrer, affischer för Instagram och Facebook – attraktiva, varumärkesfokuserade visuella element.",
+        "Design av logotyper, visitkort, broschyrer och affischer – tryckfärdiga original samt grafik för sociala medier som Instagram och Facebook.",
       link: "#contact",
     },
   ];
@@ -54,7 +54,7 @@ export default function Services() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent pointer-events-none"></div>
                 </div>
 
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">
+                <h3 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">
                   {service.title}
                 </h3>
                 <p className="text-slate-300 mb-8 leading-relaxed font-light">
