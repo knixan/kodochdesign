@@ -1,32 +1,30 @@
-import { HiCode, HiDatabase } from "react-icons/hi";
-import { MdImportantDevices } from "react-icons/md";
-import { FaPaintBrush } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Services() {
   const services = [
     {
-      icon: HiCode,
+      image: "/images/webbdesign.jpg",
       title: "Webbutveckling",
       description:
         "Full-stack webbapplikationer med moderna ramverk som React, Next.js och Node.js med responsiv design.",
       link: "#contact",
     },
     {
-      icon: MdImportantDevices,
+      image: "/images/responsiv.jpg",
       title: "Responsiv Design",
       description:
         "Mobilanpassade, responsiva webbplatser som ser perfekta ut på alla enheter med hjälp av Tailwind CSS och moderna CSS-tekniker.",
       link: "#contact",
     },
     {
-      icon: HiDatabase,
+      image: "/images/backend.jpg",
       title: "Backend-lösningar",
       description:
         "Robusta backend-system med PostgreSQL, Prisma, Server Actions och API‑utveckling för skalbara applikationer.",
       link: "#contact",
     },
     {
-      icon: FaPaintBrush,
+      image: "/images/grafiskdesign.jpg",
       title: "Grafisk Design",
       description:
         "Design av logotyper, visitkort, broschyrer och affischer – tryckfärdiga original samt grafik för sociala medier som Instagram och Facebook.",
@@ -50,7 +48,13 @@ export default function Services() {
               <div className="absolute -inset-1 bg-gradient-to-r from-violet-600 via-pink-600 to-cyan-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-60 transition duration-500"></div>
               <div className="relative backdrop-blur-xl bg-slate-900/40 border border-white/10 p-5 md:p-8 rounded-2xl shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2">
                 <div className="relative overflow-hidden rounded-xl mb-6 flex items-center justify-center h-56 bg-gradient-to-r from-slate-800/40 to-slate-900/30">
-                  <service.icon className="text-7xl gradient-text transition-transform duration-500 group-hover:scale-110" />
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(min-width: 1024px) 25vw, 100vw"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent pointer-events-none"></div>
                 </div>
 
