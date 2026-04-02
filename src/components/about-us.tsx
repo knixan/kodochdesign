@@ -74,6 +74,13 @@ export default function AboutUs() {
 
       </div>
     </div>
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+            Team
+          </h3>
+          <div className="w-16 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 mx-auto rounded-full mt-4"></div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="group relative">
