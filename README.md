@@ -1,102 +1,115 @@
-## Kodoch Design
+# Kodoch Design
 
-En modern, snabb och responsiv webbplats byggd med Next.js (App Router), React och TypeScript. Projektet använder Turbopack för snabbare utveckling och build, ESLint för kodkvalitet samt Tailwind CSS 4 via PostCSS för styling.
+A modern portfolio website for Kodoch Design, showcasing web design and development services. Built with cutting-edge web technologies to deliver a fast, responsive, and visually stunning experience.
 
-- Varumärkesfärger: `#00a6f4` och `#f6339a`
-- Bildoptimering med `next/image` och fjärrmönster för `placehold.co`
-- Ikoner via `react-icons`
+## Features
 
-### Tech stack
-- Next.js ^16, React 19, TypeScript 5
-- Tailwind CSS 4 via `@tailwindcss/postcss` (se `src/app/globals.css`)
-- ESLint 9 med `eslint-config-next`
-- PostCSS
+- **Animated UI** – Dynamic gradient backgrounds and floating orbs for visual depth
+- **Image Carousel** – Smooth auto-playing carousel powered by Embla Carousel
+- **Service Showcase** – Dedicated sections highlighting design and development offerings
+- **Responsive Design** – Fully optimized for mobile, tablet, and desktop viewing
+- **Contact Ready** – Email integration prepared (Nodemailer & Resend)
 
-## Mappstruktur
+## Tech Stack
+
+- **Next.js 16** with App Router and Turbopack for blazing-fast development
+- **React 19** with TypeScript 5 for type-safe components
+- **Tailwind CSS 4** via PostCSS for modern, utility-first styling
+- **Embla Carousel** for smooth image presentations
+- **React Icons** for scalable icon components
+
+### Brand Identity
+- Primary colors: `#00a6f4` (cyan) and `#f6339a` (magenta)
+- Custom Poppins font family for modern typography
+
+## Project Structure
 
 ```
-eslint.config.mjs
-next-env.d.ts
-next.config.ts
-package.json
-postcss.config.mjs
-tsconfig.json
-public/
-	images/
-		carousel/
 src/
-	app/
-		globals.css
-		layout.tsx
-		page.tsx
-		ommig/
-			page.tsx
-		webbsidor/
-			page.tsx
-	components/
-		Navbar.tsx
-		hero.tsx
-		carousel.tsx
-		services.tsx
-		about.tsx
-		Footer.tsx
+├── app/
+│   ├── globals.css          # Tailwind CSS configuration
+│   ├── layout.tsx           # Root layout
+│   ├── page.tsx             # Homepage
+│   ├── ommig/               # About page
+│   └── webbsidor/           # Portfolio/services page
+├── components/
+│   ├── Navbar.tsx           # Navigation header
+│   ├── Footer.tsx           # Footer with contact info
+│   ├── hero.tsx             # Hero section with CTA
+│   ├── carousel.tsx         # Image carousel
+│   ├── services.tsx         # Services showcase
+│   └── about-us.tsx         # About section
+public/
+└── images/
+    └── carousel/            # Carousel image assets
 ```
 
-### Sidor och routing
-- `/` – Startsida (Hero, tjänster m.m.)
-- `/ommig` – Om mig
-- `/webbsidor` – Exempel/erbjudanden kring webbsidor
+## Pages
 
-### Komponenter
-- `Navbar`, `Footer` – gemensamma layoutkomponenter
-- `hero`, `services`, `about` – innehållssektioner
-- `carousel` – bildkarusell (bilder i `public/images/carousel/`)
+- **`/`** – Homepage featuring hero, portfolio carousel, services, and about sections
+- **`/ommig`** – About page with detailed background and expertise
+- **`/webbsidor`** – Web design portfolio and service offerings
 
-## Kom igång
+## Getting Started
 
-Förkrav:
-- Node.js 18 eller senare
-- Paketmanager: Yarn (rekommenderat) eller npm
+### Prerequisites
+- Node.js 18 or later
+- Yarn (recommended) or npm
 
-Installera beroenden och starta utvecklingsservern:
+### Installation
 
+1. Clone the repository
+2. Install dependencies:
 ```bash
-# Installera beroenden
-yarn
+yarn install
+```
 
-# Starta dev-server (Turbopack)
+3. Start the development server with Turbopack:
+```bash
 yarn dev
 ```
 
-Öppna http://localhost:3000 i din webbläsare.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### Lintning och kodstil
+### Available Scripts
+
 ```bash
-yarn lint
+yarn dev      # Start development server with Turbopack
+yarn build    # Build for production with Turbopack
+yarn start    # Start production server
+yarn lint     # Run ESLint code quality checks
 ```
 
-### Bygga och köra i produktion
-```bash
-yarn build
-yarn start
-```
+## Styling with Tailwind CSS 4
 
-## Styling (Tailwind CSS 4)
-Tailwind är aktiverat via PostCSS-pluginen och importeras i `src/app/globals.css`:
+Tailwind CSS 4 is configured via PostCSS and imported in `src/app/globals.css`:
 
 ```css
 @import "tailwindcss";
-@theme inline { /* projektets färger/typsnitt m.m. */ }
+@theme inline {
+  /* Custom theme: colors, typography, spacing */
+}
 ```
 
-Lägg till klasser direkt i dina komponenter. Temavärden definieras i `@theme inline` och används för bl.a. `--color-background` och `--color-foreground`.
+Theme variables are defined in the `@theme inline` block, including brand colors and design tokens. Apply utility classes directly to components for rapid UI development.
 
-## Bilder
-Projektet använder `next/image` och tillåter fjärrbilder från `placehold.co` (se `next.config.ts`). Egna bilder ligger under `public/images/`.
+## Image Optimization
 
-## E-post (framtida funktionalitet)
-Paket för e-post finns inkluderade (`nodemailer`, `resend`). Om du lägger till en kontaktfunktion behöver du sannolikt miljövariabler som t.ex. `RESEND_API_KEY`. Skapa då en `.env.local` i projektroten och lägg till nödvändiga nycklar.
+Images are optimized using Next.js Image component (`next/image`):
+- Local images: stored in `public/images/`
+- Remote patterns: configured for `placehold.co` in `next.config.ts`
 
+## Email Integration (Future)
 
-## Licens
-Detta repo tillhör Kodoch Design. https://kodochdesign.se Kontakta ägaren för användning utanför projektets syfte.
+Email functionality is pre-configured with Nodemailer and Resend. To enable contact forms:
+
+1. Create `.env.local` in the project root
+2. Add your API credentials:
+```bash
+RESEND_API_KEY=your_api_key_here
+```
+
+## License
+
+© 2024 Kodoch Design. All rights reserved.
+Visit [kodochdesign.se](https://kodochdesign.se) for more information.
