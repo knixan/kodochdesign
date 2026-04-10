@@ -251,8 +251,9 @@ const Hero = () => {
                   src: "/images/carousel/mozionzone-mobile.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
+              
                   {
-                  src: "/images/carousel/jonny-portfolio-mobile.jpg",
+                  src: "/images/carousel/ledningsteknik-mobil.png",
                   alt: "Responsiv webbplats på flera enheter",
                 },
              
