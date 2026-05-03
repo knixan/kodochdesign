@@ -1,34 +1,33 @@
-"use client";
-
 import Image from "next/image";
-import { useTranslate } from "@/locales";
 
 export default function Services() {
-  const { t } = useTranslate();
-
   const services = [
     {
       image: "/images/webbdesign.jpg",
-      title: t("services.web_title"),
-      description: t("services.web_desc"),
+      title: "Webbutveckling",
+      description:
+        "Full-stack webbapplikationer med moderna ramverk som React, Next.js och Node.js med responsiv design.",
       link: "#contact",
     },
     {
       image: "/images/responsiv.jpg",
-      title: t("services.responsive_title"),
-      description: t("services.responsive_desc"),
+      title: "Responsiv Design",
+      description:
+        "Mobilanpassade, responsiva webbplatser som ser perfekta ut på alla enheter med hjälp av Tailwind CSS och moderna CSS-tekniker.",
       link: "#contact",
     },
     {
       image: "/images/backend.jpg",
-      title: t("services.backend_title"),
-      description: t("services.backend_desc"),
+      title: "Backend-lösningar",
+      description:
+        "Robusta backend-system med PostgreSQL, Prisma, Server Actions och API‑utveckling för skalbara applikationer.",
       link: "#contact",
     },
     {
       image: "/images/grafiskdesign.jpg",
-      title: t("services.graphic_title"),
-      description: t("services.graphic_desc"),
+      title: "Grafisk Design",
+      description:
+        "Design av logotyper, visitkort, broschyrer och affischer – tryckfärdiga original samt grafik för sociala medier som Instagram och Facebook.",
       link: "#contact",
     },
   ];
@@ -38,7 +37,7 @@ export default function Services() {
       <div className="container mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-black mb-8 bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent leading-tight tracking-tight">
-            {t("services.title")}
+            Våra tjänster
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 mx-auto rounded-full"></div>
         </div>

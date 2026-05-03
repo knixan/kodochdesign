@@ -1,13 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-import { useTranslate } from "@/locales";
 
 const Footer = () => {
-  const { t } = useTranslate();
-
   return (
     <footer
       id="footer"
@@ -36,9 +31,9 @@ const Footer = () => {
                   />
                 </div>
               </div>
-
+             
               <p className="text-slate-400 mt-2 font-light">
-                {t("footer.copyright")}
+                © 2025 Kod & Design
               </p>
             </div>
 
@@ -48,7 +43,7 @@ const Footer = () => {
                 id="kontakt"
                 className="text-2xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent"
               >
-                {t("footer.contact")}
+                Kontakt
               </h4>
               <div className="space-y-3 text-lg">
                 <p className="font-semibold text-white">Kod & Design</p>
@@ -60,12 +55,13 @@ const Footer = () => {
                     kontakt@kodochdesign.se
                   </a>
                 </div>
-                <p className="text-slate-400">{t("footer.location")}</p>
+                <p className="text-slate-400">Östergötland, Sverige</p>
               </div>
 
               {/* Social Media */}
               <div className="flex justify-center lg:justify-start space-x-6 mt-8">
                 {[
+                
                   {
                     icon: FaFacebook,
                     href: "https://www.facebook.com/profile.php?id=61579831973399",
@@ -97,13 +93,13 @@ const Footer = () => {
             {/* Links Section */}
             <div className="text-center lg:text-left">
               <h4 className="text-2xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                {t("footer.navigation")}
+                Navigation
               </h4>
               <ul className="space-y-4">
                 {[
-                  { href: "/#section1", label: t("nav.home") },
-                  { href: "/omoss", label: t("nav.about") },
-                  { href: "/#tjanster", label: t("nav.services") },
+                  { href: "/#section1", label: "Hem" },
+                  { href: "/omoss", label: "Om oss" },
+                  { href: "/#tjanster", label: "Tjänster" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
