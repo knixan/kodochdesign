@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "We create your",
+    "highlight": "Digital Solution",
+    "subtitle": "Websites, web applications & design – tailored to your needs",
+    "cta": "Contact us!",
+    "badge_freelance": "Freelance",
+    "badge_agency": "Agency-ready",
+    "badge_seo": "SEO-friendly",
+    "tagline": "Web • Design • Code"
+  },
+  "about": {
+    "title": "About us",
+    "paragraph1": "At Kod & Design we help you realise your digital vision – whether it's a simple website, an advanced web application or a complete system with backend and database. We listen to your needs and deliver a solution tailored specifically to you and your business.",
+    "paragraph2": "From idea to finished product, we handle the entire process. We build with modern technologies such as React, Next.js, TypeScript, Node.js and PostgreSQL – but what matters most to us is that the end result works flawlessly, looks professional and is easy to use for your visitors or customers.",
+    "paragraph3": "Beyond web development, we offer graphic design – logos, business cards, print layouts and visual profiles. We take a holistic approach to your visual identity and ensure that your digital presence and your brand are aligned, from the first sketch to the finished design material.",
+    "team_title": "Team",
+    "josefine_role": "Full-stack Developer & Graphic Designer with a focus on frontend",
+    "josefine_bio": "Josefine has a broad background in full-stack web development with a special focus on frontend and graphic design. With experience in React, Next.js, TypeScript and Node.js she creates visually appealing and functional websites.",
+    "niklas_role": "Full-stack Developer with a focus on backend",
+    "niklas_bio": "Niklas is a versatile full-stack developer with particular strength in backend. With deep knowledge of databases, API development and server logic, he ensures the systems behind the scenes are robust, scalable and efficient.",
+    "tobias_role": "Full-stack Developer",
+    "tobias_bio": "Tobias is a well-rounded full-stack developer who moves smoothly between frontend and backend. With broad technical skills he contributes solutions across the entire stack – from user interfaces to database management."
+  },
+  "services": {
+    "title": "Our services",
+    "web_title": "Web Development",
+    "web_desc": "Full-stack web applications with modern frameworks such as React, Next.js and Node.js with responsive design.",
+    "responsive_title": "Responsive Design",
+    "responsive_desc": "Mobile-friendly, responsive websites that look perfect on all devices using Tailwind CSS and modern CSS techniques.",
+    "backend_title": "Backend Solutions",
+    "backend_desc": "Robust backend systems with PostgreSQL, Prisma, Server Actions and API development for scalable applications.",
+    "graphic_title": "Graphic Design",
+    "graphic_desc": "Design of logos, business cards, brochures and posters – print-ready originals as well as graphics for social media such as Instagram and Facebook."
+  },
+  "carousel": {
+    "prev": "Previous image",
+    "next": "Next image",
+    "close": "Close"
+  },
+  "footer": {
+    "contact": "Contact",
+    "navigation": "Navigation",
+    "location": "Östergötland, Sweden",
+    "copyright": "© 2025 Kod & Design"
+  }
+}

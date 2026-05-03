@@ -3,10 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslate, useLocales } from "@/locales";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const { t, onChangeLang } = useTranslate();
+  const { allLangs, currentLang } = useLocales();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,11 +24,13 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const nextLang = allLangs.find((l) => l.value !== currentLang.value)!;
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
         isScrolled
-          ? "backdrop-blur-xl bg-slate-900/80 border-b border-white/10 shadow-2xl"
+          ? "backdrop-blur-xl bg-slate-900/80 shadow-2xl"
           : "backdrop-blur-sm bg-slate-950/20"
       }`}
     >
@@ -44,16 +49,15 @@ const Navbar = () => {
               />
             </div>
           </div>
-       
         </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex gap-4 items-center space-x-2">
           {[
-            { href: "/#section1", label: "Hem" },
-            { href: "/#tjanster", label: "Tjänster" },
-            { href: "/#omoss", label: "Om oss" },
-             { href: "#kontakt", label: "Kontakt" },
+            { href: "/#section1", label: t("nav.home") },
+            { href: "/#tjanster", label: t("nav.services") },
+            { href: "/#omoss", label: t("nav.about") },
+            { href: "#kontakt", label: t("nav.contact") },
           ].map((link, i) => (
             <Link key={i} href={link.href} className="group relative">
               <button className="relative px-6 py-3 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-xl bg-white/5 border border-white/10 hover:border-violet-400/50 hover:shadow-lg hover:shadow-violet-500/25">
@@ -64,10 +68,32 @@ const Navbar = () => {
               </button>
             </Link>
           ))}
+
+          {/* Language toggle */}
+          <button
+            onClick={() => onChangeLang(nextLang.value)}
+            aria-label={`Switch to ${nextLang.label}`}
+            className="relative px-4 py-3 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-xl bg-white/5 border border-white/10 hover:border-violet-400/50 hover:shadow-lg hover:shadow-violet-500/25 flex items-center gap-2"
+          >
+            <span className="text-lg">{nextLang.icon}</span>
+            <span className="text-sm relative z-10 transition-colors duration-300 group-hover:text-violet-300">
+              {nextLang.label}
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-pink-500/20 transform scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          </button>
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-3">
+          {/* Mobile language toggle */}
+          <button
+            onClick={() => onChangeLang(nextLang.value)}
+            aria-label={`Switch to ${nextLang.label}`}
+            className="relative p-2 text-white text-xl"
+          >
+            {nextLang.icon}
+          </button>
+
           <button
             onClick={toggleMobileMenu}
             className="relative p-3 text-white focus:outline-none group"
@@ -108,10 +134,10 @@ const Navbar = () => {
       >
         <div className="flex flex-col items-center py-6 space-y-3 px-6">
           {[
-            { href: "/#section1", label: "Hem" },
-            { href: "/#tjanster", label: "Tjänster" },
-            { href: "/omoss", label: "Om oss" },
-            { href: "#kontakt", label: "Kontakt" },
+            { href: "/#section1", label: t("nav.home") },
+            { href: "/#tjanster", label: t("nav.services") },
+            { href: "/omoss", label: t("nav.about") },
+            { href: "#kontakt", label: t("nav.contact") },
           ].map((link, i) => (
             <Link
               key={i}

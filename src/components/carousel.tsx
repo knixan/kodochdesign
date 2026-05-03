@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useTranslate } from "@/locales";
 
 interface CarouselImage {
   src: string;
@@ -22,6 +23,8 @@ function Lightbox({
   onClose: () => void;
   onChange: (i: number) => void;
 }) {
+  const { t } = useTranslate();
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -48,7 +51,7 @@ function Lightbox({
           e.stopPropagation();
           onChange((index - 1 + images.length) % images.length);
         }}
-        aria-label="Föregående bild"
+        aria-label={t("carousel.prev")}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-[10000] rounded-full bg-slate-900/60 hover:bg-slate-900/90 border border-white/10 p-2 text-white transition"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
@@ -63,7 +66,7 @@ function Lightbox({
           e.stopPropagation();
           onChange((index + 1) % images.length);
         }}
-        aria-label="Nästa bild"
+        aria-label={t("carousel.next")}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-[10000] rounded-full bg-slate-900/60 hover:bg-slate-900/90 border border-white/10 p-2 text-white transition"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
@@ -80,7 +83,7 @@ function Lightbox({
         <button
           type="button"
           onClick={onClose}
-          aria-label="Stäng"
+          aria-label={t("carousel.close")}
           className="absolute -top-4 -right-4 z-[10000] rounded-full bg-slate-900/80 hover:bg-slate-900 border border-white/20 p-2 text-white transition"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-6 w-6">
@@ -112,6 +115,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   interval = 5000,
 }) => {
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const { t } = useTranslate();
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
@@ -145,7 +149,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       <button
         type="button"
         onClick={scrollPrev}
-        aria-label="Föregående bild"
+        aria-label={t("carousel.prev")}
         className="absolute top-1/2 left-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-pink-400/60"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
@@ -157,7 +161,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       <button
         type="button"
         onClick={scrollNext}
-        aria-label="Nästa bild"
+        aria-label={t("carousel.next")}
         className="absolute top-1/2 right-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">

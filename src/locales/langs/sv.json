@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Hem",
+    "services": "Tjänster",
+    "about": "Om oss",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Vi skapar din",
+    "highlight": "Digitala Lösning",
+    "subtitle": "Hemsidor, webbapplikationer & design – skräddarsytt efter dina behov",
+    "cta": "Kontakta oss!",
+    "badge_freelance": "Frilans",
+    "badge_agency": "Byråklar",
+    "badge_seo": "SEO vänligt",
+    "tagline": "Webb • Design • Kod"
+  },
+  "about": {
+    "title": "Om oss",
+    "paragraph1": "Vi på Kod & Design hjälper dig att förverkliga din digitala vision – oavsett om det handlar om en enkel hemsida, en avancerad webbapplikation eller ett komplett system med backend och databas. Vi lyssnar på dina behov och levererar en lösning som är skräddarsydd för just dig och ditt företag.",
+    "paragraph2": "Från idé till färdig produkt tar vi hand om hela processen. Vi bygger med moderna teknologier som React, Next.js, TypeScript, Node.js och PostgreSQL – men det viktigaste för oss är att slutresultatet fungerar felfritt, ser professionellt ut och är enkelt att använda för dina besökare eller kunder.",
+    "paragraph3": "Utöver webbutveckling erbjuder vi grafisk design – logotyper, visitkort, layout för trycksaker och visuella profiler. Vi tar ett helhetsgrepp om din visuella identitet och ser till att din digitala närvaro och ditt varumärke hänger ihop, från första skissen till det färdiga designunderlaget.",
+    "team_title": "Team",
+    "josefine_role": "Fullstackutvecklare & Grafisk Designer med fokus på frontend",
+    "josefine_bio": "Josefine har en bred grund inom full-stack webbutveckling med ett extra fokus på frontend och grafisk design. Med erfarenhet från React, Next.js, TypeScript och Node.js skapar hon visuellt tilltalande och funktionella webbplatser.",
+    "niklas_role": "Fullstackutvecklare med fokus på backend",
+    "niklas_bio": "Niklas är en allsidig fullstackutvecklare med särskild styrka inom backend. Med djup kunskap i databaser, API-utveckling och serverlogik ser han till att systemen bakom kulisserna är robusta, skalbara och effektiva.",
+    "tobias_role": "Fullstackutvecklare",
+    "tobias_bio": "Tobias är en bred fullstackutvecklare som rör sig smidigt mellan frontend och backend. Med en allsidig teknisk kompetens bidrar han med lösningar genom hela stacken – från användargränssnitt till databashantering."
+  },
+  "services": {
+    "title": "Våra tjänster",
+    "web_title": "Webbutveckling",
+    "web_desc": "Full-stack webbapplikationer med moderna ramverk som React, Next.js och Node.js med responsiv design.",
+    "responsive_title": "Responsiv Design",
+    "responsive_desc": "Mobilanpassade, responsiva webbplatser som ser perfekta ut på alla enheter med hjälp av Tailwind CSS och moderna CSS-tekniker.",
+    "backend_title": "Backend-lösningar",
+    "backend_desc": "Robusta backend-system med PostgreSQL, Prisma, Server Actions och API‑utveckling för skalbara applikationer.",
+    "graphic_title": "Grafisk Design",
+    "graphic_desc": "Design av logotyper, visitkort, broschyrer och affischer – tryckfärdiga original samt grafik för sociala medier som Instagram och Facebook."
+  },
+  "carousel": {
+    "prev": "Föregående bild",
+    "next": "Nästa bild",
+    "close": "Stäng"
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "navigation": "Navigation",
+    "location": "Östergötland, Sverige",
+    "copyright": "© 2025 Kod & Design"
+  }
+}
