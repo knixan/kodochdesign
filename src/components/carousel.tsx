@@ -26,7 +26,8 @@ function Lightbox({
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowRight") onChange((index + 1) % images.length);
-      if (e.key === "ArrowLeft") onChange((index - 1 + images.length) % images.length);
+      if (e.key === "ArrowLeft")
+        onChange((index - 1 + images.length) % images.length);
     };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKey);
@@ -51,8 +52,18 @@ function Lightbox({
         aria-label="Föregående bild"
         className="absolute left-4 top-1/2 -translate-y-1/2 z-[10000] rounded-full bg-slate-900/60 hover:bg-slate-900/90 border border-white/10 p-2 text-white transition"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          className="h-7 w-7"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
         </svg>
       </button>
 
@@ -66,8 +77,18 @@ function Lightbox({
         aria-label="Nästa bild"
         className="absolute right-4 top-1/2 -translate-y-1/2 z-[10000] rounded-full bg-slate-900/60 hover:bg-slate-900/90 border border-white/10 p-2 text-white transition"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
-          <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          className="h-7 w-7"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
         </svg>
       </button>
 
@@ -83,8 +104,18 @@ function Lightbox({
           aria-label="Stäng"
           className="absolute -top-4 -right-4 z-[10000] rounded-full bg-slate-900/80 hover:bg-slate-900 border border-white/20 p-2 text-white transition"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-6 w-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            className="h-6 w-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
@@ -96,7 +127,7 @@ function Lightbox({
         />
       </div>
     </div>,
-    document.body
+    document.body,
   );
 }
 
@@ -115,7 +146,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
-    autoPlay ? [Autoplay({ delay: interval, stopOnInteraction: false })] : []
+    autoPlay ? [Autoplay({ delay: interval, stopOnInteraction: false })] : [],
   );
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -131,7 +162,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         scrollPrev();
       }
     },
-    [scrollNext, scrollPrev]
+    [scrollNext, scrollPrev],
   );
 
   return (
@@ -148,8 +179,18 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         aria-label="Föregående bild"
         className="absolute top-1/2 left-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-pink-400/60"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          className="h-7 w-7"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
         </svg>
       </button>
 
@@ -160,8 +201,18 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         aria-label="Nästa bild"
         className="absolute top-1/2 right-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
-          <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          className="h-7 w-7"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
         </svg>
       </button>
 
@@ -176,16 +227,16 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
               className="relative flex-[0_0_100%] md:flex-[0_0_33.333%] aspect-[3/4] min-w-0 pl-4 cursor-pointer"
             >
               <div className="relative w-full h-full rounded-xl overflow-hidden">
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                priority={i < 3}
-                sizes="(min-width: 768px) 33vw, 100vw"
-                quality={80}
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/40 pointer-events-none" />
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  priority={i < 3}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  quality={80}
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/40 pointer-events-none" />
               </div>
             </button>
           ))}
@@ -243,7 +294,7 @@ const Hero = () => {
                   src: "/images/carousel/skenningevvs-mobile.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
-                   {
+                {
                   src: "/images/carousel/gammelbyggnad-mobil.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
@@ -251,12 +302,11 @@ const Hero = () => {
                   src: "/images/carousel/mozionzone-mobile.jpg",
                   alt: "Responsiv webbplats på flera enheter",
                 },
-              
-                  {
+
+                {
                   src: "/images/carousel/ledningsteknik-mobil.png",
                   alt: "Responsiv webbplats på flera enheter",
                 },
-             
               ]}
               interval={5000}
               autoPlay

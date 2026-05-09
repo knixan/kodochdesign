@@ -31,7 +31,7 @@ const Footer = () => {
                   />
                 </div>
               </div>
-             
+
               <p className="text-slate-400 mt-2 font-light">
                 © 2025 Kod & Design
               </p>
@@ -61,7 +61,6 @@ const Footer = () => {
               {/* Social Media */}
               <div className="flex justify-center lg:justify-start space-x-6 mt-8">
                 {[
-                
                   {
                     icon: FaFacebook,
                     href: "https://www.facebook.com/profile.php?id=61579831973399",
@@ -71,6 +70,11 @@ const Footer = () => {
                     icon: FaInstagram,
                     href: "https://www.instagram.com/kodochdesign",
                     label: "Instagram",
+                  },
+                  {
+                    icon: FaLinkedin,
+                    href: "https://www.linkedin.com/company/113094350",
+                    label: "LinkedIn",
                   },
                 ].map(({ icon: Icon, href, label }) => (
                   <a

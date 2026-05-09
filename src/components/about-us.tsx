@@ -12,19 +12,19 @@ const teamMembers: TeamMember[] = [
     name: "Josefine",
     role: "Fullstackutvecklare & Grafisk Designer med fokus på frontend",
     bio: "Josefine har en bred grund inom full-stack webbutveckling med ett extra fokus på frontend och grafisk design. Med erfarenhet från React, Next.js, TypeScript och Node.js skapar hon visuellt tilltalande och funktionella webbplatser.",
-    image: "/images/josefineeriksson.png",
+    image: "/images/team/josefine.png",
   },
   {
     name: "Niklas",
     role: "Fullstackutvecklare med fokus på backend",
     bio: "Niklas är en allsidig fullstackutvecklare med särskild styrka inom backend. Med djup kunskap i databaser, API-utveckling och serverlogik ser han till att systemen bakom kulisserna är robusta, skalbara och effektiva.",
-    image: null,
+    image: "/images/team/niklas.png",
   },
   {
-    name: "Tobias",
+    name: "Torbjörn",
     role: "Fullstackutvecklare",
-    bio: "Tobias är en bred fullstackutvecklare som rör sig smidigt mellan frontend och backend. Med en allsidig teknisk kompetens bidrar han med lösningar genom hela stacken – från användargränssnitt till databashantering.",
-    image: null,
+    bio: "Torbjörn är en bred fullstackutvecklare som rör sig smidigt mellan frontend och backend. Med en allsidig teknisk kompetens bidrar han med lösningar genom hela stacken – från användargränssnitt till databashantering.",
+    image: "/images/team/torbjorn.png",
   },
 ];
 
@@ -38,42 +38,38 @@ export default function AboutUs() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full"></div>
         </div>
-  <div id="about" className="mb-12">
-      <div
-        id="kodochdesign"
-        className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl shadow-2xl"
-      >
-       
+        <div id="about" className="mb-12">
+          <div
+            id="kodochdesign"
+            className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl shadow-2xl"
+          >
+            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+              <p>
+                Vi på Kod & Design hjälper dig att förverkliga din digitala
+                vision – oavsett om det handlar om en enkel hemsida, en
+                avancerad webbapplikation eller ett komplett system med backend
+                och databas. Vi lyssnar på dina behov och levererar en lösning
+                som är skräddarsydd för just dig och ditt företag.
+              </p>
 
-        <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-          <p>
-            Vi på Kod & Design hjälper dig att förverkliga din digitala vision
-            – oavsett om det handlar om en enkel hemsida, en avancerad
-            webbapplikation eller ett komplett system med backend och databas.
-            Vi lyssnar på dina behov och levererar en lösning som är
-            skräddarsydd för just dig och ditt företag.
-          </p>
+              <p>
+                Från idé till färdig produkt tar vi hand om hela processen. Vi
+                bygger med moderna teknologier som React, Next.js, TypeScript,
+                Node.js och PostgreSQL – men det viktigaste för oss är att
+                slutresultatet fungerar felfritt, ser professionellt ut och är
+                enkelt att använda för dina besökare eller kunder.
+              </p>
 
-          <p>
-            Från idé till färdig produkt tar vi hand om hela processen.
-            Vi bygger med moderna teknologier som React, Next.js, TypeScript,
-            Node.js och PostgreSQL – men det viktigaste för oss är att
-            slutresultatet fungerar felfritt, ser professionellt ut och är
-            enkelt att använda för dina besökare eller kunder.
-          </p>
-
-          <p>
-            Utöver webbutveckling erbjuder vi grafisk design – logotyper, 
-            visitkort, layout för trycksaker och visuella profiler. 
-            Vi tar ett helhetsgrepp om din visuella identitet och ser 
-            till att din digitala närvaro och ditt varumärke hänger ihop, 
-            från första skissen till det färdiga designunderlaget.
-          </p>
+              <p>
+                Utöver webbutveckling erbjuder vi grafisk design – logotyper,
+                visitkort, layout för trycksaker och visuella profiler. Vi tar
+                ett helhetsgrepp om din visuella identitet och ser till att din
+                digitala närvaro och ditt varumärke hänger ihop, från första
+                skissen till det färdiga designunderlaget.
+              </p>
+            </div>
+          </div>
         </div>
-
-
-      </div>
-    </div>
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
             Team

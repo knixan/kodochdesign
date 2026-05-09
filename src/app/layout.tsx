@@ -10,7 +10,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Kod & Design – Webbyrå",
-  description: "Vi skapar skräddarsydda hemsidor med moderna webteknologier. Webbutveckling, responsiv design och grafisk design.",
+  description:
+    "Vi skapar skräddarsydda hemsidor med moderna webteknologier. Webbutveckling, responsiv design och grafisk design.",
 };
 
 export default function RootLayout({
@@ -20,11 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv">
-      <body
-        className={`${poppins.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${poppins.variable} antialiased`}>{children}</body>
     </html>
   );
 }

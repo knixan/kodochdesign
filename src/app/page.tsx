@@ -8,7 +8,7 @@ import AboutUs from "@/components/about-us";
 import Services from "@/components/services";
 import Carousel from "@/components/carousel";
 
-const HomePage = () => {
+export default function HomePage() {
   useEffect(() => {}, []);
 
   return (
@@ -27,13 +27,9 @@ const HomePage = () => {
           <Carousel />
           <Services />
           <AboutUs />
-          
-          
         </main>
         <Footer />
       </div>
     </div>
   );
-};
-
-export default HomePage;
+}

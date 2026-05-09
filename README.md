@@ -19,6 +19,7 @@ A modern portfolio website for Kodoch Design, showcasing web design and developm
 - **React Icons** for scalable icon components
 
 ### Brand Identity
+
 - Primary colors: `#00a6f4` (cyan) and `#f6339a` (magenta)
 - Custom Poppins font family for modern typography
 
@@ -53,6 +54,7 @@ public/
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 18 or later
 - Yarn (recommended) or npm
 
@@ -60,11 +62,13 @@ public/
 
 1. Clone the repository
 2. Install dependencies:
+
 ```bash
 yarn install
 ```
 
 3. Start the development server with Turbopack:
+
 ```bash
 yarn dev
 ```
@@ -96,6 +100,7 @@ Theme variables are defined in the `@theme inline` block, including brand colors
 ## Image Optimization
 
 Images are optimized using Next.js Image component (`next/image`):
+
 - Local images: stored in `public/images/`
 - Remote patterns: configured for `placehold.co` in `next.config.ts`
 
@@ -105,6 +110,7 @@ Email functionality is pre-configured with Nodemailer and Resend. To enable cont
 
 1. Create `.env.local` in the project root
 2. Add your API credentials:
+
 ```bash
 RESEND_API_KEY=your_api_key_here
 ```
