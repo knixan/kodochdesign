@@ -60,7 +60,7 @@ export default function Hero() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/#kontakt"
-                className="group relative inline-flex items-center justify-center rounded-2xl border border-transparent bg-gradient-to-r from-pink-500 via-violet-500 to-cyan-400 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-pink-500/30 transition-transform hover:-translate-y-0.5"
+                className="group relative inline-flex items-center justify-center rounded-2xl border border-transparent bg-pink-500 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-pink-500/30 transition-transform hover:-translate-y-0.5"
               >
                 Kontakta oss!
               </Link>
