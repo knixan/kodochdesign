@@ -1,121 +1,89 @@
-# Kodoch Design
+# Kod & Design
 
-A modern portfolio website for Kodoch Design, showcasing web design and development services. Built with cutting-edge web technologies to deliver a fast, responsive, and visually stunning experience.
+Hemsida för Kod & Design — ett webbyrå som erbjuder hemsidor, webbapplikationer och digital design. Byggd med moderna webteknologier för snabb, responsiv och visuellt tilltalande upplevelse.
 
-## Features
+## Funktioner
 
-- **Animated UI** – Dynamic gradient backgrounds and floating orbs for visual depth
-- **Image Carousel** – Smooth auto-playing carousel powered by Embla Carousel
-- **Service Showcase** – Dedicated sections highlighting design and development offerings
-- **Responsive Design** – Fully optimized for mobile, tablet, and desktop viewing
-- **Contact Ready** – Email integration prepared (Nodemailer & Resend)
+- **Animerat UI** – Dynamiska gradientbakgrunder och flytande orbs för visuellt djup
+- **Bildkarusell** – Smidig autoplay-karusell med Embla Carousel
+- **Tjänstesektioner** – Dedikerade sektioner som visar design- och utvecklingstjänster
+- **Responsiv design** – Fullt optimerad för mobil, surfplatta och desktop
+- **Kontaktformulär** – E-postintegration via Nodemailer
 
 ## Tech Stack
 
-- **Next.js 16** with App Router and Turbopack for blazing-fast development
-- **React 19** with TypeScript 5 for type-safe components
-- **Tailwind CSS 4** via PostCSS for modern, utility-first styling
-- **Embla Carousel** for smooth image presentations
-- **React Icons** for scalable icon components
+- **Next.js 16** med App Router och Turbopack
+- **React 19** med TypeScript 5
+- **Tailwind CSS 4** via PostCSS
+- **Embla Carousel** för bildpresentationer
+- **React Icons** för ikoner
 
-### Brand Identity
+### Varumärke
 
-- Primary colors: `#00a6f4` (cyan) and `#f6339a` (magenta)
-- Custom Poppins font family for modern typography
+- Primärfärger: `#00a6f4` (cyan) och `#f6339a` (magenta)
+- Typsnitt: Poppins
 
-## Project Structure
+## Projektstruktur
 
 ```
 src/
 ├── app/
-│   ├── globals.css          # Tailwind CSS configuration
-│   ├── layout.tsx           # Root layout
-│   ├── page.tsx             # Homepage
-│   ├── ommig/               # About page
-│   └── webbsidor/           # Portfolio/services page
+│   ├── globals.css      # Tailwind CSS och globala stilar
+│   ├── layout.tsx       # Root layout
+│   └── page.tsx         # Startsida
 ├── components/
-│   ├── Navbar.tsx           # Navigation header
-│   ├── Footer.tsx           # Footer with contact info
-│   ├── hero.tsx             # Hero section with CTA
-│   ├── carousel.tsx         # Image carousel
-│   ├── services.tsx         # Services showcase
-│   └── about-us.tsx         # About section
+│   ├── Navbar.tsx       # Navigation
+│   ├── Footer.tsx       # Footer med kontaktinfo
+│   ├── hero.tsx         # Hero-sektion med CTA
+│   ├── carousel.tsx     # Bildkarusell
+│   ├── services.tsx     # Tjänster
+│   └── about-us.tsx     # Om oss
 public/
 └── images/
-    └── carousel/            # Carousel image assets
+    └── carousel/        # Karusellbilder
 ```
 
-## Pages
+## Kom igång
 
-- **`/`** – Homepage featuring hero, portfolio carousel, services, and about sections
-- **`/ommig`** – About page with detailed background and expertise
-- **`/webbsidor`** – Web design portfolio and service offerings
+### Krav
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18 or later
-- Yarn (recommended) or npm
+- Node.js 18 eller senare
+- npm eller yarn
 
 ### Installation
 
-1. Clone the repository
-2. Install dependencies:
+1. Klona repot
+2. Installera beroenden:
 
 ```bash
-yarn install
+npm install
 ```
 
-3. Start the development server with Turbopack:
+3. Starta utvecklingsservern:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Öppna [http://localhost:3000](http://localhost:3000)
 
-### Available Scripts
+### Skript
 
 ```bash
-yarn dev      # Start development server with Turbopack
-yarn build    # Build for production with Turbopack
-yarn start    # Start production server
-yarn lint     # Run ESLint code quality checks
+npm run dev    # Starta utvecklingsserver med Turbopack
+npm run build  # Bygg för produktion
+npm run start  # Starta produktionsserver
+npm run lint   # Kör ESLint
 ```
 
-## Styling with Tailwind CSS 4
+## Bildoptimering
 
-Tailwind CSS 4 is configured via PostCSS and imported in `src/app/globals.css`:
+Bilder optimeras med Next.js Image-komponenten:
 
-```css
-@import "tailwindcss";
-@theme inline {
-  /* Custom theme: colors, typography, spacing */
-}
-```
+- Lokala bilder: sparade i `public/images/`
+- Konfigurerade bildkvaliteter: `[75, 80]` i `next.config.ts`
 
-Theme variables are defined in the `@theme inline` block, including brand colors and design tokens. Apply utility classes directly to components for rapid UI development.
+## Licens
 
-## Image Optimization
-
-Images are optimized using Next.js Image component (`next/image`):
-
-- Local images: stored in `public/images/`
-- Remote patterns: configured for `placehold.co` in `next.config.ts`
-
-## Email Integration (Future)
-
-Email functionality is pre-configured with Nodemailer and Resend. To enable contact forms:
-
-1. Create `.env.local` in the project root
-2. Add your API credentials:
-
-```bash
-RESEND_API_KEY=your_api_key_here
-```
-
-## License
-
-© 2024 Kodoch Design. All rights reserved.
-Visit [kodochdesign.se](https://kodochdesign.se) for more information.
+© 2025 Kod & Design. Alla rättigheter förbehållna.
+Besök [kodochdesign.se](https://kodochdesign.se)
