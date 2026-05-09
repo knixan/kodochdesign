@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Navbar = () => {
+export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
         isScrolled
-          ? "backdrop-blur-xl bg-slate-900/80 border-b border-white/10 shadow-2xl"
+          ? "backdrop-blur-xl bg-slate-900/80  shadow-2xl"
           : "backdrop-blur-sm bg-slate-950/20"
       }`}
     >
@@ -132,5 +132,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

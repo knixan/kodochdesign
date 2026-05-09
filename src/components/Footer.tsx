@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer
       id="footer"
@@ -125,5 +125,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
