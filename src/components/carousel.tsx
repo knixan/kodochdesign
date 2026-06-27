@@ -218,25 +218,28 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
       {/* Embla viewport */}
       <div className="overflow-hidden rounded-xl" ref={emblaRef}>
-        <div className="flex ml-[calc(-0.5rem)] md:ml-[calc(-0.5rem)]">
+        <div className="flex">
           {images.map((img, i) => (
             <button
               key={img.src + i}
               type="button"
               onClick={() => setLightbox(i)}
-              className="relative flex-[0_0_100%] md:flex-[0_0_33.333%] aspect-[3/4] min-w-0 pl-4 cursor-pointer"
+              className="relative flex-[0_0_100%] aspect-video min-w-0 cursor-pointer"
             >
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  priority={i < 3}
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  quality={80}
-                  className="object-cover object-center"
+                  priority={i < 2}
+                  sizes="100vw"
+                  quality={85}
+                  className="object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/40 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                <span className="absolute bottom-4 left-4 text-sm font-semibold text-white/80 backdrop-blur-sm bg-black/30 px-3 py-1 rounded-full">
+                  {img.alt}
+                </span>
               </div>
             </button>
           ))}
@@ -283,29 +286,28 @@ const Hero = () => {
             <ImageCarousel
               images={[
                 {
-                  src: "/images/carousel/fakeynails-mobile.jpg",
-                  alt: "UX/UI wireframes och prototyper",
+                  src: "/images/prisexempel/motionzone.png",
+                  alt: "MotionZone – Boknings- & e-handelsplattform",
                 },
                 {
-                  src: "/images/carousel/mozionzone-mobile.jpg",
-                  alt: "Responsiv webbplats på flera enheter",
+                  src: "/images/prisexempel/fakey-nails.png",
+                  alt: "Fakey Nails – Sajt med CMS & bokning",
                 },
                 {
-                  src: "/images/carousel/skenningevvs-mobile.jpg",
-                  alt: "Responsiv webbplats på flera enheter",
+                  src: "/images/prisexempel/tassa-in.png",
+                  alt: "Tassa In – Bokningssystem med adminpanel",
                 },
                 {
-                  src: "/images/carousel/gammelbyggnad-mobil.jpg",
-                  alt: "Responsiv webbplats på flera enheter",
+                  src: "/images/prisexempel/skeningevvs.png",
+                  alt: "Skänninge VVS – Företagssajt",
                 },
                 {
-                  src: "/images/carousel/mozionzone-mobile.jpg",
-                  alt: "Responsiv webbplats på flera enheter",
+                  src: "/images/prisexempel/sweettimeuf.png",
+                  alt: "Sweet Time UF – E-handel",
                 },
-
                 {
-                  src: "/images/carousel/ledningsteknik-mobil.png",
-                  alt: "Responsiv webbplats på flera enheter",
+                  src: "/images/prisexempel/knegarloggen.png",
+                  alt: "Knegarloggen – SaaS-applikation",
                 },
               ]}
               interval={5000}

@@ -211,7 +211,7 @@ export default function PriserPage() {
                     price: "från 35 000 kr",
                   },
                   {
-                    image: "/images/prisexempel/motionzone.jpg",
+                    image: "/images/prisexempel/motionzone.png",
                     title: "MotionZone",
                     type: "Boknings- & e-handelsplattform",
                     description: "Dansstudio-plattform med bokningssystem, kurser, e-handel, adminpanel och rollbaserad auth.",
