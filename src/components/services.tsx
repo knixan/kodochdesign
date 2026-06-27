@@ -6,28 +6,28 @@ export default function Services() {
       image: "/images/webbdesign.jpg",
       title: "Webbutveckling",
       description:
-        "Full-stack webbapplikationer med moderna ramverk som React, Next.js och Node.js med responsiv design.",
+        "Skräddarsydda webbapplikationer och SaaS-system byggda med modern tech-stack. Vi hanterar allt – från enkel landingssida till komplex affärslogik och realtidsfunktioner.",
       link: "#contact",
     },
     {
       image: "/images/responsiv.jpg",
       title: "Responsiv Design",
       description:
-        "Mobilanpassade, responsiva webbplatser som ser perfekta ut på alla enheter med hjälp av Tailwind CSS och moderna CSS-tekniker.",
+        "Webbplatser som fungerar felfritt och ser skarpa ut på alla skärmar – mobil, surfplatta och desktop. Snabb, tillgänglig och konverteringsfokuserad.",
       link: "#contact",
     },
     {
       image: "/images/backend.jpg",
       title: "Backend-lösningar",
       description:
-        "Robusta backend-system med PostgreSQL, Prisma, Server Actions och API‑utveckling för skalbara applikationer.",
+        "Pålitliga och skalbara backend-system med PostgreSQL, Prisma och Server Actions. API-arkitektur, autentisering och affärslogik som håller när kraven växer.",
       link: "#contact",
     },
     {
       image: "/images/grafiskdesign.jpg",
       title: "Grafisk Design",
       description:
-        "Design av logotyper, visitkort, broschyrer och affischer – tryckfärdiga original samt grafik för sociala medier som Instagram och Facebook.",
+        "Logotyper, grafisk profil, trycksaker och sociala medier-material. Vi ser till att ditt varumärke ser sammanhållet och professionellt ut – online och offline.",
       link: "#contact",
     },
   ];

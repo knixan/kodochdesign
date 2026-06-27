@@ -52,7 +52,8 @@ export default function Navbar() {
             { href: "/#section1", label: "Hem" },
             { href: "/#tjanster", label: "Tjänster" },
             { href: "/#omoss", label: "Om oss" },
-            { href: "#kontakt", label: "Kontakt" },
+            { href: "/priser", label: "Priser" },
+            { href: "/#kontakt", label: "Kontakt" },
           ].map((link, i) => (
             <Link key={i} href={link.href} className="group relative">
               <button className="relative px-6 py-3 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-xl bg-white/5 border border-white/10 hover:border-violet-400/50 hover:shadow-lg hover:shadow-violet-500/25">
@@ -109,8 +110,9 @@ export default function Navbar() {
           {[
             { href: "/#section1", label: "Hem" },
             { href: "/#tjanster", label: "Tjänster" },
-            { href: "/omoss", label: "Om oss" },
-            { href: "#kontakt", label: "Kontakt" },
+            { href: "/#omoss", label: "Om oss" },
+            { href: "/priser", label: "Priser" },
+            { href: "/#kontakt", label: "Kontakt" },
           ].map((link, i) => (
             <Link
               key={i}

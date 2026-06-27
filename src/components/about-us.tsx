@@ -8,24 +8,24 @@ interface TeamMember {
 }
 
 const teamMembers: TeamMember[] = [
-  {
-    name: "Josefine",
-    role: "Fullstackutvecklare & Grafisk Designer med fokus på frontend",
-    bio: "Josefine har en bred grund inom full-stack webbutveckling med ett extra fokus på frontend och grafisk design. Med erfarenhet från React, Next.js, TypeScript och Node.js skapar hon visuellt tilltalande och funktionella webbplatser.",
-    image: "/images/team/josefine.png",
-  },
-  {
-    name: "Niklas",
-    role: "Fullstackutvecklare med fokus på backend",
-    bio: "Niklas är en allsidig fullstackutvecklare med särskild styrka inom backend. Med djup kunskap i databaser, API-utveckling och serverlogik ser han till att systemen bakom kulisserna är robusta, skalbara och effektiva.",
-    image: "/images/team/niklas.png",
-  },
-  {
-    name: "Torbjörn",
-    role: "Fullstackutvecklare",
-    bio: "Torbjörn är en bred fullstackutvecklare som rör sig smidigt mellan frontend och backend. Med en allsidig teknisk kompetens bidrar han med lösningar genom hela stacken – från användargränssnitt till databashantering.",
-    image: "/images/team/torbjorn.png",
-  },
+  // {
+  //   name: "Josefine",
+  //   role: "Fullstackutvecklare & Grafisk Designer",
+  //   bio: "Full-stack-utvecklare med tyngdpunkt på frontend och grafisk design. Behärskar React, Next.js, TypeScript och Node.js och har ett öga för det visuella – kod och design i ett.",
+  //   image: "/images/team/josefine.png",
+  // },
+  // {
+  //   name: "Niklas",
+  //   role: "Fullstackutvecklare med fokus på backend",
+  //   bio: "Djup kompetens inom backend: databaser, API-arkitektur och serverlogik är hans hemmaplan. Han ser till att systemen är robusta, säkra och redo att växa med verksamheten.",
+  //   image: "/images/team/niklas.png",
+  // },
+  // {
+  //   name: "Torbjörn",
+  //   role: "Fullstackutvecklare",
+  //   bio: "Rör sig lika hemtamt i frontend som i backend. Hans breda tekniska profil gör honom värdefull i hela stacken – från användargränssnitt till databasdesign.",
+  //   image: "/images/team/torbjorn.png",
+  // },
 ];
 
 export default function AboutUs() {
@@ -45,37 +45,38 @@ export default function AboutUs() {
           >
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                Vi på Kod & Design hjälper dig att förverkliga din digitala
-                vision – oavsett om det handlar om en enkel hemsida, en
-                avancerad webbapplikation eller ett komplett system med backend
-                och databas. Vi lyssnar på dina behov och levererar en lösning
-                som är skräddarsydd för just dig och ditt företag.
+                Vi på Kod & Design bygger digitala produkter – allt från
+                landingssidor och företagswebbplatser till komplexa
+                SaaS-applikationer med autentisering, databaser och avancerad
+                affärslogik. Oavsett projektets storlek arbetar vi nära dig
+                för att förstå din verksamhet och leverera något som faktiskt
+                löser ditt problem.
               </p>
 
               <p>
-                Från idé till färdig produkt tar vi hand om hela processen. Vi
-                bygger med moderna teknologier som React, Next.js, TypeScript,
-                Node.js och PostgreSQL – men det viktigaste för oss är att
-                slutresultatet fungerar felfritt, ser professionellt ut och är
-                enkelt att använda för dina besökare eller kunder.
+                Vi arbetar i hela stacken med React, Next.js, TypeScript,
+                Node.js och PostgreSQL. Tydlig kommunikation, realistiska
+                scope och leverans som håller det vi lovar – det är
+                grundprincipen i allt vi gör.
               </p>
 
               <p>
-                Utöver webbutveckling erbjuder vi grafisk design – logotyper,
-                visitkort, layout för trycksaker och visuella profiler. Vi tar
-                ett helhetsgrepp om din visuella identitet och ser till att din
-                digitala närvaro och ditt varumärke hänger ihop, från första
-                skissen till det färdiga designunderlaget.
+                Utöver kod erbjuder vi grafisk design: logotyper, visuell
+                profil, trycksaker och sociala medier-grafik. En sammanhållen
+                visuell identitet gör hela skillnaden, och vi kan hjälpa dig
+                med allt från första skissen till färdigt underlag.
               </p>
             </div>
           </div>
         </div>
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            Team
-          </h3>
-          <div className="w-16 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 mx-auto rounded-full mt-4"></div>
-        </div>
+        {teamMembers.length > 0 && (
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              Team
+            </h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 mx-auto rounded-full mt-4"></div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (

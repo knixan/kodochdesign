@@ -33,7 +33,7 @@ export default function Footer() {
               </div>
 
               <p className="text-slate-400 mt-2 font-light">
-                © 2025 Kod & Design
+                © 2026 Kod & Design
               </p>
             </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
                 <p className="font-semibold text-white">Kod & Design</p>
                 <div className="group">
                   <a
-                    href="mailto:josefineeriksson@live.se"
+                    href="mailto:kontakt@kodochdesign.se"
                     className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                   >
                     kontakt@kodochdesign.se
@@ -102,15 +102,16 @@ export default function Footer() {
               <ul className="space-y-4">
                 {[
                   { href: "/#section1", label: "Hem" },
-                  { href: "/omoss", label: "Om oss" },
+                  { href: "/#omoss", label: "Om oss" },
                   { href: "/#tjanster", label: "Tjänster" },
+                  { href: "/priser", label: "Priser" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
                       className="group relative inline-block"
                     >
-                      <span className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 font-medium text-lg group-hover:translate-x-2 transform transition-transform duration-300 inline-block">
+                      <span className="text-slate-300 hover:text-cyan-400 font-medium text-lg group-hover:translate-x-2 transition-all duration-300 inline-block">
                         {link.label}
                       </span>
                       <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-400 group-hover:w-full transition-all duration-300"></div>
