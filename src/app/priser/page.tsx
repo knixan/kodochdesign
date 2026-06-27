@@ -1,8 +1,24 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import { FiCheck, FiPackage, FiServer, FiRefreshCw, FiExternalLink } from "react-icons/fi";
+import { FiCheck, FiPackage, FiServer, FiRefreshCw } from "react-icons/fi";
+
+export const metadata: Metadata = {
+  title: "Priser & Paket",
+  description:
+    "Se våra paket och prisexempel på verkliga projekt – från enkel landingssida från 10 000 kr till komplex SaaS-applikation från 75 000 kr. Kontakta oss för offert.",
+  alternates: {
+    canonical: "https://kodochdesign.se/priser",
+  },
+  openGraph: {
+    title: "Priser & Paket | Kod & Design",
+    description:
+      "Paket och prisexempel på verkliga projekt – landingssidor, e-handel, bokningssystem och SaaS-applikationer.",
+    url: "https://kodochdesign.se/priser",
+  },
+};
 
 const packages = [
   {
