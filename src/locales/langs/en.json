@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About us",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "titleWe": "We create ",
+    "titleWebsites": "websites",
+    "titleAnd": "& ",
+    "titleProducts": "digital products",
+    "subtitle": "that look professional and actually work",
+    "description": "From a simple landing page to a complex web app – tailored for your business.",
+    "iconWebDev": "Web development",
+    "iconResponsive": "Responsive design",
+    "iconBackend": "Backend solutions",
+    "iconGraphic": "Graphic design",
+    "cta": "Let's build something amazing"
+  },
+  "services": {
+    "heading": "Our services",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Custom web applications and SaaS systems built with a modern tech stack. We handle everything – from a simple landing page to complex business logic and real-time features."
+    },
+    "responsive": {
+      "title": "Responsive Design",
+      "description": "Websites that work flawlessly and look sharp on every screen – mobile, tablet and desktop. Fast, accessible and conversion-focused."
+    },
+    "backend": {
+      "title": "Backend Solutions",
+      "description": "Reliable, scalable backend systems with PostgreSQL, Prisma and Server Actions. API architecture, authentication and business logic that holds up as requirements grow."
+    },
+    "graphic": {
+      "title": "Graphic Design",
+      "description": "Logos, brand identity, print materials and social media content. We make sure your brand looks cohesive and professional – online and offline."
+    }
+  },
+  "about": {
+    "heading": "About us",
+    "paragraph1": "At Kod & Design we build digital products – everything from landing pages and company websites to complex SaaS applications with authentication, databases and advanced business logic. Regardless of project size, we work closely with you to understand your business and deliver something that actually solves your problem.",
+    "paragraph2": "We work across the full stack with React, Next.js, TypeScript, Node.js and PostgreSQL. Clear communication, realistic scope and delivering what we promise – that's the core principle behind everything we do.",
+    "paragraph3": "Beyond code, we offer graphic design: logos, visual identity, print materials and social media graphics. A cohesive visual identity makes all the difference, and we can help with everything from the first sketch to the final files.",
+    "team": "Team",
+    "profileImageAlt": "Profile picture of {{name}}"
+  },
+  "carousel": {
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "close": "Close",
+    "images": {
+      "motionzone": "MotionZone – Booking & e-commerce platform",
+      "fakeyNails": "Fakey Nails – Site with CMS & booking",
+      "tassaIn": "Tassa In – Booking system with admin panel",
+      "skeningeVvs": "Skänninge VVS – Company site",
+      "sweetTimeUf": "Sweet Time UF – E-commerce",
+      "knegarloggen": "Knegarloggen – SaaS application"
+    }
+  },
+  "contact": {
+    "heading": "Contact us",
+    "subtitle": "Tell us about your project – we'll get back to you within a few days.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us about your project, what you need help with and roughly when you'd like to get started...",
+    "sending": "Sending...",
+    "send": "Send message",
+    "success": "Thanks! We'll be in touch soon.",
+    "error": "Something went wrong. Please try again or email us directly."
+  },
+  "footer": {
+    "copyright": "© 2026 Kod & Design",
+    "contactHeading": "Contact",
+    "companyName": "Kod & Design",
+    "address": "Östergötland, Sweden",
+    "navHeading": "Navigation"
+  },
+  "pricing": {
+    "title": "Pricing & Packages",
+    "subtitle": "We tailor the setup to your needs. Every project starts with a free consultation where we put together a quote.",
+    "ctaButton": "Contact us for a quote",
+    "packages": {
+      "oneTime": {
+        "title": "One-off Project",
+        "description": "We build your website or application for a fixed price. You get the source code and take over after delivery – no ongoing commitment.",
+        "includes": [
+          "Fixed project price with no hidden costs",
+          "Deployment included",
+          "Source code handed over upon full payment",
+          "30 days of bug fixing after delivery",
+          "Responsive design for all devices",
+          "SEO groundwork"
+        ]
+      },
+      "hosting": {
+        "title": "Project + Hosting",
+        "badge": "Popular",
+        "description": "We build the project and manage hosting for you – Vercel, S3 bucket for media and similar – all on your own account and billed to you. You only pay the actual costs plus a small administration fee.",
+        "includes": [
+          "Everything in One-off Project",
+          "We set up and configure hosting",
+          "Vercel, S3 or another service on your account",
+          "You see and pay the actual costs directly",
+          "We're available if something goes down"
+        ]
+      },
+      "maintenance": {
+        "title": "Project + Maintenance",
+        "description": "In addition to the project, we provide ongoing monthly maintenance – updates, small changes and technical support. Great if you want a long-term partner.",
+        "includes": [
+          "Everything in Project + Hosting",
+          "Ongoing maintenance and updates",
+          "Included hours every month",
+          "Priority support",
+          "Changes and additions within scope"
+        ]
+      }
+    },
+    "alwaysIncluded": {
+      "heading": "What's always included",
+      "items": [
+        "Source code handed over upon full payment",
+        "Deployment always included in the project price",
+        "30 days of free bug fixing after delivery",
+        "Responsive design – mobile, tablet and desktop",
+        "SEO groundwork from the start",
+        "3 included rounds of revisions during the project"
+      ]
+    },
+    "examples": {
+      "heading": "Price Examples",
+      "subtitle": "Examples of past projects and approximate starting prices.",
+      "note": "Prices are approximate starting prices. The final price depends on scope, features and timeline – contact us for a quote.",
+      "projects": {
+        "skeningevvs": {
+          "type": "Company site",
+          "description": "Responsive company site with service pages, team section, Google Maps and SEO optimization.",
+          "price": "from 10,000 SEK"
+        },
+        "fakeyNails": {
+          "type": "Site with CMS + booking",
+          "description": "Salon site with Sanity CMS – the client edits prices and services themselves. Embedded booking system.",
+          "price": "from 20,000 SEK"
+        },
+        "sweetTimeUf": {
+          "type": "E-commerce",
+          "description": "Web shop with product catalog, variant handling, checkout, order management and admin panel.",
+          "price": "from 30,000 SEK"
+        },
+        "tassaIn": {
+          "type": "Custom booking system + admin",
+          "description": "Booking system for pet care with a custom API, time management, capacity control and admin panel.",
+          "price": "from 35,000 SEK"
+        },
+        "motionzone": {
+          "type": "Booking & e-commerce platform",
+          "description": "Dance studio platform with booking system, courses, e-commerce, admin panel and role-based auth.",
+          "price": "from 55,000 SEK"
+        },
+        "knegarloggen": {
+          "type": "SaaS application",
+          "description": "Job log and invoicing tool for tradespeople – Stripe subscriptions, PDF invoices, tax deductions and file uploads.",
+          "price": "from 75,000 SEK"
+        }
+      }
+    },
+    "terms": {
+      "heading": "Terms",
+      "items": [
+        {
+          "title": "Advance payment",
+          "text": "30–50% of the project price is invoiced at project start. The remaining amount is invoiced upon delivery."
+        },
+        {
+          "title": "Changes outside scope",
+          "text": "Changes beyond the agreed scope are billed hourly. We always inform you before starting any additional work."
+        },
+        {
+          "title": "Ownership",
+          "text": "Ownership of the code transfers to you upon full payment. Until then, Kod & Design owns the code."
+        },
+        {
+          "title": "Cancellation",
+          "text": "If the project is cancelled, work completed up to that point is billed at the agreed hourly rate."
+        },
+        {
+          "title": "Payment",
+          "text": "Payment terms are 30 days net unless otherwise agreed."
+        },
+        {
+          "title": "GDPR",
+          "text": "If we process personal data on your behalf, we sign a data processing agreement (DPA)."
+        }
+      ]
+    },
+    "final": {
+      "heading": "Ready to get started?",
+      "text": "Tell us about your project and we'll put together a free quote.",
+      "button": "Contact us"
+    }
+  }
+}

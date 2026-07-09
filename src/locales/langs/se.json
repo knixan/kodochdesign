@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "home": "Hem",
+    "services": "Tjänster",
+    "about": "Om oss",
+    "pricing": "Priser",
+    "contact": "Kontakt",
+    "language": "Språk"
+  },
+  "hero": {
+    "titleWe": "Vi skapar ",
+    "titleWebsites": "webbplatser",
+    "titleAnd": "& ",
+    "titleProducts": "digitala produkter",
+    "subtitle": "som ser professionella ut och faktiskt funkar",
+    "description": "Från enkel landingssida till komplex webbapp – skräddarsytt för ditt företag.",
+    "iconWebDev": "Webbutveckling",
+    "iconResponsive": "Responsiv design",
+    "iconBackend": "Backend-lösningar",
+    "iconGraphic": "Grafisk design",
+    "cta": "Låt oss bygga något fantastiskt"
+  },
+  "services": {
+    "heading": "Våra tjänster",
+    "webDev": {
+      "title": "Webbutveckling",
+      "description": "Skräddarsydda webbapplikationer och SaaS-system byggda med modern tech-stack. Vi hanterar allt – från enkel landingssida till komplex affärslogik och realtidsfunktioner."
+    },
+    "responsive": {
+      "title": "Responsiv Design",
+      "description": "Webbplatser som fungerar felfritt och ser skarpa ut på alla skärmar – mobil, surfplatta och desktop. Snabb, tillgänglig och konverteringsfokuserad."
+    },
+    "backend": {
+      "title": "Backend-lösningar",
+      "description": "Pålitliga och skalbara backend-system med PostgreSQL, Prisma och Server Actions. API-arkitektur, autentisering och affärslogik som håller när kraven växer."
+    },
+    "graphic": {
+      "title": "Grafisk Design",
+      "description": "Logotyper, grafisk profil, trycksaker och sociala medier-material. Vi ser till att ditt varumärke ser sammanhållet och professionellt ut – online och offline."
+    }
+  },
+  "about": {
+    "heading": "Om oss",
+    "paragraph1": "Vi på Kod & Design bygger digitala produkter – allt från landingssidor och företagswebbplatser till komplexa SaaS-applikationer med autentisering, databaser och avancerad affärslogik. Oavsett projektets storlek arbetar vi nära dig för att förstå din verksamhet och leverera något som faktiskt löser ditt problem.",
+    "paragraph2": "Vi arbetar i hela stacken med React, Next.js, TypeScript, Node.js och PostgreSQL. Tydlig kommunikation, realistiska scope och leverans som håller det vi lovar – det är grundprincipen i allt vi gör.",
+    "paragraph3": "Utöver kod erbjuder vi grafisk design: logotyper, visuell profil, trycksaker och sociala medier-grafik. En sammanhållen visuell identitet gör hela skillnaden, och vi kan hjälpa dig med allt från första skissen till färdigt underlag.",
+    "team": "Team",
+    "profileImageAlt": "Profilbild av {{name}}"
+  },
+  "carousel": {
+    "prevImage": "Föregående bild",
+    "nextImage": "Nästa bild",
+    "close": "Stäng",
+    "images": {
+      "motionzone": "MotionZone – Boknings- & e-handelsplattform",
+      "fakeyNails": "Fakey Nails – Sajt med CMS & bokning",
+      "tassaIn": "Tassa In – Bokningssystem med adminpanel",
+      "skeningeVvs": "Skänninge VVS – Företagssajt",
+      "sweetTimeUf": "Sweet Time UF – E-handel",
+      "knegarloggen": "Knegarloggen – SaaS-applikation"
+    }
+  },
+  "contact": {
+    "heading": "Kontakta oss",
+    "subtitle": "Berätta om ditt projekt – vi hör av oss inom ett par dagar.",
+    "nameLabel": "Namn",
+    "namePlaceholder": "Ditt namn",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "din@email.se",
+    "messageLabel": "Meddelande",
+    "messagePlaceholder": "Berätta om ditt projekt, vad du behöver hjälp med och ungefär när du vill komma igång...",
+    "sending": "Skickar...",
+    "send": "Skicka meddelande",
+    "success": "Tack! Vi hör av oss snart.",
+    "error": "Något gick fel. Försök igen eller maila oss direkt."
+  },
+  "footer": {
+    "copyright": "© 2026 Kod & Design",
+    "contactHeading": "Kontakt",
+    "companyName": "Kod & Design",
+    "address": "Östergötland, Sverige",
+    "navHeading": "Navigation"
+  },
+  "pricing": {
+    "title": "Priser & Paket",
+    "subtitle": "Vi anpassar upplägget efter dina behov. Alla projekt inleds med ett kostnadsfritt samtal där vi tar fram en offert.",
+    "ctaButton": "Kontakta för offert",
+    "packages": {
+      "oneTime": {
+        "title": "Engångsprojekt",
+        "description": "Vi bygger din webbplats eller applikation till ett fast pris. Du får källkoden och tar över efter leverans – ingen bindningstid.",
+        "includes": [
+          "Fast projektpris utan dolda kostnader",
+          "Deploy ingår",
+          "Källkod lämnas över vid full betalning",
+          "30 dagars buggfixning efter leverans",
+          "Responsiv design för alla enheter",
+          "SEO-grundstruktur"
+        ]
+      },
+      "hosting": {
+        "title": "Projekt + Hosting",
+        "badge": "Populärt",
+        "description": "Vi bygger projektet och sköter hosting åt dig – Vercel, S3-bucket för media och liknande – allt på ditt konto och din räkning. Du betalar bara faktiska kostnader plus en liten administrationsavgift.",
+        "includes": [
+          "Allt i Engångsprojekt",
+          "Vi sätter upp och konfigurerar hosting",
+          "Vercel, S3 eller annan tjänst på ditt konto",
+          "Du ser och betalar faktiska kostnader direkt",
+          "Vi finns tillgängliga vid driftstörningar"
+        ]
+      },
+      "maintenance": {
+        "title": "Projekt + Förvaltning",
+        "description": "Utöver projektet ingår löpande underhåll varje månad – uppdateringar, småändringar och teknisk support. Passar dig som vill ha en långsiktig partner.",
+        "includes": [
+          "Allt i Projekt + Hosting",
+          "Löpande underhåll och uppdateringar",
+          "Inkluderade timmar varje månad",
+          "Prioriterad support",
+          "Ändringar och tillägg inom ramen"
+        ]
+      }
+    },
+    "alwaysIncluded": {
+      "heading": "Vad som alltid ingår",
+      "items": [
+        "Källkod lämnas över vid full betalning",
+        "Deploy ingår alltid i projektpriset",
+        "30 dagars kostnadsfri buggfixning efter leverans",
+        "Responsiv design – mobil, surfplatta och desktop",
+        "SEO-grundstruktur från start",
+        "3 inkluderade revideringsrundor under projektet"
+      ]
+    },
+    "examples": {
+      "heading": "Prisexempel",
+      "subtitle": "Exempel på tidigare projekt och ungefärliga startpriser.",
+      "note": "Priserna är ungefärliga startpriser. Slutpriset beror på scope, funktioner och tidsram – kontakta oss för offert.",
+      "projects": {
+        "skeningevvs": {
+          "type": "Företagssajt",
+          "description": "Responsiv företagssajt med tjänstesidor, teamsektion, Google Maps och SEO-optimering.",
+          "price": "från 10 000 SEK"
+        },
+        "fakeyNails": {
+          "type": "Sajt med CMS + bokning",
+          "description": "Salongsajt med Sanity CMS - kunden redigerar priser och tjänster själv. Inbäddat bokningssystem.",
+          "price": "från 20 000 SEK"
+        },
+        "sweetTimeUf": {
+          "type": "E-handel",
+          "description": "Webbshop med produktkatalog, varianthantering, checkout, orderhantering och adminpanel.",
+          "price": "från 30 000 SEK"
+        },
+        "tassaIn": {
+          "type": "Eget bokningssystem + admin",
+          "description": "Bokningssystem för djurvård med eget API, tidshantering, kapacitetskontroll och adminpanel.",
+          "price": "från 35 000 SEK"
+        },
+        "motionzone": {
+          "type": "Boknings- & e-handelsplattform",
+          "description": "Dansstudio-plattform med bokningssystem, kurser, e-handel, adminpanel och rollbaserad auth.",
+          "price": "från 55 000 SEK"
+        },
+        "knegarloggen": {
+          "type": "SaaS-applikation",
+          "description": "Jobblogg och fakturaverktyg för hantverkare – Stripe-prenumerationer, PDF-fakturor, ROT-avdrag och filuppladdning.",
+          "price": "från 75 000 SEK"
+        }
+      }
+    },
+    "terms": {
+      "heading": "Villkor",
+      "items": [
+        {
+          "title": "Förskott",
+          "text": "30–50% av projektpriset faktureras vid projektstart. Resterande belopp faktureras vid leverans."
+        },
+        {
+          "title": "Ändringar utanför scope",
+          "text": "Ändringar som tillkommer utöver det avtalade scopet faktureras per timme. Vi informerar alltid innan vi påbörjar tilläggsarbete."
+        },
+        {
+          "title": "Äganderätt",
+          "text": "Äganderätten till koden övergår till dig vid full betalning. Fram till dess äger Kod & Design koden."
+        },
+        {
+          "title": "Avbrott",
+          "text": "Om projektet avbryts faktureras nedlagt arbete till dess enligt avtalad timpenning."
+        },
+        {
+          "title": "Betalning",
+          "text": "Betalningsvillkor 30 dagar netto om inget annat avtalats."
+        },
+        {
+          "title": "GDPR",
+          "text": "Om vi hanterar personuppgifter åt dig som kund tecknar vi ett personuppgiftsbiträdesavtal (PUB-avtal)."
+        }
+      ]
+    },
+    "final": {
+      "heading": "Redo att sätta igång?",
+      "text": "Berätta om ditt projekt så tar vi fram en offert utan kostnad.",
+      "button": "Kontakta oss"
+    }
+  }
+}

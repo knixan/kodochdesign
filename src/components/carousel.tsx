@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useTranslate } from "@/locales";
 
 interface CarouselImage {
   src: string;
@@ -22,6 +23,8 @@ function Lightbox({
   onClose: () => void;
   onChange: (i: number) => void;
 }) {
+  const { t } = useTranslate();
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -49,7 +52,7 @@ function Lightbox({
           e.stopPropagation();
           onChange((index - 1 + images.length) % images.length);
         }}
-        aria-label="Föregående bild"
+        aria-label={t("carousel.prevImage")}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-[10000] rounded-full bg-slate-900/60 hover:bg-slate-900/90 border border-white/10 p-2 text-white transition"
       >
         <svg
@@ -74,7 +77,7 @@ function Lightbox({
           e.stopPropagation();
           onChange((index + 1) % images.length);
         }}
-        aria-label="Nästa bild"
+        aria-label={t("carousel.nextImage")}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-[10000] rounded-full bg-slate-900/60 hover:bg-slate-900/90 border border-white/10 p-2 text-white transition"
       >
         <svg
@@ -101,7 +104,7 @@ function Lightbox({
         <button
           type="button"
           onClick={onClose}
-          aria-label="Stäng"
+          aria-label={t("carousel.close")}
           className="absolute -top-4 -right-4 z-[10000] rounded-full bg-slate-900/80 hover:bg-slate-900 border border-white/20 p-2 text-white transition"
         >
           <svg
@@ -142,6 +145,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   autoPlay = true,
   interval = 5000,
 }) => {
+  const { t } = useTranslate();
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -176,7 +180,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       <button
         type="button"
         onClick={scrollPrev}
-        aria-label="Föregående bild"
+        aria-label={t("carousel.prevImage")}
         className="absolute top-1/2 left-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-pink-400/60"
       >
         <svg
@@ -198,7 +202,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       <button
         type="button"
         onClick={scrollNext}
-        aria-label="Nästa bild"
+        aria-label={t("carousel.nextImage")}
         className="absolute top-1/2 right-2 -translate-y-1/2 z-10 rounded-full bg-slate-900/40 hover:bg-slate-900/70 border border-white/10 backdrop-blur-md p-2 text-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
       >
         <svg
@@ -260,6 +264,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 };
 
 const Hero = () => {
+  const { t } = useTranslate();
+
   useEffect(() => {
     const mainHeading = document.getElementById("main-heading");
     const subHeading = document.getElementById("sub-heading");
@@ -287,27 +293,27 @@ const Hero = () => {
               images={[
                 {
                   src: "/images/prisexempel/motionzone.png",
-                  alt: "MotionZone – Boknings- & e-handelsplattform",
+                  alt: t("carousel.images.motionzone"),
                 },
                 {
                   src: "/images/prisexempel/fakey-nails.png",
-                  alt: "Fakey Nails – Sajt med CMS & bokning",
+                  alt: t("carousel.images.fakeyNails"),
                 },
                 {
                   src: "/images/prisexempel/tassa-in.png",
-                  alt: "Tassa In – Bokningssystem med adminpanel",
+                  alt: t("carousel.images.tassaIn"),
                 },
                 {
                   src: "/images/prisexempel/skeningevvs.png",
-                  alt: "Skänninge VVS – Företagssajt",
+                  alt: t("carousel.images.skeningeVvs"),
                 },
                 {
                   src: "/images/prisexempel/sweettimeuf.png",
-                  alt: "Sweet Time UF – E-handel",
+                  alt: t("carousel.images.sweetTimeUf"),
                 },
                 {
                   src: "/images/prisexempel/knegarloggen.png",
-                  alt: "Knegarloggen – SaaS-applikation",
+                  alt: t("carousel.images.knegarloggen"),
                 },
               ]}
               interval={5000}

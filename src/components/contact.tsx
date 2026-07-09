@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslate } from "@/locales";
 
 export default function Contact() {
+  const { t } = useTranslate();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -36,11 +38,11 @@ export default function Contact() {
       <div className="container mx-auto max-w-2xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-black mb-4 bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent leading-tight tracking-tight">
-            Kontakta oss
+            {t("contact.heading")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 mx-auto rounded-full" />
           <p className="text-slate-400 mt-6 text-lg">
-            Berätta om ditt projekt – vi hör av oss inom ett par dagar.
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -53,7 +55,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-semibold text-slate-300 mb-2">
-                  Namn
+                  {t("contact.nameLabel")}
                 </label>
                 <input
                   type="text"
@@ -61,13 +63,13 @@ export default function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   required
-                  placeholder="Ditt namn"
+                  placeholder={t("contact.namePlaceholder")}
                   className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-pink-400/60 focus:bg-white/8 transition-all duration-200"
                 />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-slate-300 mb-2">
-                  E-post
+                  {t("contact.emailLabel")}
                 </label>
                 <input
                   type="email"
@@ -75,7 +77,7 @@ export default function Contact() {
                   value={form.email}
                   onChange={handleChange}
                   required
-                  placeholder="din@email.se"
+                  placeholder={t("contact.emailPlaceholder")}
                   className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-pink-400/60 focus:bg-white/8 transition-all duration-200"
                 />
               </div>
@@ -83,7 +85,7 @@ export default function Contact() {
 
             <div>
               <label className="block text-sm font-semibold text-slate-300 mb-2">
-                Meddelande
+                {t("contact.messageLabel")}
               </label>
               <textarea
                 name="message"
@@ -91,7 +93,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={6}
-                placeholder="Berätta om ditt projekt, vad du behöver hjälp med och ungefär när du vill komma igång..."
+                placeholder={t("contact.messagePlaceholder")}
                 className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-pink-400/60 focus:bg-white/8 transition-all duration-200 resize-none"
               />
             </div>
@@ -101,17 +103,17 @@ export default function Contact() {
               disabled={status === "loading"}
               className="w-full py-4 rounded-2xl bg-pink-500 font-semibold text-white shadow-lg shadow-pink-500/30 hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {status === "loading" ? "Skickar..." : "Skicka meddelande"}
+              {status === "loading" ? t("contact.sending") : t("contact.send")}
             </button>
 
             {status === "success" && (
               <p className="text-center text-cyan-400 font-medium">
-                Tack! Vi hör av oss snart.
+                {t("contact.success")}
               </p>
             )}
             {status === "error" && (
               <p className="text-center text-red-400 font-medium">
-                Något gick fel. Försök igen eller maila oss direkt.
+                {t("contact.error")}
               </p>
             )}
           </form>

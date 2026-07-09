@@ -1,33 +1,34 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslate } from "@/locales";
 
 export default function Services() {
+  const { t } = useTranslate();
+
   const services = [
     {
       image: "/images/webbdesign.jpg",
-      title: "Webbutveckling",
-      description:
-        "Skräddarsydda webbapplikationer och SaaS-system byggda med modern tech-stack. Vi hanterar allt – från enkel landingssida till komplex affärslogik och realtidsfunktioner.",
+      title: t("services.webDev.title"),
+      description: t("services.webDev.description"),
       link: "#contact",
     },
     {
       image: "/images/responsiv.jpg",
-      title: "Responsiv Design",
-      description:
-        "Webbplatser som fungerar felfritt och ser skarpa ut på alla skärmar – mobil, surfplatta och desktop. Snabb, tillgänglig och konverteringsfokuserad.",
+      title: t("services.responsive.title"),
+      description: t("services.responsive.description"),
       link: "#contact",
     },
     {
       image: "/images/backend.jpg",
-      title: "Backend-lösningar",
-      description:
-        "Pålitliga och skalbara backend-system med PostgreSQL, Prisma och Server Actions. API-arkitektur, autentisering och affärslogik som håller när kraven växer.",
+      title: t("services.backend.title"),
+      description: t("services.backend.description"),
       link: "#contact",
     },
     {
       image: "/images/grafiskdesign.jpg",
-      title: "Grafisk Design",
-      description:
-        "Logotyper, grafisk profil, trycksaker och sociala medier-material. Vi ser till att ditt varumärke ser sammanhållet och professionellt ut – online och offline.",
+      title: t("services.graphic.title"),
+      description: t("services.graphic.description"),
       link: "#contact",
     },
   ];
@@ -37,7 +38,7 @@ export default function Services() {
       <div className="container mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-black mb-8 bg-gradient-to-r from-pink-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent leading-tight tracking-tight">
-            Våra tjänster
+            {t("services.heading")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 mx-auto rounded-full"></div>
         </div>

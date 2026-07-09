@@ -3,10 +3,21 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslate } from "@/locales";
+import LanguageSwitcher from "./language-switcher";
 
 export default function Navbar() {
+  const { t } = useTranslate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  const navLinks = [
+    { href: "/#section1", label: t("nav.home") },
+    { href: "/#tjanster", label: t("nav.services") },
+    { href: "/#omoss", label: t("nav.about") },
+    { href: "/priser", label: t("nav.pricing") },
+    { href: "/#kontakt", label: t("nav.contact") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,13 +59,7 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <div className="hidden md:flex gap-4 items-center space-x-2">
-          {[
-            { href: "/#section1", label: "Hem" },
-            { href: "/#tjanster", label: "Tjänster" },
-            { href: "/#omoss", label: "Om oss" },
-            { href: "/priser", label: "Priser" },
-            { href: "/#kontakt", label: "Kontakt" },
-          ].map((link, i) => (
+          {navLinks.map((link, i) => (
             <Link key={i} href={link.href} className="group relative">
               <button className="relative px-6 py-3 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 backdrop-blur-xl bg-white/5 border border-white/10 hover:border-violet-400/50 hover:shadow-lg hover:shadow-violet-500/25">
                 <span className="relative z-10 transition-colors duration-300 group-hover:text-violet-300">
@@ -64,10 +69,12 @@ export default function Navbar() {
               </button>
             </Link>
           ))}
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSwitcher />
           <button
             onClick={toggleMobileMenu}
             className="relative p-3 text-white focus:outline-none group"
@@ -107,13 +114,7 @@ export default function Navbar() {
         } md:hidden overflow-hidden transition-all duration-500 ease-in-out backdrop-blur-xl bg-slate-900/90 border-t border-white/10`}
       >
         <div className="flex flex-col items-center py-6 space-y-3 px-6">
-          {[
-            { href: "/#section1", label: "Hem" },
-            { href: "/#tjanster", label: "Tjänster" },
-            { href: "/#omoss", label: "Om oss" },
-            { href: "/priser", label: "Priser" },
-            { href: "/#kontakt", label: "Kontakt" },
-          ].map((link, i) => (
+          {navLinks.map((link, i) => (
             <Link
               key={i}
               href={link.href}

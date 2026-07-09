@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslate } from "@/locales";
 
 interface TeamMember {
   name: string;
@@ -29,12 +32,14 @@ const teamMembers: TeamMember[] = [
 ];
 
 export default function AboutUs() {
+  const { t } = useTranslate();
+
   return (
     <section id="omoss" className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-black mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent leading-tight tracking-tight">
-            Om oss
+            {t("about.heading")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full"></div>
         </div>
@@ -44,35 +49,18 @@ export default function AboutUs() {
             className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl shadow-2xl"
           >
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-              <p>
-                Vi på Kod & Design bygger digitala produkter – allt från
-                landingssidor och företagswebbplatser till komplexa
-                SaaS-applikationer med autentisering, databaser och avancerad
-                affärslogik. Oavsett projektets storlek arbetar vi nära dig
-                för att förstå din verksamhet och leverera något som faktiskt
-                löser ditt problem.
-              </p>
+              <p>{t("about.paragraph1")}</p>
 
-              <p>
-                Vi arbetar i hela stacken med React, Next.js, TypeScript,
-                Node.js och PostgreSQL. Tydlig kommunikation, realistiska
-                scope och leverans som håller det vi lovar – det är
-                grundprincipen i allt vi gör.
-              </p>
+              <p>{t("about.paragraph2")}</p>
 
-              <p>
-                Utöver kod erbjuder vi grafisk design: logotyper, visuell
-                profil, trycksaker och sociala medier-grafik. En sammanhållen
-                visuell identitet gör hela skillnaden, och vi kan hjälpa dig
-                med allt från första skissen till färdigt underlag.
-              </p>
+              <p>{t("about.paragraph3")}</p>
             </div>
           </div>
         </div>
         {teamMembers.length > 0 && (
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              Team
+              {t("about.team")}
             </h3>
             <div className="w-16 h-1 bg-gradient-to-r from-violet-500 to-cyan-500 mx-auto rounded-full mt-4"></div>
           </div>
@@ -90,7 +78,7 @@ export default function AboutUs() {
                     {member.image ? (
                       <Image
                         src={member.image}
-                        alt={`Profilbild av ${member.name}`}
+                        alt={t("about.profileImageAlt", { name: member.name })}
                         width={180}
                         height={180}
                         className="relative rounded-full border-4 border-white/20 shadow-xl object-cover w-44 h-44"

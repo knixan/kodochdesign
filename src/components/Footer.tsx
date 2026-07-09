@@ -1,8 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { useTranslate } from "@/locales";
 
 export default function Footer() {
+  const { t } = useTranslate();
+
+  const navLinks = [
+    { href: "/#section1", label: t("nav.home") },
+    { href: "/#omoss", label: t("nav.about") },
+    { href: "/#tjanster", label: t("nav.services") },
+    { href: "/priser", label: t("nav.pricing") },
+  ];
+
   return (
     <footer
       id="footer"
@@ -33,7 +45,7 @@ export default function Footer() {
               </div>
 
               <p className="text-slate-400 mt-2 font-light">
-                © 2026 Kod & Design
+                {t("footer.copyright")}
               </p>
             </div>
 
@@ -43,10 +55,10 @@ export default function Footer() {
                 id="kontakt"
                 className="text-2xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent"
               >
-                Kontakt
+                {t("footer.contactHeading")}
               </h4>
               <div className="space-y-3 text-lg">
-                <p className="font-semibold text-white">Kod & Design</p>
+                <p className="font-semibold text-white">{t("footer.companyName")}</p>
                 <div className="group">
                   <a
                     href="mailto:kontakt@kodochdesign.se"
@@ -55,7 +67,7 @@ export default function Footer() {
                     kontakt@kodochdesign.se
                   </a>
                 </div>
-                <p className="text-slate-400">Östergötland, Sverige</p>
+                <p className="text-slate-400">{t("footer.address")}</p>
               </div>
 
               {/* Social Media */}
@@ -97,15 +109,10 @@ export default function Footer() {
             {/* Links Section */}
             <div className="text-center lg:text-left">
               <h4 className="text-2xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                Navigation
+                {t("footer.navHeading")}
               </h4>
               <ul className="space-y-4">
-                {[
-                  { href: "/#section1", label: "Hem" },
-                  { href: "/#omoss", label: "Om oss" },
-                  { href: "/#tjanster", label: "Tjänster" },
-                  { href: "/priser", label: "Priser" },
-                ].map((link) => (
+                {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
