@@ -43,7 +43,7 @@ export default function Hero() {
           företag.
         </p>
 
-        <div className="flex flex-wrap gap-8 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
           {serviceIcons.map(({ icon: Icon, label }) => (
             <div key={label} className="flex flex-col items-center gap-2 group">
               <div className="w-14 h-14 rounded-xl border border-white/15 bg-white/5 backdrop-blur-xl flex items-center justify-center group-hover:border-pink-400/50 group-hover:bg-pink-500/10 transition-all duration-300">
