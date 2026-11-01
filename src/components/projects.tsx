@@ -7,13 +7,17 @@ import { useTranslate } from "@/locales";
 import SectionHeading from "./section-heading";
 import Lightbox from "./lightbox";
 
+// role: "design" = bara designen, "designDev" = designat och byggt
 const projects = [
-  { key: "motionzone", title: "MotionZone", image: "/images/prisexempel/motionzone.png" },
-  { key: "fakeyNails", title: "Fakey Nails", image: "/images/prisexempel/fakey-nails.png" },
-  { key: "skeningevvs", title: "Skänninge VVS", image: "/images/prisexempel/skeningevvs.png" },
-  { key: "sweetTimeUf", title: "Sweet Time UF", image: "/images/prisexempel/sweettimeuf.png" },
-  { key: "tassaIn", title: "Tassa In", image: "/images/prisexempel/tassa-in.png" },
-  { key: "knegarloggen", title: "Knegarloggen", image: "/images/prisexempel/knegarloggen.png" },
+  { key: "visitum", title: "Visitum", image: "/images/bildexempel/visitum.png", role: "design" },
+  { key: "nathanget", title: "Näthänget", image: "/images/bildexempel/nathanget.png", role: "designDev" },
+  { key: "knegarloggen", title: "Knegarloggen", image: "/images/bildexempel/knegarloggen.png", role: "designDev" },
+  { key: "motionzone", title: "MotionZone", image: "/images/bildexempel/motionzone.png", role: "design" },
+  { key: "jonnyEriksson", title: "Jonny Eriksson Konst", image: "/images/bildexempel/jonny-eriksson-konst.png", role: "designDev" },
+  { key: "kladerEfterVader", title: "Kläder efter väder", image: "/images/bildexempel/klader-efter-vader.png", role: "designDev" },
+  { key: "bMovies", title: "B-Movies", image: "/images/bildexempel/b-movies.png", role: "designDev" },
+  { key: "sweetTimeUf", title: "Sweet Time UF", image: "/images/bildexempel/sweettime.png", role: "designDev" },
+  { key: "skeningevvs", title: "Skänninge VVS", image: "/images/bildexempel/skeningevvs.png", role: "designDev" },
 ] as const;
 
 export default function Projects() {
@@ -45,23 +49,28 @@ export default function Projects() {
                 type="button"
                 onClick={() => setLightbox(i)}
                 aria-label={t("lightbox.open", { name: project.title })}
-                className="relative block w-full aspect-[16/10] overflow-hidden cursor-zoom-in"
+                className="relative block w-full aspect-[5/4] overflow-hidden bg-white cursor-zoom-in"
               >
                 <Image
                   src={project.image}
                   alt={images[i].alt}
                   fill
                   sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                 />
                 <span className="absolute top-3 right-3 rounded-full bg-black/50 p-2 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <FiMaximize2 />
                 </span>
               </button>
               <div className="p-5">
-                <p className="text-xs font-medium text-fuchsia-400 mb-1">
-                  {t(`projects.items.${project.key}.type`)}
-                </p>
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                  <p className="text-xs font-medium text-fuchsia-400">
+                    {t(`projects.items.${project.key}.type`)}
+                  </p>
+                  <span className="rounded-full border border-white/10 px-2.5 py-0.5 text-[11px] text-slate-300">
+                    {t(`projects.roles.${project.role}`)}
+                  </span>
+                </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {project.title}
                 </h3>

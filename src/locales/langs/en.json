@@ -65,32 +65,48 @@
   },
   "projects": {
     "eyebrow": "Projects",
-    "heading": "A selection of my work",
-    "subtitle": "Click an image to view it full size.",
+    "heading": "Projects I've helped create",
+    "subtitle": "A selection where I've done the design, or both the design and the build. Click an image to view it larger.",
+    "roles": {
+      "design": "Design",
+      "designDev": "Design & development"
+    },
     "items": {
+      "visitum": {
+        "type": "SaaS landing page",
+        "description": "Landing page design for a booking and patient record system for clinics."
+      },
+      "nathanget": {
+        "type": "Web & mobile app",
+        "description": "A meeting place for young people with profiles, guestbooks, a message board and group chat. Web and mobile app sharing one backend."
+      },
+      "knegarloggen": {
+        "type": "SaaS application",
+        "description": "Job log and invoicing tool for tradespeople with subscriptions, PDF invoices, tax deductions and file uploads."
+      },
       "motionzone": {
-        "type": "Booking & e-commerce platform",
-        "description": "Dance studio platform with booking system, courses, e-commerce, admin panel and role-based authentication."
+        "type": "Landing page",
+        "description": "Landing page design for a dance studio with classes, booking and a web shop."
       },
-      "fakeyNails": {
-        "type": "Site with CMS & booking",
-        "description": "Salon site with Sanity CMS where the client edits prices and services themselves. Embedded booking system."
+      "jonnyEriksson": {
+        "type": "E-commerce for an artist",
+        "description": "Web shop for posters and prints with cart, checkout and admin panel. The artist edits texts and images himself via Sanity CMS."
       },
-      "skeningevvs": {
-        "type": "Company site",
-        "description": "Responsive company site with service pages, team section, Google Maps and SEO optimization."
+      "kladerEfterVader": {
+        "type": "Weather app",
+        "description": "Weather app for children and young people with, for example, intellectual disabilities or autism. Shows the weather and gives simple clothing tips with clear pictures."
+      },
+      "bMovies": {
+        "type": "Movie catalog & e-commerce",
+        "description": "Catalog and web shop for B-movies with search, top lists, cart and sign-in."
       },
       "sweetTimeUf": {
         "type": "E-commerce",
         "description": "Web shop with product catalog, variant handling, checkout, order management and admin panel."
       },
-      "tassaIn": {
-        "type": "Booking system with admin panel",
-        "description": "Booking system for pet care with a custom API, time management, capacity control and admin panel."
-      },
-      "knegarloggen": {
-        "type": "SaaS application",
-        "description": "Job log and invoicing tool for tradespeople – subscriptions, PDF invoices, tax deductions and file uploads."
+      "skeningevvs": {
+        "type": "Company site",
+        "description": "Responsive company site with service pages, team section, Google Maps and SEO optimization."
       }
     }
   },

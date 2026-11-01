@@ -65,32 +65,48 @@
   },
   "projects": {
     "eyebrow": "Projekt",
-    "heading": "Ett urval av det jag byggt",
-    "subtitle": "Klicka på en bild för att se den i full storlek.",
+    "heading": "Projekt jag har varit med och skapat",
+    "subtitle": "Ett urval där jag har designat, eller både designat och byggt. Klicka på en bild för att se den större.",
+    "roles": {
+      "design": "Design",
+      "designDev": "Design & utveckling"
+    },
     "items": {
-      "motionzone": {
-        "type": "Boknings- & e-handelsplattform",
-        "description": "Dansstudio-plattform med bokningssystem, kurser, e-handel, adminpanel och rollbaserad inloggning."
+      "visitum": {
+        "type": "Landningssida för SaaS",
+        "description": "Design av landningssidan för ett boknings- och journalsystem för kliniker."
       },
-      "fakeyNails": {
-        "type": "Sajt med CMS & bokning",
-        "description": "Salongsajt med Sanity CMS där kunden själv redigerar priser och tjänster. Inbäddat bokningssystem."
-      },
-      "skeningevvs": {
-        "type": "Företagssajt",
-        "description": "Responsiv företagssajt med tjänstesidor, teamsektion, Google Maps och SEO-optimering."
-      },
-      "sweetTimeUf": {
-        "type": "E-handel",
-        "description": "Webbshop med produktkatalog, varianthantering, checkout, orderhantering och adminpanel."
-      },
-      "tassaIn": {
-        "type": "Bokningssystem med adminpanel",
-        "description": "Bokningssystem för djurvård med eget API, tidshantering, kapacitetskontroll och adminpanel."
+      "nathanget": {
+        "type": "Webb- och mobilapp",
+        "description": "Mötesplats för unga med profiler, gästböcker, klotterplank och gruppchatt. Webb och mobilapp med gemensam backend."
       },
       "knegarloggen": {
         "type": "SaaS-applikation",
         "description": "Jobblogg och fakturaverktyg för hantverkare med prenumerationer, PDF-fakturor, ROT-avdrag och filuppladdning."
+      },
+      "motionzone": {
+        "type": "Landningssida",
+        "description": "Design av landningssidan för en dansstudio med kurser, bokning och webbutik."
+      },
+      "jonnyEriksson": {
+        "type": "E-handel för konstnär",
+        "description": "Webbutik för posters och prints med kundvagn, kassa och adminpanel. Konstnären redigerar själv texter och bilder via Sanity CMS."
+      },
+      "kladerEfterVader": {
+        "type": "Väderapp",
+        "description": "Väderapp för barn och unga med till exempel IF eller autism. Visar vädret och ger enkla klädtips med tydliga bilder."
+      },
+      "bMovies": {
+        "type": "Filmkatalog & e-handel",
+        "description": "Katalog och webbutik för B-filmer med sökning, topplistor, kundvagn och inloggning."
+      },
+      "sweetTimeUf": {
+        "type": "E-handel",
+        "description": "Webbshop med produktkatalog, varianthantering, kassa, orderhantering och adminpanel."
+      },
+      "skeningevvs": {
+        "type": "Företagssajt",
+        "description": "Responsiv företagssajt med tjänstesidor, teamsektion, Google Maps och SEO-optimering."
       }
     }
   },
