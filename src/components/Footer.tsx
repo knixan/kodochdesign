@@ -3,133 +3,110 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FiMail, FiMapPin } from "react-icons/fi";
 import { useTranslate } from "@/locales";
+import LanguageSwitcher from "./language-switcher";
+
+const socials = [
+  {
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/company/113094350",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaInstagram,
+    href: "https://www.instagram.com/kodochdesign",
+    label: "Instagram",
+  },
+  {
+    icon: FaFacebook,
+    href: "https://www.facebook.com/profile.php?id=61579831973399",
+    label: "Facebook",
+  },
+];
 
 export default function Footer() {
   const { t } = useTranslate();
 
   const navLinks = [
-    { href: "/#section1", label: t("nav.home") },
-    { href: "/#omoss", label: t("nav.about") },
+    { href: "/#home", label: t("nav.home") },
     { href: "/#tjanster", label: t("nav.services") },
-    { href: "/priser", label: t("nav.pricing") },
+    { href: "/#projekt", label: t("nav.projects") },
+    { href: "/#om-mig", label: t("nav.about") },
+    { href: "/#kontakt", label: t("nav.contact") },
   ];
 
   return (
-    <footer
-      id="footer"
-      className="relative bg-slate-950 text-slate-300 py-20 px-4 overflow-hidden"
-    >
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-900/50"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-violet-900/20 to-pink-900/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-900/20 to-cyan-900/20 rounded-full blur-3xl"></div>
-
-      <div className="relative z-10 container mx-auto">
-        {/* Main footer content */}
-        <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-12 mb-12">
-          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
-            {/* Logo Section */}
-            <div className="text-center lg:text-left group">
-              <div className="relative inline-block mb-6">
-                <div className="absolute -inset-2 bg-gradient-to-r from-violet-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                <div className="relative backdrop-blur-xl bg-slate-900/40 border border-white/20 rounded-2xl p-4">
-                  <Image
-                    src="/kodochdesignloggo2.png"
-                    alt="Footer logga"
-                    width={300}
-                    height={300}
-                    className="h-18 w-32 object-contain"
-                  />
-                </div>
-              </div>
-
-              <p className="text-slate-400 mt-2 font-light">
-                {t("footer.copyright")}
-              </p>
-            </div>
-
-            {/* Contact Section */}
-            <div className="text-center lg:text-left">
-              <h4
-                id="kontakt"
-                className="text-2xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent"
+    <footer id="footer" className="border-t border-white/5 px-6 py-14">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_2fr_1.5fr_auto] gap-10">
+        <div>
+          <Image
+            src="/kodochdesignloggo2.png"
+            alt="Logga Kod & Design"
+            width={1080}
+            height={480}
+            className="h-10 w-auto mb-4"
+          />
+          <p className="text-xs text-slate-500 mb-5">{t("footer.copyright")}</p>
+          <div className="flex gap-3">
+            {socials.map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-400 hover:text-white hover:border-violet-500/50 transition-colors"
               >
-                {t("footer.contactHeading")}
-              </h4>
-              <div className="space-y-3 text-lg">
-                <p className="font-semibold text-white">{t("footer.companyName")}</p>
-                <div className="group">
-                  <a
-                    href="mailto:kontakt@kodochdesign.se"
-                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                  >
-                    kontakt@kodochdesign.se
-                  </a>
-                </div>
-                <p className="text-slate-400">{t("footer.address")}</p>
-              </div>
-
-              {/* Social Media */}
-              <div className="flex justify-center lg:justify-start space-x-6 mt-8">
-                {[
-                  {
-                    icon: FaFacebook,
-                    href: "https://www.facebook.com/profile.php?id=61579831973399",
-                    label: "Facebook",
-                  },
-                  {
-                    icon: FaInstagram,
-                    href: "https://www.instagram.com/kodochdesign",
-                    label: "Instagram",
-                  },
-                  {
-                    icon: FaLinkedin,
-                    href: "https://www.linkedin.com/company/113094350",
-                    label: "LinkedIn",
-                  },
-                ].map(({ icon: Icon, href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    aria-label={label}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative"
-                  >
-                    <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-300"></div>
-                    <div className="relative w-12 h-12 flex items-center justify-center backdrop-blur-xl bg-slate-800/60 border border-white/20 rounded-xl text-cyan-400 hover:text-white transform hover:scale-110 transition-all duration-300">
-                      <Icon className="text-xl" />
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Links Section */}
-            <div className="text-center lg:text-left">
-              <h4 className="text-2xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                {t("footer.navHeading")}
-              </h4>
-              <ul className="space-y-4">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="group relative inline-block"
-                    >
-                      <span className="text-slate-300 hover:text-cyan-400 font-medium text-lg group-hover:translate-x-2 transition-all duration-300 inline-block">
-                        {link.label}
-                      </span>
-                      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-400 group-hover:w-full transition-all duration-300"></div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                <Icon />
+              </a>
+            ))}
           </div>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-white mb-4">
+            {t("footer.contactHeading")}
+          </h4>
+          <ul className="space-y-3 text-sm text-slate-400">
+            <li className="flex items-center gap-3">
+              <FiMail className="shrink-0" />
+              <a
+                href="mailto:kontakt@kodochdesign.se"
+                className="hover:text-white transition-colors"
+              >
+                kontakt@kodochdesign.se
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <FiMapPin className="shrink-0" />
+              {t("footer.address")}
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-white mb-4">
+            {t("footer.navHeading")}
+          </h4>
+          <ul className="space-y-2 text-sm">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <LanguageSwitcher openUpward />
         </div>
       </div>
     </footer>
   );
-};
+}

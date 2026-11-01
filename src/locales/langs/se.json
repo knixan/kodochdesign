@@ -2,67 +2,155 @@
   "nav": {
     "home": "Hem",
     "services": "Tjänster",
-    "about": "Om oss",
-    "pricing": "Priser",
+    "projects": "Projekt",
+    "about": "Om mig",
     "contact": "Kontakt",
-    "language": "Språk"
+    "language": "Språk",
+    "openMenu": "Öppna meny",
+    "pricing": "Priser"
   },
   "hero": {
-    "titleWe": "Vi skapar ",
-    "titleWebsites": "webbplatser",
-    "titleAnd": "& ",
-    "titleProducts": "digitala produkter",
-    "subtitle": "som ser professionella ut och faktiskt funkar",
-    "description": "Från enkel landingssida till komplex webbapp – skräddarsytt för ditt företag.",
-    "iconWebDev": "Webbutveckling",
-    "iconResponsive": "Responsiv design",
-    "iconBackend": "Backend-lösningar",
-    "iconGraphic": "Grafisk design",
-    "cta": "Låt oss bygga något fantastiskt"
+    "badge": "UI-designer & fullstackutvecklare",
+    "titleStart": "Från design",
+    "titleHighlight": "till kod.",
+    "subtitle": "Jag designar och bygger gränssnitt som ser professionella ut och faktiskt funkar.",
+    "description": "Design i Figma och responsiva webbplatser i React och Next.js. Som fullstackutvecklare bygger jag även backend när projektet kräver det.",
+    "iconDesign": "UI-design i Figma",
+    "iconFrontend": "Frontend",
+    "iconResponsive": "Responsivt",
+    "iconBackend": "Backend",
+    "cta": "Boka ett samtal",
+    "ctaSecondary": "Se mina projekt"
   },
   "services": {
-    "heading": "Våra tjänster",
-    "webDev": {
-      "title": "Webbutveckling",
-      "description": "Skräddarsydda webbapplikationer och SaaS-system byggda med modern tech-stack. Vi hanterar allt – från enkel landingssida till komplex affärslogik och realtidsfunktioner."
+    "eyebrow": "Tjänster",
+    "heading": "Vad jag kan hjälpa dig med",
+    "design": {
+      "title": "UI-design i Figma",
+      "description": "Jag ritar upp sidorna i Figma med layout, färger och typsnitt. Då ser du hur allt kommer att se ut innan en enda rad kod skrivs.",
+      "tags": [
+        "Figma",
+        "Webbdesign",
+        "Layout"
+      ]
     },
-    "responsive": {
-      "title": "Responsiv Design",
-      "description": "Webbplatser som fungerar felfritt och ser skarpa ut på alla skärmar – mobil, surfplatta och desktop. Snabb, tillgänglig och konverteringsfokuserad."
-    },
-    "backend": {
-      "title": "Backend-lösningar",
-      "description": "Pålitliga och skalbara backend-system med PostgreSQL, Prisma och Server Actions. API-arkitektur, autentisering och affärslogik som håller när kraven växer."
+    "frontend": {
+      "title": "Frontendutveckling",
+      "description": "Jag omsätter design till snabb, tillgänglig och responsiv kod som ser skarp ut på mobil, surfplatta och desktop.",
+      "tags": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind"
+      ]
     },
     "graphic": {
-      "title": "Grafisk Design",
-      "description": "Logotyper, grafisk profil, trycksaker och sociala medier-material. Vi ser till att ditt varumärke ser sammanhållet och professionellt ut – online och offline."
+      "title": "Grafisk design",
+      "description": "Logotyp, grafisk profil och material för sociala medier. Ditt varumärke ska se sammanhållet ut, både på nätet och i tryck.",
+      "tags": [
+        "Logotyp",
+        "Grafisk profil",
+        "Sociala medier"
+      ]
+    },
+    "backend": {
+      "title": "Backend & integrationer",
+      "description": "När projektet behöver mer än ett gränssnitt: databaser, API:er, inloggning och betalningar. Byggt för att hålla när kraven växer.",
+      "tags": [
+        "Node.js",
+        "PostgreSQL",
+        "API"
+      ]
     }
   },
-  "about": {
-    "heading": "Om oss",
-    "paragraph1": "Vi på Kod & Design bygger digitala produkter – allt från landingssidor och företagswebbplatser till komplexa SaaS-applikationer med autentisering, databaser och avancerad affärslogik. Oavsett projektets storlek arbetar vi nära dig för att förstå din verksamhet och leverera något som faktiskt löser ditt problem.",
-    "paragraph2": "Vi arbetar i hela stacken med React, Next.js, TypeScript, Node.js och PostgreSQL. Tydlig kommunikation, realistiska scope och leverans som håller det vi lovar – det är grundprincipen i allt vi gör.",
-    "paragraph3": "Utöver kod erbjuder vi grafisk design: logotyper, visuell profil, trycksaker och sociala medier-grafik. En sammanhållen visuell identitet gör hela skillnaden, och vi kan hjälpa dig med allt från första skissen till färdigt underlag.",
-    "team": "Team",
-    "profileImageAlt": "Profilbild av {{name}}"
+  "projects": {
+    "eyebrow": "Projekt",
+    "heading": "Ett urval av det jag byggt",
+    "subtitle": "Klicka på en bild för att se den i full storlek.",
+    "items": {
+      "motionzone": {
+        "type": "Boknings- & e-handelsplattform",
+        "description": "Dansstudio-plattform med bokningssystem, kurser, e-handel, adminpanel och rollbaserad inloggning."
+      },
+      "fakeyNails": {
+        "type": "Sajt med CMS & bokning",
+        "description": "Salongsajt med Sanity CMS där kunden själv redigerar priser och tjänster. Inbäddat bokningssystem."
+      },
+      "skeningevvs": {
+        "type": "Företagssajt",
+        "description": "Responsiv företagssajt med tjänstesidor, teamsektion, Google Maps och SEO-optimering."
+      },
+      "sweetTimeUf": {
+        "type": "E-handel",
+        "description": "Webbshop med produktkatalog, varianthantering, checkout, orderhantering och adminpanel."
+      },
+      "tassaIn": {
+        "type": "Bokningssystem med adminpanel",
+        "description": "Bokningssystem för djurvård med eget API, tidshantering, kapacitetskontroll och adminpanel."
+      },
+      "knegarloggen": {
+        "type": "SaaS-applikation",
+        "description": "Jobblogg och fakturaverktyg för hantverkare med prenumerationer, PDF-fakturor, ROT-avdrag och filuppladdning."
+      }
+    }
   },
-  "carousel": {
+  "process": {
+    "eyebrow": "Arbetssätt",
+    "heading": "Så jobbar jag",
+    "steps": [
+      {
+        "title": "Samtal",
+        "text": "Vi pratar om mål, målgrupp och vad som behövs. Och vad som inte behövs."
+      },
+      {
+        "title": "Design i Figma",
+        "text": "Jag ritar upp designen i Figma så att du kan se den och tycka till."
+      },
+      {
+        "title": "Utveckling",
+        "text": "Designen blir kod. Du följer arbetet och ser framstegen löpande."
+      },
+      {
+        "title": "Lansering",
+        "text": "Sajten går live, och jag finns kvar om du behöver hjälp efteråt."
+      }
+    ],
+    "engagement": "Jag tar uppdrag som konsult per timme, som avgränsade projekt eller som förstärkning i ditt team. Antingen på plats i Östergötland eller på distans."
+  },
+  "about": {
+    "eyebrow": "Om mig",
+    "headingStart": "Design och kod ",
+    "headingHighlight": "i samma person",
+    "paragraph1": "Jag heter Josefine och driver Kod & Design. Jag är UI-designer och fullstackutvecklare med fokus på frontend, och det jag gillar mest är att ta en idé hela vägen från första skissen i Figma till en färdig produkt i webbläsaren.",
+    "paragraph2": "Eftersom jag både designar och kodar slipper du glappet mellan designer och utvecklare. Det som ritas går också att bygga. Jag jobbar med React, Next.js, TypeScript och Tailwind. Backend bygger jag med Node.js och PostgreSQL när projektet kräver det.",
+    "paragraph3": "Tydlig kommunikation, realistiska tidsplaner och leverans som håller det jag lovar. Det är grunden i allt jag gör.",
+    "imageAlt": "Josefine, UI-designer och fullstackutvecklare på Kod & Design",
+    "cta": "Hör av dig"
+  },
+  "lightbox": {
     "prevImage": "Föregående bild",
     "nextImage": "Nästa bild",
     "close": "Stäng",
-    "images": {
-      "motionzone": "MotionZone – Boknings- & e-handelsplattform",
-      "fakeyNails": "Fakey Nails – Sajt med CMS & bokning",
-      "tassaIn": "Tassa In – Bokningssystem med adminpanel",
-      "skeningeVvs": "Skänninge VVS – Företagssajt",
-      "sweetTimeUf": "Sweet Time UF – E-handel",
-      "knegarloggen": "Knegarloggen – SaaS-applikation"
-    }
+    "open": "Visa {{name}} i full storlek"
   },
   "contact": {
-    "heading": "Kontakta oss",
-    "subtitle": "Berätta om ditt projekt – vi hör av oss inom ett par dagar.",
+    "eyebrow": "Kontakt",
+    "heading": "Berätta om ditt projekt",
+    "subtitle": "Jag hör av mig inom ett par dagar.",
+    "benefits": [
+      {
+        "title": "Snabb återkoppling",
+        "text": "Jag svarar oftast inom 1–2 arbetsdagar."
+      },
+      {
+        "title": "Personlig kontakt",
+        "text": "Du pratar direkt med mig hela vägen."
+      },
+      {
+        "title": "Långsiktigt samarbete",
+        "text": "Jag vill vara din partner, inte bara leverantör."
+      }
+    ],
     "nameLabel": "Namn",
     "namePlaceholder": "Ditt namn",
     "emailLabel": "E-post",
@@ -71,8 +159,8 @@
     "messagePlaceholder": "Berätta om ditt projekt, vad du behöver hjälp med och ungefär när du vill komma igång...",
     "sending": "Skickar...",
     "send": "Skicka meddelande",
-    "success": "Tack! Vi hör av oss snart.",
-    "error": "Något gick fel. Försök igen eller maila oss direkt."
+    "success": "Tack! Jag hör av mig snart.",
+    "error": "Något gick fel. Försök igen eller maila mig direkt."
   },
   "footer": {
     "copyright": "© 2026 Kod & Design",
@@ -88,7 +176,7 @@
     "packages": {
       "oneTime": {
         "title": "Engångsprojekt",
-        "description": "Vi bygger din webbplats eller applikation till ett fast pris. Du får källkoden och tar över efter leverans – ingen bindningstid.",
+        "description": "Vi bygger din webbplats eller applikation till ett fast pris. Du får källkoden och tar över efter leverans. Ingen bindningstid.",
         "includes": [
           "Fast projektpris utan dolda kostnader",
           "Deploy ingår",
@@ -101,7 +189,7 @@
       "hosting": {
         "title": "Projekt + Hosting",
         "badge": "Populärt",
-        "description": "Vi bygger projektet och sköter hosting åt dig – Vercel, S3-bucket för media och liknande – allt på ditt konto och din räkning. Du betalar bara faktiska kostnader plus en liten administrationsavgift.",
+        "description": "Vi bygger projektet och sköter hosting åt dig, till exempel Vercel och S3-bucket för media. Allt ligger på ditt konto och din räkning. Du betalar bara faktiska kostnader plus en liten administrationsavgift.",
         "includes": [
           "Allt i Engångsprojekt",
           "Vi sätter upp och konfigurerar hosting",
@@ -112,7 +200,7 @@
       },
       "maintenance": {
         "title": "Projekt + Förvaltning",
-        "description": "Utöver projektet ingår löpande underhåll varje månad – uppdateringar, småändringar och teknisk support. Passar dig som vill ha en långsiktig partner.",
+        "description": "Utöver projektet ingår löpande underhåll varje månad: uppdateringar, småändringar och teknisk support. Passar dig som vill ha en långsiktig partner.",
         "includes": [
           "Allt i Projekt + Hosting",
           "Löpande underhåll och uppdateringar",
@@ -128,7 +216,7 @@
         "Källkod lämnas över vid full betalning",
         "Deploy ingår alltid i projektpriset",
         "30 dagars kostnadsfri buggfixning efter leverans",
-        "Responsiv design – mobil, surfplatta och desktop",
+        "Responsiv design för mobil, surfplatta och desktop",
         "SEO-grundstruktur från start",
         "3 inkluderade revideringsrundor under projektet"
       ]
@@ -136,7 +224,7 @@
     "examples": {
       "heading": "Prisexempel",
       "subtitle": "Exempel på tidigare projekt och ungefärliga startpriser.",
-      "note": "Priserna är ungefärliga startpriser. Slutpriset beror på scope, funktioner och tidsram – kontakta oss för offert.",
+      "note": "Priserna är ungefärliga startpriser. Slutpriset beror på scope, funktioner och tidsram. Kontakta oss för offert.",
       "projects": {
         "skeningevvs": {
           "type": "Företagssajt",
@@ -165,7 +253,7 @@
         },
         "knegarloggen": {
           "type": "SaaS-applikation",
-          "description": "Jobblogg och fakturaverktyg för hantverkare – Stripe-prenumerationer, PDF-fakturor, ROT-avdrag och filuppladdning.",
+          "description": "Jobblogg och fakturaverktyg för hantverkare med Stripe-prenumerationer, PDF-fakturor, ROT-avdrag och filuppladdning.",
           "price": "från 75 000 SEK"
         }
       }

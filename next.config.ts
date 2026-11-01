@@ -11,6 +11,10 @@ const nextConfig = {
       },
     ],
   },
+  // Prissidan är dold tills vidare – ta bort redirecten för att visa den igen
+  async redirects() {
+    return [{ source: "/priser", destination: "/", permanent: false }];
+  },
 };
 
 module.exports = nextConfig;

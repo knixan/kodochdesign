@@ -2,77 +2,165 @@
   "nav": {
     "home": "Home",
     "services": "Services",
-    "about": "About us",
-    "pricing": "Pricing",
+    "projects": "Projects",
+    "about": "About me",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "openMenu": "Open menu",
+    "pricing": "Pricing"
   },
   "hero": {
-    "titleWe": "We create ",
-    "titleWebsites": "websites",
-    "titleAnd": "& ",
-    "titleProducts": "digital products",
-    "subtitle": "that look professional and actually work",
-    "description": "From a simple landing page to a complex web app – tailored for your business.",
-    "iconWebDev": "Web development",
-    "iconResponsive": "Responsive design",
-    "iconBackend": "Backend solutions",
-    "iconGraphic": "Graphic design",
-    "cta": "Let's build something amazing"
+    "badge": "UI designer & full-stack developer",
+    "titleStart": "From design",
+    "titleHighlight": "to code.",
+    "subtitle": "I design and build interfaces that look professional and actually work.",
+    "description": "Design in Figma and responsive websites in React & Next.js. As a full-stack developer I build the backend too when the project needs it.",
+    "iconDesign": "UI design in Figma",
+    "iconFrontend": "Frontend",
+    "iconResponsive": "Responsive",
+    "iconBackend": "Backend",
+    "cta": "Book a call",
+    "ctaSecondary": "See my projects"
   },
   "services": {
-    "heading": "Our services",
-    "webDev": {
-      "title": "Web Development",
-      "description": "Custom web applications and SaaS systems built with a modern tech stack. We handle everything – from a simple landing page to complex business logic and real-time features."
+    "eyebrow": "Services",
+    "heading": "How I can help you",
+    "design": {
+      "title": "UI Design in Figma",
+      "description": "I draw up the pages in Figma – layout, colours and typography – so you can see how everything will look before a single line of code is written.",
+      "tags": [
+        "Figma",
+        "Web design",
+        "Layout"
+      ]
     },
-    "responsive": {
-      "title": "Responsive Design",
-      "description": "Websites that work flawlessly and look sharp on every screen – mobile, tablet and desktop. Fast, accessible and conversion-focused."
-    },
-    "backend": {
-      "title": "Backend Solutions",
-      "description": "Reliable, scalable backend systems with PostgreSQL, Prisma and Server Actions. API architecture, authentication and business logic that holds up as requirements grow."
+    "frontend": {
+      "title": "Frontend Development",
+      "description": "I turn design into fast, accessible and responsive code that looks sharp on mobile, tablet and desktop.",
+      "tags": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind"
+      ]
     },
     "graphic": {
       "title": "Graphic Design",
-      "description": "Logos, brand identity, print materials and social media content. We make sure your brand looks cohesive and professional – online and offline."
+      "description": "Logo, brand identity and social media content – so your brand looks cohesive, online and offline.",
+      "tags": [
+        "Logo",
+        "Brand identity",
+        "Social media"
+      ]
+    },
+    "backend": {
+      "title": "Backend & Integrations",
+      "description": "When the project needs more than an interface: databases, APIs, authentication and payments – built to hold up as requirements grow.",
+      "tags": [
+        "Node.js",
+        "PostgreSQL",
+        "API"
+      ]
     }
   },
-  "about": {
-    "heading": "About us",
-    "paragraph1": "At Kod & Design we build digital products – everything from landing pages and company websites to complex SaaS applications with authentication, databases and advanced business logic. Regardless of project size, we work closely with you to understand your business and deliver something that actually solves your problem.",
-    "paragraph2": "We work across the full stack with React, Next.js, TypeScript, Node.js and PostgreSQL. Clear communication, realistic scope and delivering what we promise – that's the core principle behind everything we do.",
-    "paragraph3": "Beyond code, we offer graphic design: logos, visual identity, print materials and social media graphics. A cohesive visual identity makes all the difference, and we can help with everything from the first sketch to the final files.",
-    "team": "Team",
-    "profileImageAlt": "Profile picture of {{name}}"
+  "projects": {
+    "eyebrow": "Projects",
+    "heading": "A selection of my work",
+    "subtitle": "Click an image to view it full size.",
+    "items": {
+      "motionzone": {
+        "type": "Booking & e-commerce platform",
+        "description": "Dance studio platform with booking system, courses, e-commerce, admin panel and role-based authentication."
+      },
+      "fakeyNails": {
+        "type": "Site with CMS & booking",
+        "description": "Salon site with Sanity CMS where the client edits prices and services themselves. Embedded booking system."
+      },
+      "skeningevvs": {
+        "type": "Company site",
+        "description": "Responsive company site with service pages, team section, Google Maps and SEO optimization."
+      },
+      "sweetTimeUf": {
+        "type": "E-commerce",
+        "description": "Web shop with product catalog, variant handling, checkout, order management and admin panel."
+      },
+      "tassaIn": {
+        "type": "Booking system with admin panel",
+        "description": "Booking system for pet care with a custom API, time management, capacity control and admin panel."
+      },
+      "knegarloggen": {
+        "type": "SaaS application",
+        "description": "Job log and invoicing tool for tradespeople – subscriptions, PDF invoices, tax deductions and file uploads."
+      }
+    }
   },
-  "carousel": {
+  "process": {
+    "eyebrow": "Process",
+    "heading": "How I work",
+    "steps": [
+      {
+        "title": "Conversation",
+        "text": "We talk about goals, audience and what's needed – and what isn't."
+      },
+      {
+        "title": "Design in Figma",
+        "text": "I draw up the design in Figma so you can see it and give feedback."
+      },
+      {
+        "title": "Development",
+        "text": "The design becomes code. You follow along and see progress continuously."
+      },
+      {
+        "title": "Launch",
+        "text": "The site goes live – and I'm still around if you need help afterwards."
+      }
+    ],
+    "engagement": "I take on work as an hourly consultant, as defined projects or as an extra pair of hands in your team – on site in Östergötland or remotely."
+  },
+  "about": {
+    "eyebrow": "About me",
+    "headingStart": "Design and code – ",
+    "headingHighlight": "in one person",
+    "paragraph1": "I'm Josefine and I run Kod & Design. I'm a UI designer and full-stack developer with a focus on frontend, and what I enjoy most is taking an idea all the way from the first sketch in Figma to a finished product in the browser.",
+    "paragraph2": "Because I both design and code, there's no gap between designer and developer – what gets drawn can also be built. I work with React, Next.js, TypeScript and Tailwind, and build the backend with Node.js and PostgreSQL when the project needs it.",
+    "paragraph3": "Clear communication, realistic timelines and delivering what I promise – that's the foundation of everything I do.",
+    "imageAlt": "Josefine, UI designer and full-stack developer at Kod & Design",
+    "cta": "Get in touch"
+  },
+  "lightbox": {
     "prevImage": "Previous image",
     "nextImage": "Next image",
     "close": "Close",
-    "images": {
-      "motionzone": "MotionZone – Booking & e-commerce platform",
-      "fakeyNails": "Fakey Nails – Site with CMS & booking",
-      "tassaIn": "Tassa In – Booking system with admin panel",
-      "skeningeVvs": "Skänninge VVS – Company site",
-      "sweetTimeUf": "Sweet Time UF – E-commerce",
-      "knegarloggen": "Knegarloggen – SaaS application"
-    }
+    "open": "View {{name}} full size"
   },
   "contact": {
-    "heading": "Contact us",
-    "subtitle": "Tell us about your project – we'll get back to you within a few days.",
+    "eyebrow": "Contact",
+    "heading": "Tell me about your project",
+    "subtitle": "I'll get back to you within a few days.",
+    "benefits": [
+      {
+        "title": "Quick response",
+        "text": "I usually reply within 1–2 business days."
+      },
+      {
+        "title": "Personal contact",
+        "text": "You talk directly to me – all the way."
+      },
+      {
+        "title": "Long-term collaboration",
+        "text": "I want to be your partner, not just a supplier."
+      }
+    ],
     "nameLabel": "Name",
     "namePlaceholder": "Your name",
     "emailLabel": "Email",
     "emailPlaceholder": "your@email.com",
     "messageLabel": "Message",
-    "messagePlaceholder": "Tell us about your project, what you need help with and roughly when you'd like to get started...",
+    "messagePlaceholder": "Tell me about your project, what you need help with and roughly when you'd like to get started...",
     "sending": "Sending...",
     "send": "Send message",
-    "success": "Thanks! We'll be in touch soon.",
-    "error": "Something went wrong. Please try again or email us directly."
+    "success": "Thanks! I'll be in touch soon.",
+    "error": "Something went wrong. Please try again or email me directly."
   },
   "footer": {
     "copyright": "© 2026 Kod & Design",
